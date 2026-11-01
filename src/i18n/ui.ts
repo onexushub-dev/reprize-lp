@@ -28,7 +28,7 @@ export const ui = {
     'store.soon': 'Em breve',
     'store.availableOn': 'Baixar na',
     'footer.company':
-      'Reprize é um produto da Nexus Hub, nome fantasia de Victor Hugo Marques Ltda., CNPJ 64.669.130/0001-02, São Paulo/SP.',
+      'Reprize é um produto da Nexus Hub, CNPJ 64.669.130/0001-02, São Paulo/SP.',
     'footer.contact': 'Contato e suporte',
     'footer.rights': 'Todos os direitos reservados.',
     'legal.updated': 'Última atualização',
@@ -52,7 +52,7 @@ export const ui = {
     'store.soon': 'Coming soon',
     'store.availableOn': 'Download on',
     'footer.company':
-      'Reprize is a product of Nexus Hub, trade name of Victor Hugo Marques Ltda., Brazilian company registration (CNPJ) 64.669.130/0001-02, São Paulo, Brazil.',
+      'Reprize is a product of Nexus Hub, Brazilian company registration (CNPJ) 64.669.130/0001-02, São Paulo, Brazil.',
     'footer.contact': 'Contact and support',
     'footer.rights': 'All rights reserved.',
     'legal.updated': 'Last updated',
@@ -76,7 +76,7 @@ export const ui = {
     'store.soon': 'Próximamente',
     'store.availableOn': 'Descargar en',
     'footer.company':
-      'Reprize es un producto de Nexus Hub, nombre comercial de Victor Hugo Marques Ltda., CNPJ 64.669.130/0001-02, São Paulo, Brasil.',
+      'Reprize es un producto de Nexus Hub, CNPJ 64.669.130/0001-02, São Paulo, Brasil.',
     'footer.contact': 'Contacto y soporte',
     'footer.rights': 'Todos los derechos reservados.',
     'legal.updated': 'Última actualización',

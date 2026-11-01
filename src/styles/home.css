@@ -649,11 +649,6 @@
   color: var(--color-muted);
 }
 
-.tag--pro {
-  border-color: var(--color-amber);
-  color: var(--color-amber);
-}
-
 /* Testimonials: a big opening quote mark and a round avatar (a generic silhouette until the real photo is added). */
 .quote-mark {
   font-family: var(--font-barlow), sans-serif;

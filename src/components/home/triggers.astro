@@ -27,7 +27,6 @@ const order: TriggerKey[] = ['tap', 'gesture', 'voice', 'phone', 'bluetooth', 'w
             <li class="tile tile--row reveal">
               <TriggerIcon name={key} />
               <div class="flex flex-col gap-1.5">
-                <span class:list={['tag', item.pro && 'tag--pro']}>{item.tag}</span>
                 <h3 class="text-2xl font-extrabold">{item.title}</h3>
                 <p class="text-paper/75 text-sm leading-6">{item.body}</p>
               </div>
