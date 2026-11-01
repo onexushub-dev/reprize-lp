@@ -42,7 +42,7 @@ export interface HomeCopy {
   triggers: {
     title: string;
     subtitle: string;
-    items: Record<TriggerKey, { title: string; body: string; tag: string; pro: boolean }>;
+    items: Record<TriggerKey, { title: string; body: string }>;
   };
   editor: {
     eyebrow: string;
@@ -127,36 +127,26 @@ const ptBR: HomeCopy = {
     title: 'Salve sem tirar o olho do jogo.',
     subtitle: 'Seis jeitos de acionar o lance. Use o que cabe no seu jogo.',
     items: {
-      tap: { title: 'Toque na tela', body: 'O básico: um toque em qualquer lugar salva o lance.', tag: 'Grátis', pro: false },
+      tap: { title: 'Toque na tela', body: 'O básico: um toque em qualquer lugar salva o lance.' },
       gesture: {
         title: 'Braços no alto',
         body: 'Levante os dois braços e o app salva. Funciona com quem estiver no quadro.',
-        tag: 'Grátis',
-        pro: false,
       },
       voice: {
         title: 'Diga “salvar”',
         body: 'Comando de voz processado no próprio aparelho. Nenhum áudio vai para a nuvem.',
-        tag: 'Grátis · iPhone',
-        pro: false,
       },
       watch: {
         title: 'Apple Watch',
         body: 'Um botão grande no pulso. O relógio vibra quando o lance é salvo.',
-        tag: 'Pro · iPhone',
-        pro: true,
       },
       bluetooth: {
         title: 'Controle Bluetooth',
         body: 'Use o botão de um controle Bluetooth de câmera ou selfie.',
-        tag: 'Grátis',
-        pro: false,
       },
       phone: {
         title: 'Segundo celular',
         body: 'Transforme outro iPhone num botão de salvar, a poucos metros da quadra.',
-        tag: 'Grátis · iPhone',
-        pro: false,
       },
     },
   },
@@ -329,7 +319,7 @@ const ptBR: HomeCopy = {
       price: P.proYearly,
       period: 'por ano',
       alt: `Cerca de ${P.proYearlyPerMonth} por mês · economia de ${P.yearlySavingsPercent}%`,
-      badge: 'Melhor valor',
+      badge: 'Recomendado',
       items: [
         `${P.trialDays} dias grátis para testar`,
         'Gravações ilimitadas',
@@ -337,14 +327,14 @@ const ptBR: HomeCopy = {
         'Clipes acima de 15s, compilação e Apple Watch',
       ],
     },
-    note: 'Valores em reais na loja do Brasil; em outros países a loja mostra o preço local. Cancele quando quiser nas configurações da App Store ou do Google Play. O vídeo exportado no plano Grátis leva a marca d’água do Reprize.',
+    note: 'Cancele quando quiser nas configurações da App Store ou do Google Play. O vídeo exportado no plano Grátis leva a marca d’água do Reprize.',
   },
   faq: {
     title: 'Perguntas frequentes',
     items: [
       {
         q: 'Meus vídeos vão para a nuvem?',
-        a: 'Não. Tudo fica no seu celular: o Reprize não tem cadastro nem servidor de vídeos. Só as compras passam por serviços de terceiros (Apple, Google e RevenueCat). Os detalhes estão na Política de Privacidade.',
+        a: 'Não. Tudo fica no seu celular: o Reprize não tem cadastro nem servidor de vídeos. Os detalhes estão na Política de Privacidade.',
       },
       {
         q: 'O app grava o jogo inteiro?',
@@ -423,36 +413,26 @@ const en: HomeCopy = {
     title: 'Save it without taking your eyes off the game.',
     subtitle: 'Six ways to save a play. Use whatever fits your game.',
     items: {
-      tap: { title: 'Tap the screen', body: 'The basic one: a tap anywhere saves the play.', tag: 'Free', pro: false },
+      tap: { title: 'Tap the screen', body: 'The basic one: a tap anywhere saves the play.' },
       gesture: {
         title: 'Arms up',
         body: 'Raise both arms and the app saves it. Works for anyone in the frame.',
-        tag: 'Free',
-        pro: false,
       },
       voice: {
         title: 'Say “save”',
         body: 'Voice command processed on the device itself. No audio goes to the cloud.',
-        tag: 'Free · iPhone',
-        pro: false,
       },
       watch: {
         title: 'Apple Watch',
         body: 'A big button on your wrist. The watch buzzes when the play is saved.',
-        tag: 'Pro · iPhone',
-        pro: true,
       },
       bluetooth: {
         title: 'Bluetooth remote',
         body: 'Use the button on a Bluetooth camera or selfie remote.',
-        tag: 'Pro',
-        pro: true,
       },
       phone: {
         title: 'Second phone',
         body: 'Turn another iPhone into a save button, a few meters from the court.',
-        tag: 'Pro · iPhone',
-        pro: true,
       },
     },
   },
@@ -625,7 +605,7 @@ const en: HomeCopy = {
       price: PU.proYearly,
       period: 'per year',
       alt: `About ${PU.proYearlyPerMonth} per month · save ${PU.yearlySavingsPercent}%`,
-      badge: 'Best value',
+      badge: 'Recommended',
       items: [
         `${PU.trialDays}-day free trial`,
         'Unlimited recordings',
@@ -633,14 +613,14 @@ const en: HomeCopy = {
         'Clips over 15s, compilations and Apple Watch',
       ],
     },
-    note: 'Prices in US dollars; your store shows the price in your local currency, with taxes where they apply. Cancel anytime in your App Store or Google Play settings. Videos exported on the Free plan carry the Reprize watermark.',
+    note: 'Cancel anytime in your App Store or Google Play settings. Videos exported on the Free plan carry the Reprize watermark.',
   },
   faq: {
     title: 'Frequently asked questions',
     items: [
       {
         q: 'Do my videos go to the cloud?',
-        a: 'No. Everything stays on your phone: Reprize has no sign-up and no video servers. Only purchases go through third-party services (Apple, Google and RevenueCat). Details are in the Privacy Policy.',
+        a: 'No. Everything stays on your phone: Reprize has no sign-up and no video servers. Details are in the Privacy Policy.',
       },
       {
         q: 'Does the app record the whole game?',
@@ -719,36 +699,26 @@ const es: HomeCopy = {
     title: 'Guarda sin quitar los ojos del juego.',
     subtitle: 'Seis formas de guardar una jugada. Usa la que mejor te quede.',
     items: {
-      tap: { title: 'Toca la pantalla', body: 'Lo básico: un toque en cualquier lugar guarda la jugada.', tag: 'Gratis', pro: false },
+      tap: { title: 'Toca la pantalla', body: 'Lo básico: un toque en cualquier lugar guarda la jugada.' },
       gesture: {
         title: 'Brazos arriba',
         body: 'Levanta los dos brazos y la app la guarda. Funciona con cualquier persona en el cuadro.',
-        tag: 'Gratis',
-        pro: false,
       },
       voice: {
         title: 'Di “guardar”',
         body: 'Comando de voz procesado en el propio dispositivo. Ningún audio va a la nube.',
-        tag: 'Gratis · iPhone',
-        pro: false,
       },
       watch: {
         title: 'Apple Watch',
         body: 'Un botón grande en la muñeca. El reloj vibra cuando la jugada se guarda.',
-        tag: 'Pro · iPhone',
-        pro: true,
       },
       bluetooth: {
         title: 'Control Bluetooth',
         body: 'Usa el botón de un control Bluetooth de cámara o de selfie.',
-        tag: 'Pro',
-        pro: true,
       },
       phone: {
         title: 'Segundo celular',
         body: 'Convierte otro iPhone en un botón de guardar, a unos metros de la cancha.',
-        tag: 'Pro · iPhone',
-        pro: true,
       },
     },
   },
@@ -921,7 +891,7 @@ const es: HomeCopy = {
       price: PE.proYearly,
       period: 'al año',
       alt: `Cerca de ${PE.proYearlyPerMonth} al mes · ahorras ${PE.yearlySavingsPercent}%`,
-      badge: 'Mejor valor',
+      badge: 'Recomendado',
       items: [
         `${PE.trialDays} días gratis para probar`,
         'Grabaciones ilimitadas',
@@ -929,14 +899,14 @@ const es: HomeCopy = {
         'Clips de más de 15s, compilación y Apple Watch',
       ],
     },
-    note: 'Precios en dólares estadounidenses; tu tienda muestra el precio en tu moneda local, con impuestos donde correspondan. Cancela cuando quieras en los ajustes de la App Store o de Google Play. El video exportado en el plan Gratis lleva la marca de agua de Reprize.',
+    note: 'Cancela cuando quieras en los ajustes de la App Store o de Google Play. El video exportado en el plan Gratis lleva la marca de agua de Reprize.',
   },
   faq: {
     title: 'Preguntas frecuentes',
     items: [
       {
         q: '¿Mis videos van a la nube?',
-        a: 'No. Todo queda en tu celular: Reprize no tiene registro ni servidor de videos. Solo las compras pasan por servicios de terceros (Apple, Google y RevenueCat). Los detalles están en la Política de Privacidad.',
+        a: 'No. Todo queda en tu celular: Reprize no tiene registro ni servidor de videos. Los detalles están en la Política de Privacidad.',
       },
       {
         q: '¿La app graba todo el partido?',
