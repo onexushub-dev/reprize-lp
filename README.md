@@ -1,6 +1,6 @@
-# Revi LP
+# Reprize LP
 
-Landing page do Revi (https://userevi.app), em Astro 7 + Tailwind v4 + TypeScript. Português (BR) na raiz, inglês em `/en` e espanhol em `/es`.
+Landing page do Reprize (https://reprize.app), em Astro 7 + Tailwind v4 + TypeScript. Português (BR) na raiz, inglês em `/en` e espanhol em `/es`.
 
 ## Requisitos
 
@@ -29,7 +29,7 @@ pnpm preview   # serve a pasta dist
 
 ## Marca
 
-Os arquivos vêm do kit de marca do Revi (Placar), no mesmo desenho do app. O Âmbar é `#FFB000` e nunca vai sobre fundo claro; nele entra o Âmbar escuro (`#946200`). Paleta em Ink `#0A0A0A`, Branco `#FFFFFF`, Âmbar e Âmbar escuro.
+Os arquivos vêm do kit de marca do Reprize (artefato "Reprize: marca e lojas"), com o símbolo igual ao do app. O Âmbar é `#FFB000` e nunca vai sobre fundo claro; nele entra o Âmbar escuro (`#946200`). Paleta em Ink `#0A0A0A`, Branco `#FFFFFF`, Âmbar e Âmbar escuro.
 
 ## Links das lojas
 
@@ -37,7 +37,7 @@ Copie `.env.example` para `.env` e preencha `PUBLIC_APP_STORE_URL` e `PUBLIC_PLA
 
 ## Rotas legais
 
-As lojas apontam para `userevi.app/privacy` e `userevi.app/terms`. Por isso as URLs não têm barra final (`trailingSlash: 'never'`).
+As lojas apontam para `reprize.app/privacy` e `reprize.app/terms`. Por isso as URLs não têm barra final (`trailingSlash: 'never'`).
 
 ## Prints do app
 

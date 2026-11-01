@@ -111,7 +111,7 @@ const ptBR: HomeCopy = {
     steps: [
       {
         title: 'Posicione',
-        body: 'Num ponto firme, de frente para o jogo. O Revi mostra o guia da quadra e o nível do horizonte.',
+        body: 'Num ponto firme, de frente para o jogo. O Reprize mostra o guia da quadra e o nível do horizonte.',
       },
       {
         title: 'Jogue',
@@ -165,7 +165,7 @@ const ptBR: HomeCopy = {
     title: 'Do lance ao story em dois toques.',
     subtitle: 'Corte no ponto certo, ajuste a velocidade e mande para onde quiser.',
     items: [
-      { title: 'Corte preciso', body: 'Ajuste onde o lance começa e termina, dentro do trecho que o Revi guardou.' },
+      { title: 'Corte preciso', body: 'Ajuste onde o lance começa e termina, dentro do trecho que o Reprize guardou.' },
       { title: 'Velocidade, zoom e giro', body: 'Acelere, desacelere e enquadre o lance do jeito que ele merece.' },
       {
         title: 'Modo Foco',
@@ -178,7 +178,7 @@ const ptBR: HomeCopy = {
   privacy: {
     eyebrow: 'Privacidade',
     title: 'Grava tudo. Guarda só o lance.',
-    body: 'Enquanto você joga, o Revi mantém só os instantes mais recentes numa memória temporária do celular. O que fica para trás é apagado na hora. Só os lances que você salva permanecem.',
+    body: 'Enquanto você joga, o Reprize mantém só os instantes mais recentes numa memória temporária do celular. O que fica para trás é apagado na hora. Só os lances que você salva permanecem.',
     bullets: [
       'Sem conta e sem login',
       'Nenhum vídeo vai para os nossos servidores',
@@ -189,7 +189,7 @@ const ptBR: HomeCopy = {
   },
   sports: {
     title: 'Qualquer esporte. Qualquer quadra.',
-    subtitle: 'Prenda o celular, comece a gravar e jogue. O Revi não liga para a modalidade.',
+    subtitle: 'Prenda o celular, comece a gravar e jogue. O Reprize não liga para a modalidade.',
     credit: 'Fotos e vídeos: Pexels.',
     nav: { region: 'Esportes', prev: 'Esporte anterior', next: 'Próximo esporte', slide: 'Esporte {n} de {total}' },
     items: {
@@ -262,7 +262,7 @@ const ptBR: HomeCopy = {
   },
   testimonials: {
     title: 'Quem já testou conta.',
-    subtitle: 'O que quem jogou com o Revi mais gostou.',
+    subtitle: 'O que quem jogou com o Reprize mais gostou.',
     items: {
       marcus: {
         tag: 'Basquete',
@@ -278,7 +278,7 @@ const ptBR: HomeCopy = {
       },
       sara: {
         tag: 'Beach tennis',
-        quote: 'Adorei o Revi, é simples de usar. É só levantar os braços e o lance tá salvo.',
+        quote: 'Adorei o Reprize, é simples de usar. É só levantar os braços e o lance tá salvo.',
       },
       lyandra: {
         tag: 'Futevôlei',
@@ -286,7 +286,7 @@ const ptBR: HomeCopy = {
       },
       yasmin: {
         tag: 'Beach tennis',
-        quote: 'Gostei demais do Revi. Sem cadastro e sem mandar vídeo para a nuvem, fico tranquila.',
+        quote: 'Gostei demais do Reprize. Sem cadastro e sem mandar vídeo para a nuvem, fico tranquila.',
       },
     },
   },
@@ -337,14 +337,14 @@ const ptBR: HomeCopy = {
         'Clipes acima de 15s, compilação e Apple Watch',
       ],
     },
-    note: 'Valores em reais na loja do Brasil; em outros países a loja mostra o preço local. Cancele quando quiser nas configurações da App Store ou do Google Play. O vídeo exportado no plano Grátis leva a marca d’água do Revi.',
+    note: 'Valores em reais na loja do Brasil; em outros países a loja mostra o preço local. Cancele quando quiser nas configurações da App Store ou do Google Play. O vídeo exportado no plano Grátis leva a marca d’água do Reprize.',
   },
   faq: {
     title: 'Perguntas frequentes',
     items: [
       {
         q: 'Meus vídeos vão para a nuvem?',
-        a: 'Não. Tudo fica no seu celular: o Revi não tem cadastro nem servidor de vídeos. Só as compras passam por serviços de terceiros (Apple, Google e RevenueCat). Os detalhes estão na Política de Privacidade.',
+        a: 'Não. Tudo fica no seu celular: o Reprize não tem cadastro nem servidor de vídeos. Só as compras passam por serviços de terceiros (Apple, Google e RevenueCat). Os detalhes estão na Política de Privacidade.',
       },
       {
         q: 'O app grava o jogo inteiro?',
@@ -352,7 +352,7 @@ const ptBR: HomeCopy = {
       },
       {
         q: 'O celular esquenta? E a bateria?',
-        a: 'Gravar vídeo continuamente exige do aparelho. O Revi apaga a tela depois de alguns segundos sem toque para poupar bateria e, se o celular esquentar, reduz a qualidade aos poucos (primeiro Full HD a 30 quadros, depois 720p) e avisa na tela. Se esquentar demais, a gravação para para proteger o aparelho. Em dia de sol forte, deixe o celular na sombra.',
+        a: 'Gravar vídeo continuamente exige do aparelho. O Reprize apaga a tela depois de alguns segundos sem toque para poupar bateria e, se o celular esquentar, reduz a qualidade aos poucos (primeiro Full HD a 30 quadros, depois 720p) e avisa na tela. Se esquentar demais, a gravação para para proteger o aparelho. Em dia de sol forte, deixe o celular na sombra.',
       },
       {
         q: 'Funciona no iPhone e no Android?',
@@ -378,10 +378,10 @@ const ptBR: HomeCopy = {
   },
   cta: {
     title: 'Nenhum lance perdido.',
-    subtitle: 'Baixe o Revi e deixe o celular ligado na quadra. O resto é jogo.',
+    subtitle: 'Baixe o Reprize e deixe o celular ligado na quadra. O resto é jogo.',
     legal: 'Disponível para iPhone e Android.',
   },
-  stickyLabel: 'Baixar o Revi',
+  stickyLabel: 'Baixar o Reprize',
 };
 
 const en: HomeCopy = {
@@ -407,7 +407,7 @@ const en: HomeCopy = {
     steps: [
       {
         title: 'Position',
-        body: 'Somewhere steady, facing the game. Revi shows a court guide and the horizon level.',
+        body: 'Somewhere steady, facing the game. Reprize shows a court guide and the horizon level.',
       },
       {
         title: 'Play',
@@ -461,7 +461,7 @@ const en: HomeCopy = {
     title: 'From play to story in two taps.',
     subtitle: 'Trim at the right spot, adjust the speed and send it anywhere.',
     items: [
-      { title: 'Precise trim', body: 'Set where the play starts and ends, within the stretch Revi kept.' },
+      { title: 'Precise trim', body: 'Set where the play starts and ends, within the stretch Reprize kept.' },
       { title: 'Speed, zoom and rotate', body: 'Speed it up, slow it down and frame the play the way it deserves.' },
       {
         title: 'Focus Mode',
@@ -474,7 +474,7 @@ const en: HomeCopy = {
   privacy: {
     eyebrow: 'Privacy',
     title: 'Records everything. Keeps only the play.',
-    body: 'While you play, Revi keeps only the most recent moments in your phone’s temporary memory. What falls behind is deleted on the spot. Only the plays you save stay.',
+    body: 'While you play, Reprize keeps only the most recent moments in your phone’s temporary memory. What falls behind is deleted on the spot. Only the plays you save stay.',
     bullets: [
       'No account, no login',
       'No video ever reaches our servers',
@@ -485,7 +485,7 @@ const en: HomeCopy = {
   },
   sports: {
     title: 'Any sport. Any court.',
-    subtitle: 'Mount the phone, start recording and play. Revi does not care which sport it is.',
+    subtitle: 'Mount the phone, start recording and play. Reprize does not care which sport it is.',
     credit: 'Photos and videos: Pexels.',
     nav: { region: 'Sports', prev: 'Previous sport', next: 'Next sport', slide: 'Sport {n} of {total}' },
     items: {
@@ -558,7 +558,7 @@ const en: HomeCopy = {
   },
   testimonials: {
     title: 'Hear it from people who tested it.',
-    subtitle: 'What players liked most about Revi.',
+    subtitle: 'What players liked most about Reprize.',
     items: {
       marcus: {
         tag: 'Basketball',
@@ -574,7 +574,7 @@ const en: HomeCopy = {
       },
       sara: {
         tag: 'Beach tennis',
-        quote: 'Loved Revi, it is so simple to use. Just raise your arms and the play is saved.',
+        quote: 'Loved Reprize, it is so simple to use. Just raise your arms and the play is saved.',
       },
       lyandra: {
         tag: 'Footvolley',
@@ -582,7 +582,7 @@ const en: HomeCopy = {
       },
       yasmin: {
         tag: 'Beach tennis',
-        quote: 'I really like Revi. No sign-up and no videos sent to the cloud, so I feel at ease.',
+        quote: 'I really like Reprize. No sign-up and no videos sent to the cloud, so I feel at ease.',
       },
     },
   },
@@ -633,14 +633,14 @@ const en: HomeCopy = {
         'Clips over 15s, compilations and Apple Watch',
       ],
     },
-    note: 'Prices in US dollars; your store shows the price in your local currency, with taxes where they apply. Cancel anytime in your App Store or Google Play settings. Videos exported on the Free plan carry the Revi watermark.',
+    note: 'Prices in US dollars; your store shows the price in your local currency, with taxes where they apply. Cancel anytime in your App Store or Google Play settings. Videos exported on the Free plan carry the Reprize watermark.',
   },
   faq: {
     title: 'Frequently asked questions',
     items: [
       {
         q: 'Do my videos go to the cloud?',
-        a: 'No. Everything stays on your phone: Revi has no sign-up and no video servers. Only purchases go through third-party services (Apple, Google and RevenueCat). Details are in the Privacy Policy.',
+        a: 'No. Everything stays on your phone: Reprize has no sign-up and no video servers. Only purchases go through third-party services (Apple, Google and RevenueCat). Details are in the Privacy Policy.',
       },
       {
         q: 'Does the app record the whole game?',
@@ -648,7 +648,7 @@ const en: HomeCopy = {
       },
       {
         q: 'Does the phone overheat? What about battery?',
-        a: 'Recording video continuously is demanding. Revi turns the screen off after a few seconds without a touch to save battery and, if the phone warms up, lowers the quality step by step (Full HD at 30 fps first, then 720p) and tells you on screen. If it gets too hot, the recording stops to protect the device. On a sunny day, keep the phone in the shade.',
+        a: 'Recording video continuously is demanding. Reprize turns the screen off after a few seconds without a touch to save battery and, if the phone warms up, lowers the quality step by step (Full HD at 30 fps first, then 720p) and tells you on screen. If it gets too hot, the recording stops to protect the device. On a sunny day, keep the phone in the shade.',
       },
       {
         q: 'Does it work on iPhone and Android?',
@@ -674,10 +674,10 @@ const en: HomeCopy = {
   },
   cta: {
     title: 'No play missed.',
-    subtitle: 'Download Revi and leave the phone running on the court. The rest is just playing.',
+    subtitle: 'Download Reprize and leave the phone running on the court. The rest is just playing.',
     legal: 'Available for iPhone and Android.',
   },
-  stickyLabel: 'Get Revi',
+  stickyLabel: 'Get Reprize',
 };
 
 const es: HomeCopy = {
@@ -703,7 +703,7 @@ const es: HomeCopy = {
     steps: [
       {
         title: 'Colócalo',
-        body: 'En un punto firme, de frente al juego. Revi muestra la guía de la cancha y el nivel del horizonte.',
+        body: 'En un punto firme, de frente al juego. Reprize muestra la guía de la cancha y el nivel del horizonte.',
       },
       {
         title: 'Juega',
@@ -757,7 +757,7 @@ const es: HomeCopy = {
     title: 'De la jugada al story en dos toques.',
     subtitle: 'Recorta en el punto justo, ajusta la velocidad y envíalo a donde quieras.',
     items: [
-      { title: 'Corte preciso', body: 'Ajusta dónde empieza y termina la jugada, dentro del tramo que Revi guardó.' },
+      { title: 'Corte preciso', body: 'Ajusta dónde empieza y termina la jugada, dentro del tramo que Reprize guardó.' },
       { title: 'Velocidad, zoom y giro', body: 'Acelera, ralentiza y encuadra la jugada como se merece.' },
       {
         title: 'Modo Enfoque',
@@ -770,7 +770,7 @@ const es: HomeCopy = {
   privacy: {
     eyebrow: 'Privacidad',
     title: 'Graba todo. Guarda solo la jugada.',
-    body: 'Mientras juegas, Revi mantiene solo los instantes más recientes en una memoria temporal del celular. Lo que queda atrás se borra al instante. Solo permanecen las jugadas que guardas.',
+    body: 'Mientras juegas, Reprize mantiene solo los instantes más recientes en una memoria temporal del celular. Lo que queda atrás se borra al instante. Solo permanecen las jugadas que guardas.',
     bullets: [
       'Sin cuenta y sin inicio de sesión',
       'Ningún video llega a nuestros servidores',
@@ -781,7 +781,7 @@ const es: HomeCopy = {
   },
   sports: {
     title: 'Cualquier deporte. Cualquier cancha.',
-    subtitle: 'Apoya el celular, empieza a grabar y juega. A Revi no le importa cuál sea el deporte.',
+    subtitle: 'Apoya el celular, empieza a grabar y juega. A Reprize no le importa cuál sea el deporte.',
     credit: 'Fotos y videos: Pexels.',
     nav: { region: 'Deportes', prev: 'Deporte anterior', next: 'Siguiente deporte', slide: 'Deporte {n} de {total}' },
     items: {
@@ -854,7 +854,7 @@ const es: HomeCopy = {
   },
   testimonials: {
     title: 'Lo cuentan quienes lo probaron.',
-    subtitle: 'Lo que más les gustó de Revi a quienes jugaron con la app.',
+    subtitle: 'Lo que más les gustó de Reprize a quienes jugaron con la app.',
     items: {
       marcus: {
         tag: 'Básquetbol',
@@ -870,7 +870,7 @@ const es: HomeCopy = {
       },
       sara: {
         tag: 'Tenis de playa',
-        quote: 'Me encantó Revi, es muy fácil de usar. Solo levantas los brazos y la jugada queda guardada.',
+        quote: 'Me encantó Reprize, es muy fácil de usar. Solo levantas los brazos y la jugada queda guardada.',
       },
       lyandra: {
         tag: 'Futvóley',
@@ -878,7 +878,7 @@ const es: HomeCopy = {
       },
       yasmin: {
         tag: 'Tenis de playa',
-        quote: 'Me gustó mucho Revi. Sin registro y sin enviar videos a la nube, estoy tranquila.',
+        quote: 'Me gustó mucho Reprize. Sin registro y sin enviar videos a la nube, estoy tranquila.',
       },
     },
   },
@@ -929,14 +929,14 @@ const es: HomeCopy = {
         'Clips de más de 15s, compilación y Apple Watch',
       ],
     },
-    note: 'Precios en dólares estadounidenses; tu tienda muestra el precio en tu moneda local, con impuestos donde correspondan. Cancela cuando quieras en los ajustes de la App Store o de Google Play. El video exportado en el plan Gratis lleva la marca de agua de Revi.',
+    note: 'Precios en dólares estadounidenses; tu tienda muestra el precio en tu moneda local, con impuestos donde correspondan. Cancela cuando quieras en los ajustes de la App Store o de Google Play. El video exportado en el plan Gratis lleva la marca de agua de Reprize.',
   },
   faq: {
     title: 'Preguntas frecuentes',
     items: [
       {
         q: '¿Mis videos van a la nube?',
-        a: 'No. Todo queda en tu celular: Revi no tiene registro ni servidor de videos. Solo las compras pasan por servicios de terceros (Apple, Google y RevenueCat). Los detalles están en la Política de Privacidad.',
+        a: 'No. Todo queda en tu celular: Reprize no tiene registro ni servidor de videos. Solo las compras pasan por servicios de terceros (Apple, Google y RevenueCat). Los detalles están en la Política de Privacidad.',
       },
       {
         q: '¿La app graba todo el partido?',
@@ -944,7 +944,7 @@ const es: HomeCopy = {
       },
       {
         q: '¿El celular se calienta? ¿Y la batería?',
-        a: 'Grabar video de forma continua exige mucho al aparato. Revi apaga la pantalla después de unos segundos sin toques para ahorrar batería y, si el celular se calienta, baja la calidad poco a poco (primero Full HD a 30 fps y luego 720p) y te avisa en la pantalla. Si se calienta demasiado, la grabación se detiene para proteger el aparato. En un día de sol, deja el celular a la sombra.',
+        a: 'Grabar video de forma continua exige mucho al aparato. Reprize apaga la pantalla después de unos segundos sin toques para ahorrar batería y, si el celular se calienta, baja la calidad poco a poco (primero Full HD a 30 fps y luego 720p) y te avisa en la pantalla. Si se calienta demasiado, la grabación se detiene para proteger el aparato. En un día de sol, deja el celular a la sombra.',
       },
       {
         q: '¿Funciona en iPhone y en Android?',
@@ -970,10 +970,10 @@ const es: HomeCopy = {
   },
   cta: {
     title: 'Ninguna jugada perdida.',
-    subtitle: 'Descarga Revi y deja el celular encendido en la cancha. Lo demás es jugar.',
+    subtitle: 'Descarga Reprize y deja el celular encendido en la cancha. Lo demás es jugar.',
     legal: 'Disponible para iPhone y Android.',
   },
-  stickyLabel: 'Descargar Revi',
+  stickyLabel: 'Descargar Reprize',
 };
 
 export const homeCopy: Record<Locale, HomeCopy> = { 'pt-BR': ptBR, en, es };
