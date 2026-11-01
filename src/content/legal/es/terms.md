@@ -1,22 +1,22 @@
 ---
 title: Términos de Uso
-description: Condiciones para usar la aplicación y el sitio de Revi, incluidos los planes, los pagos y las responsabilidades.
-updated: 2026-10-30
+description: Condiciones para usar la aplicación y el sitio de Reprize, incluidos los planes, los pagos y las responsabilidades.
+updated: 2026-11-01
 ---
 
 # Términos de Uso
 
-Estos Términos regulan el uso de la aplicación **Revi** y del sitio **userevi.app**. Al descargar, instalar o usar Revi, declaras que los leíste y que estás de acuerdo con ellos. Si no estás de acuerdo, no uses la aplicación. Esta versión en español se ofrece por conveniencia; la versión en portugués es la original.
+Estos Términos regulan el uso de la aplicación **Reprize** y del sitio **reprize.app**. Al descargar, instalar o usar Reprize, declaras que los leíste y que estás de acuerdo con ellos. Si no estás de acuerdo, no uses la aplicación. Esta versión en español se ofrece por conveniencia; la versión en portugués es la original.
 
 El tratamiento de los datos personales se describe en la [Política de Privacidad](/es/privacy), que forma parte de estos Términos.
 
 ## 1. Quiénes somos
 
-Revi es ofrecida por **Nexus Hub**, nombre comercial de **Victor Hugo Marques Ltda.**, CNPJ **64.669.130/0001-02**, São Paulo, Brasil. Contacto: [support@userevi.app](mailto:support@userevi.app).
+Reprize es ofrecida por **Nexus Hub**, nombre comercial de **Victor Hugo Marques Ltda.**, CNPJ **64.669.130/0001-02**, São Paulo, Brasil. Contacto: [support@reprize.app](mailto:support@reprize.app).
 
-## 2. Qué es Revi
+## 2. Qué es Reprize
 
-Revi usa la cámara de tu celular, fijado a una reja, a un trípode o a otro soporte, para mantener una grabación temporal de los últimos momentos de un juego. Cuando activas una forma de guardar (toque en la pantalla, gesto, voz, control Bluetooth, reloj u otro celular), la aplicación guarda la jugada reciente en tu dispositivo, y puedes editarla, exportarla y compartirla.
+Reprize usa la cámara de tu celular, fijado a una reja, a un trípode o a otro soporte, para mantener una grabación temporal de los últimos momentos de un juego. Cuando activas una forma de guardar (toque en la pantalla, gesto, voz, control Bluetooth, reloj u otro celular), la aplicación guarda la jugada reciente en tu dispositivo, y puedes editarla, exportarla y compartirla.
 
 **Tus grabaciones se quedan en tu celular.** No las recibimos ni las guardamos.
 
@@ -43,9 +43,9 @@ Salvo que la ley lo permita expresamente, no puedes: copiar, modificar, descompi
 
 ## 6. Tu contenido y tus grabaciones
 
-Las grabaciones y las jugadas **te pertenecen** (o pertenecen a quien tenga los derechos sobre ellas). Como Revi no recibe este contenido, **no adquirimos ningún derecho sobre él**.
+Las grabaciones y las jugadas **te pertenecen** (o pertenecen a quien tenga los derechos sobre ellas). Como Reprize no recibe este contenido, **no adquirimos ningún derecho sobre él**.
 
-Los videos exportados pueden incluir elementos gráficos de Revi, como el logotipo. Debes conservarlos cuando formen parte del video exportado, y puedes compartir el contenido libremente, sujeto a lo que sigue.
+Los videos exportados pueden incluir elementos gráficos de Reprize, como el logotipo. Debes conservarlos cuando formen parte del video exportado, y puedes compartir el contenido libremente, sujeto a lo que sigue.
 
 ## 7. Uso responsable y seguridad
 
@@ -61,13 +61,13 @@ Eres responsable de lo que grabas, editas y compartes con la aplicación.
 
 ## 8. Límites técnicos y ausencia de garantía de captura
 
-Revi depende de tu dispositivo, del sistema operativo, de la batería, del almacenamiento libre, de la temperatura (la aplicación puede bajar la calidad por sí sola para evitar el sobrecalentamiento), de la posición del celular y de formas de guardar como el gesto, la voz, el reloj y el control, que **pueden fallar o no reconocer un comando**.
+Reprize depende de tu dispositivo, del sistema operativo, de la batería, del almacenamiento libre, de la temperatura (la aplicación puede bajar la calidad por sí sola para evitar el sobrecalentamiento), de la posición del celular y de formas de guardar como el gesto, la voz, el reloj y el control, que **pueden fallar o no reconocer un comando**.
 
-Por eso **no garantizamos** que se capture todas las jugadas, que la imagen tenga una calidad determinada ni que la aplicación funcione sin interrupciones o errores. **No dependas de Revi como tu único registro** en situaciones en que perder un video pueda causar un daño significativo, como arbitraje oficial, pruebas o competencias con consecuencias. Guarda copias de lo que importa exportándolo a tu galería o a otro lugar.
+Por eso **no garantizamos** que se capture todas las jugadas, que la imagen tenga una calidad determinada ni que la aplicación funcione sin interrupciones o errores. **No dependas de Reprize como tu único registro** en situaciones en que perder un video pueda causar un daño significativo, como arbitraje oficial, pruebas o competencias con consecuencias. Guarda copias de lo que importa exportándolo a tu galería o a otro lugar.
 
 ## 9. Propiedad intelectual
 
-La aplicación, el sitio, el nombre y el logotipo **Revi**, el diseño, los textos y el código pertenecen a Nexus Hub o están licenciados a ella y están protegidos por la ley. Estos Términos no transfieren ningún derecho más allá de la licencia del punto 4. No puedes usar la marca Revi de una manera que sugiera patrocinio o alianza sin autorización por escrito.
+La aplicación, el sitio, el nombre y el logotipo **Reprize**, el diseño, los textos y el código pertenecen a Nexus Hub o están licenciados a ella y están protegidos por la ley. Estos Términos no transfieren ningún derecho más allá de la licencia del punto 4. No puedes usar la marca Reprize de una manera que sugiera patrocinio o alianza sin autorización por escrito.
 
 ## 10. Servicios de terceros
 
@@ -88,11 +88,11 @@ Nada en estos Términos limita los derechos que tienes por ley.
 
 ## 13. Suspensión y terminación
 
-Puedes dejar de usar Revi en cualquier momento desinstalando la aplicación y cancelando las suscripciones activas en la tienda. Podemos suspender o terminar tu acceso a las funciones de pago en caso de infracción grave de estos Términos, fraude o exigencia legal, dándote la oportunidad de explicarte cuando sea razonable.
+Puedes dejar de usar Reprize en cualquier momento desinstalando la aplicación y cancelando las suscripciones activas en la tienda. Podemos suspender o terminar tu acceso a las funciones de pago en caso de infracción grave de estos Términos, fraude o exigencia legal, dándote la oportunidad de explicarte cuando sea razonable.
 
 ## 14. Cambios en estos Términos
 
-Podemos actualizar estos Términos. La versión vigente está en [userevi.app/es/terms](/es/terms), con la fecha de la última actualización. Ante cambios relevantes, te avisaremos en la aplicación o en el sitio con un plazo razonable. Si sigues usando la aplicación después de que la nueva versión entre en vigor, esta se te aplica. Si no estás de acuerdo, deja de usar la aplicación y cancela las suscripciones.
+Podemos actualizar estos Términos. La versión vigente está en [reprize.app/es/terms](/es/terms), con la fecha de la última actualización. Ante cambios relevantes, te avisaremos en la aplicación o en el sitio con un plazo razonable. Si sigues usando la aplicación después de que la nueva versión entre en vigor, esta se te aplica. Si no estás de acuerdo, deja de usar la aplicación y cancela las suscripciones.
 
 ## 15. Ley aplicable y jurisdicción
 
@@ -100,8 +100,8 @@ Estos Términos se rigen por las **leyes de Brasil**. En las relaciones de consu
 
 ## 16. Disposiciones generales
 
-Si alguna parte de estos Términos se considera inválida, las demás siguen en vigor. La tolerancia ante un incumplimiento no significa renuncia a derechos. Estos Términos, junto con la Política de Privacidad, son el acuerdo completo entre tú y nosotros sobre el uso de Revi.
+Si alguna parte de estos Términos se considera inválida, las demás siguen en vigor. La tolerancia ante un incumplimiento no significa renuncia a derechos. Estos Términos, junto con la Política de Privacidad, son el acuerdo completo entre tú y nosotros sobre el uso de Reprize.
 
 ## 17. Contacto
 
-Dudas, soporte y quejas: [support@userevi.app](mailto:support@userevi.app).
+Dudas, soporte y quejas: [support@reprize.app](mailto:support@reprize.app).

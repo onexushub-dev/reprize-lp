@@ -6,8 +6,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://userevi.app',
-  // The store listings point to userevi.app/privacy and userevi.app/terms, so canonical URLs have no trailing slash.
+  site: 'https://reprize.app',
+  // The store listings point to reprize.app/privacy and reprize.app/terms, so canonical URLs have no trailing slash.
   trailingSlash: 'never',
 
   i18n: {
