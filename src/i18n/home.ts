@@ -94,7 +94,7 @@ const ptBR: HomeCopy = {
     title: 'Seu lance. De novo.',
     subtitle:
       'Apoie o celular, jogue à vontade e guarde só a jogada que valeu. Sem cadastro, sem nuvem.',
-    note: 'Grátis para começar · Para iPhone',
+    note: 'Grátis para começar',
     screen: {
       rec: 'Gravando',
       plays: 'Lances',
@@ -104,10 +104,10 @@ const ptBR: HomeCopy = {
       savedVia: 'via gesto · 15s',
     },
   },
-  facts: ['Sem cadastro', 'Tudo fica no seu celular', 'Grátis, com gravações ilimitadas'],
+  facts: ['Sem cadastro', 'Tudo fica no seu celular', 'Comece grátis'],
   how: {
     title: 'Grave tudo. Guarde só o melhor.',
-    subtitle: 'Três passos entre o ponto e o post.',
+    subtitle: 'Três passos entre o lance e o post.',
     steps: [
       {
         title: 'Posicione',
@@ -393,7 +393,7 @@ const en: HomeCopy = {
     title: 'Your play. Again.',
     subtitle:
       'Set the phone down, play on, and keep only the play that mattered. No sign-up, no cloud.',
-    note: 'Free to start · For iPhone',
+    note: 'Free to start',
     screen: {
       rec: 'Recording',
       plays: 'Plays',
@@ -403,10 +403,10 @@ const en: HomeCopy = {
       savedVia: 'via gesture · 15s',
     },
   },
-  facts: ['No sign-up', 'Everything stays on your phone', 'Free, with unlimited recordings'],
+  facts: ['No sign-up', 'Everything stays on your phone', 'Start free'],
   how: {
     title: 'Record everything. Keep the best.',
-    subtitle: 'Three steps from the point to the post.',
+    subtitle: 'Three steps from the play to the post.',
     steps: [
       {
         title: 'Position',
