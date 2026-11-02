@@ -48,6 +48,13 @@ const ogLocale = { 'pt-BR': 'pt_BR', en: 'en_US' }[locale];
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0A0A0A" />
     <meta name="theme-color" content="#0A0A0A" />
+    <script is:inline>
+      // Set the saved theme before the first paint, so a light page never flashes dark.
+      try {
+        var saved = localStorage.getItem('reprize-theme');
+        if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+      } catch (e) {}
+    </script>
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={t('meta.siteName')} />

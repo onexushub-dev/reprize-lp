@@ -1,7 +1,10 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import BrandLogo from './brand-logo.astro';
+import Flag from './flag.astro';
 import LanguageSwitcher from './language-switcher.astro';
-import { useTranslations, type Locale } from '../i18n/ui';
+import ThemeToggle from './theme-toggle.astro';
+import { localeMeta, locales, useTranslations, type Locale } from '../i18n/ui';
 
 interface Props {
   locale: Locale;
@@ -10,19 +13,140 @@ interface Props {
 
 const { locale, slug } = Astro.props;
 const t = useTranslations(locale);
+
+// The download button goes to the App Store (iPhone first). While there is no listing yet, it goes to the download
+// section of the home page, where the stores show as "coming soon".
+const appStoreUrl = import.meta.env.PUBLIC_APP_STORE_URL || undefined;
+const downloadHref = appStoreUrl ?? `${getRelativeLocaleUrl(locale, '')}#download`;
 ---
 
-<header class="border-line border-b">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
-    <a href={getRelativeLocaleUrl(locale, '')} aria-label={t('a11y.home')}>
-      <img
-        src="/brand/reprize-horizontal-fundo-escuro.svg"
-        alt="Reprize"
-        width="185"
-        height="36"
-        class="h-9 w-auto"
-      />
+<header class="border-line bg-ink/85 sticky top-0 z-40 border-b backdrop-blur-md" data-site-header>
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2.5 sm:gap-4 sm:px-6 sm:py-4">
+    <a href={getRelativeLocaleUrl(locale, '')} aria-label={t('a11y.home')} class="shrink-0">
+      <BrandLogo name="horizontal" alt="Reprize" width={185} height={36} class="h-6 w-auto sm:h-9" />
     </a>
-    <LanguageSwitcher locale={locale} slug={slug} />
+    <div class="flex items-center gap-2 sm:gap-3">
+      <!-- Language and theme sit in the bar on wide screens and in the menu on phones. -->
+      <div class="hidden items-center gap-3 sm:flex">
+        <LanguageSwitcher locale={locale} slug={slug} />
+        <ThemeToggle locale={locale} />
+      </div>
+      <a
+        href={downloadHref}
+        class="bg-amber text-ink hover:bg-amber/90 inline-flex shrink-0 items-center gap-1.5 rounded-full py-2 pr-4 pl-3.5 text-sm font-extrabold transition-colors"
+      >
+        <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4M8 10l4 4 4-4M12 3v11"></path></svg>
+        {t('nav.download')}
+      </a>
+      <button
+        type="button"
+        data-menu-button
+        data-label-open={t('nav.openMenu')}
+        data-label-close={t('nav.closeMenu')}
+        aria-label={t('nav.openMenu')}
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="border-line hover:border-amber hover:text-amber flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-full border transition-colors sm:hidden"
+      >
+        <svg viewBox="0 0 24 24" class="menu-icon-open size-[18px]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        <svg viewBox="0 0 24 24" class="menu-icon-close hidden size-[18px]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Phone menu: language and theme. -->
+  <div id="mobile-menu" hidden class="border-line border-t px-4 pt-3 pb-4 sm:hidden">
+    <p class="text-muted px-1 pb-2 text-xs font-bold tracking-widest uppercase">{t('lang.label')}</p>
+    <ul class="grid gap-1">
+      {
+        locales.map((l) => {
+          const meta = localeMeta[l];
+          const current = l === locale;
+          return (
+            <li>
+              <a
+                href={getRelativeLocaleUrl(l, slug)}
+                hreflang={l}
+                lang={l}
+                aria-current={current ? 'true' : undefined}
+                class:list={['hover:bg-surface flex items-center gap-3 rounded-xl px-3 py-3 text-base font-semibold', current && 'text-amber']}
+              >
+                <Flag code={meta.flag} />
+                <span class="flex-1">{meta.label}</span>
+                {current && (
+                  <svg viewBox="0 0 12 12" width="14" height="14" aria-hidden="true">
+                    <path d="m2.2 6.4 2.4 2.4 5.2-5.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                )}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <div class="border-line mt-3 border-t pt-2">
+    <button
+      type="button"
+      data-theme-toggle
+      data-label-to-light={t('theme.toLight')}
+      data-label-to-dark={t('theme.toDark')}
+      class="hover:bg-surface flex w-full cursor-pointer items-center gap-3 rounded-xl px-3 py-3 text-left text-base font-semibold"
+    >
+      <svg viewBox="0 0 24 24" class="theme-icon-sun size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+      </svg>
+      <svg viewBox="0 0 24 24" class="theme-icon-moon size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+      </svg>
+      <span class="theme-text-to-light">{t('theme.toLight')}</span>
+      <span class="theme-text-to-dark">{t('theme.toDark')}</span>
+    </button>
+    </div>
   </div>
 </header>
+
+<style is:global>
+  .theme-text-to-dark {
+    display: none;
+  }
+
+  html[data-theme='light'] .theme-text-to-light {
+    display: none;
+  }
+
+  html[data-theme='light'] .theme-text-to-dark {
+    display: inline;
+  }
+</style>
+
+<script>
+  const header = document.querySelector<HTMLElement>('[data-site-header]');
+  const button = header?.querySelector<HTMLButtonElement>('[data-menu-button]');
+  const menu = header?.querySelector<HTMLElement>('#mobile-menu');
+
+  function setOpen(open: boolean) {
+    if (!button || !menu) return;
+    menu.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+    const label = open ? button.dataset.labelClose : button.dataset.labelOpen;
+    if (label) button.setAttribute('aria-label', label);
+    button.querySelector('.menu-icon-open')?.classList.toggle('hidden', open);
+    button.querySelector('.menu-icon-close')?.classList.toggle('hidden', !open);
+  }
+
+  if (header && button && menu) {
+    button.addEventListener('click', () => setOpen(menu.hidden));
+    // Closes on a tap outside the header, on Escape, and when the screen grows past the phone layout.
+    document.addEventListener('click', (event) => {
+      if (!menu.hidden && !header.contains(event.target as Node)) setOpen(false);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !menu.hidden) {
+        setOpen(false);
+        button.focus();
+      }
+    });
+    window.matchMedia('(min-width: 40rem)').addEventListener('change', (e) => e.matches && setOpen(false));
+  }
+</script>

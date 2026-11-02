@@ -1,0 +1,34 @@
+---
+/**
+ * The Reprize logo in both versions (public/brand): the one for dark backgrounds and the one for light backgrounds.
+ * The theme (html[data-theme], see global.css) shows one of them.
+ */
+interface Props {
+  name: 'horizontal' | 'palavra' | 'simbolo';
+  width: number;
+  height: number;
+  alt?: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const { name, width, height, alt = '', class: className, loading } = Astro.props;
+---
+
+<img
+  src={`/brand/reprize-${name}-fundo-escuro.svg`}
+  alt={alt}
+  width={width}
+  height={height}
+  class:list={['logo-dark', className]}
+  loading={loading}
+/>
+<img
+  src={`/brand/reprize-${name}-fundo-claro.svg`}
+  alt={alt}
+  width={width}
+  height={height}
+  class:list={['logo-light', className]}
+  loading={loading}
+  aria-hidden={alt === '' ? undefined : 'true'}
+/>
