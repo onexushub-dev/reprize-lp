@@ -2,41 +2,108 @@
 import PhoneVideo from './phone-video.astro';
 import type { HomeCopy } from '../../i18n/home';
 
+/**
+ * The app's recording screen (RecordingPanel + SavedOverlay in the reprize app), shown at the moment a clip is saved
+ * with the Bluetooth remote. Texts come from the app's own catalogs; the icons are the app's (components/icons.tsx).
+ */
 interface Props {
   copy: HomeCopy['hero']['screen'];
 }
 
 const { copy } = Astro.props;
+const stroke = { fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' } as const;
 ---
 
-<div class="rec" aria-hidden="true">
+<div class="rec" aria-hidden="true" data-save-at="10.0" data-save-until="10.9">
   <PhoneVideo name="beach-tennis-hero" eager />
 
   <div class="rec__top">
-    <span class="rec__pill"><span class="rec__dot"></span>{copy.rec}</span>
-    <span class="rec__pill">12:08</span>
-  </div>
-
-  <div class="rec__count">
-    <span class="rec__count-label">{copy.plays}</span>
-    <span class="rec__count-num">
-      <span class="old">02</span>
-      <span class="new">03</span>
+    <span class="rec__pill">
+      <span class="rec__dot"></span>
+      <span class="rec__label">{copy.rec}</span>
+      <span class="rec__elapsed">{copy.elapsed}</span>
+    </span>
+    <span class="rec__pill rec__pill--count">
+      <span class="old">{copy.clipsBefore}</span>
+      <span class="new">{copy.clips}</span>
     </span>
   </div>
 
-  <div class="rec__flash"></div>
-
-  <div class="rec__toast">
-    <strong>{copy.savedTitle}</strong>
-    <span>{copy.savedVia}</span>
+  <div class="rec__bottom">
+    <div class="rec__hint-card">
+      <div class="rec__hint-head">
+        <svg viewBox="0 0 24 24" stroke="#FFB000" stroke-width="1.8" {...stroke}>
+          <path d="M9 11V5a1.5 1.5 0 0 1 3 0v6M12 10V4a1.5 1.5 0 0 1 3 0v7M15 10.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.5 15a1.5 1.5 0 0 1 2.5-1.7L9 16"></path>
+        </svg>
+        <span class="rec__hint">{copy.hint}</span>
+      </div>
+      <div class="rec__ways">
+        <span class="rec__way">
+          <svg viewBox="0 0 24 24" stroke="#FFB000" stroke-width="2.2" {...stroke}>
+            <circle cx="12" cy="9" r="2.3"></circle>
+            <path d="M12 11.8v5.2M8.4 22.2l3.6-5.2 3.6 5.2M10.6 12.6 5.6 3.4M13.4 12.6l5-9.2M2.6 5.2c-.5-1.2-.4-2.4.3-3.4M21.4 5.2c.5-1.2.4-2.4-.3-3.4"></path>
+          </svg>
+          {copy.wayWave}
+        </span>
+        <span class="rec__way rec__way--hit">
+          <svg viewBox="0 0 24 24" stroke="#FFB000" stroke-width="1.8" {...stroke}>
+            <path d="M7 7l10 10-5 5V2l5 5L7 17"></path>
+          </svg>
+          {copy.wayRemote}
+        </span>
+        <span class="rec__way">
+          <svg viewBox="0 0 24 24" stroke="#FFB000" stroke-width="1.8" {...stroke}>
+            <rect x="6" y="6" width="12" height="12" rx="3"></rect>
+            <path d="M9 6V2h6v4M9 18v4h6v-4"></path>
+          </svg>
+          {copy.wayWatch}
+        </span>
+      </div>
+    </div>
+    <div class="rec__hold">{copy.hold}</div>
   </div>
 
-  <div class="rec__bottom">
-    <div class="rec__buffer">
-      <span>{copy.buffer}</span>
-      <div class="rec__buffer-track"><div class="rec__buffer-fill"></div></div>
+  <div class="rec__saved">
+    <div class="rec__saved-card">
+      <div class="rec__saved-row">
+        <span class="rec__badge">
+          <svg viewBox="0 0 24 24" stroke="#0A0A0A" stroke-width="2.6" {...stroke}>
+            <path d="M5 12l5 5L20 7"></path>
+          </svg>
+        </span>
+        <div>
+          <strong class="rec__saved-title">{copy.savedTitle}</strong>
+          <span class="rec__saved-via">{copy.savedVia}</span>
+        </div>
+      </div>
+      <div class="rec__undo">{copy.undo}</div>
     </div>
-    <span class="rec__hint">{copy.hint}</span>
   </div>
 </div>
+
+<script>
+  // The "clip saved" card follows the video, not a timer of its own: once per loop, after the player's point, when he
+  // reacts and looks at the crowd. The count goes from 2 to 3 clips at that moment and back to 2 when the video starts
+  // over. The seconds (of beach-tennis-hero.mp4) are on the root element.
+  const rec = document.querySelector<HTMLElement>('.rec');
+  const video = rec?.querySelector('video');
+  if (rec && video) {
+    const from = Number(rec.dataset.saveAt);
+    const to = Number(rec.dataset.saveUntil);
+    const sync = () => {
+      const t = video.currentTime;
+      rec.toggleAttribute('data-saved', t >= from && t < to);
+      rec.toggleAttribute('data-counted', t >= from);
+    };
+    // Every frame where the browser can tell (smooth edges), and the media events as the safety net.
+    if ('requestVideoFrameCallback' in video) {
+      const tick = () => {
+        sync();
+        video.requestVideoFrameCallback(tick);
+      };
+      video.requestVideoFrameCallback(tick);
+    }
+    video.addEventListener('timeupdate', sync);
+    video.addEventListener('seeked', sync);
+  }
+</script>
