@@ -24,13 +24,20 @@ export interface HomeCopy {
     title: string;
     subtitle: string;
     note: string;
+    /** The app's recording screen, texts as in the app (reprize/app/src/i18n/locales). */
     screen: {
       rec: string;
-      plays: string;
-      buffer: string;
+      elapsed: string;
+      clips: string;
+      clipsBefore: string;
       hint: string;
+      wayWave: string;
+      wayRemote: string;
+      wayWatch: string;
+      hold: string;
       savedTitle: string;
       savedVia: string;
+      undo: string;
     };
   };
   facts: string[];
@@ -49,7 +56,19 @@ export interface HomeCopy {
     title: string;
     subtitle: string;
     items: { title: string; body: string }[];
-    screen: { cut: string; speed: string; focus: string; zoom: string; save: string; share: string };
+    /** The app's clip edit mode with Modo Foco open, texts as in the app. */
+    screen: {
+      cancel: string;
+      title: string;
+      done: string;
+      focusTitle: string;
+      focusHint: string;
+      focusHold: string;
+      trimBefore: string;
+      trimCut: string;
+      trimTrigger: string;
+      tools: { focus: string; speed: string; sound: string; zoom: string; rotate: string };
+    };
   };
   privacy: {
     eyebrow: string;
@@ -97,11 +116,17 @@ const ptBR: HomeCopy = {
     note: 'Grátis para começar · Para iPhone',
     screen: {
       rec: 'Gravando',
-      plays: 'Lances',
-      buffer: 'Últimos 15s prontos',
-      hint: 'Acene com os braços para salvar',
-      savedTitle: 'Clipe #3 salvo',
-      savedVia: 'via gesto · 15s',
+      elapsed: '00:12:08',
+      clips: '3 clipes',
+      clipsBefore: '2 clipes',
+      hint: 'Toque na tela para salvar os últimos 15s',
+      wayWave: 'Acene',
+      wayRemote: 'Controle',
+      wayWatch: 'Apple Watch',
+      hold: 'Segure para encerrar a gravação',
+      savedTitle: 'CLIPE #3 SALVO',
+      savedVia: 'Via Controle · 15s',
+      undo: 'Desfazer',
     },
   },
   facts: ['Sem cadastro', 'Tudo fica no seu celular', 'Grátis, com gravações ilimitadas'],
@@ -167,7 +192,18 @@ const ptBR: HomeCopy = {
       },
       { title: 'Compilação de clipes', body: 'Junte os clipes de uma gravação num vídeo só. Recurso do PRO.' },
     ],
-    screen: { cut: 'Corte', speed: 'Velocidade', focus: 'Foco', zoom: 'Zoom', save: 'Salvar', share: 'Enviar' },
+    screen: {
+      cancel: 'Cancelar',
+      title: 'EDITAR',
+      done: 'Concluir',
+      focusTitle: 'Modo Foco',
+      focusHint: 'A câmera acompanha o lance, com zoom quando a jogada se concentra.',
+      focusHold: 'Mantenha o dedo pressionado no vídeo para ver o clipe original',
+      trimBefore: '-7s',
+      trimCut: 'Corte: 5s',
+      trimTrigger: 'gatilho',
+      tools: { focus: 'Foco', speed: 'Velocidade', sound: 'Som', zoom: 'Zoom', rotate: 'Girar' },
+    },
   },
   privacy: {
     eyebrow: 'Privacidade',
@@ -396,11 +432,17 @@ const en: HomeCopy = {
     note: 'Free to start · For iPhone',
     screen: {
       rec: 'Recording',
-      plays: 'Plays',
-      buffer: 'Last 15s ready',
-      hint: 'Wave your arms to save',
-      savedTitle: 'Clip #3 saved',
-      savedVia: 'via gesture · 15s',
+      elapsed: '00:12:08',
+      clips: '3 clips',
+      clipsBefore: '2 clips',
+      hint: 'Tap the screen to save the last 15s',
+      wayWave: 'Wave',
+      wayRemote: 'Remote',
+      wayWatch: 'Apple Watch',
+      hold: 'Hold to end the recording',
+      savedTitle: 'CLIP #3 SAVED',
+      savedVia: 'Via Remote · 15s',
+      undo: 'Undo',
     },
   },
   facts: ['No sign-up', 'Everything stays on your phone', 'Free, with unlimited recordings'],
@@ -466,7 +508,18 @@ const en: HomeCopy = {
       },
       { title: 'Clip compilations', body: 'Join a recording’s clips into a single video. A PRO feature.' },
     ],
-    screen: { cut: 'Trim', speed: 'Speed', focus: 'Focus', zoom: 'Zoom', save: 'Save', share: 'Share' },
+    screen: {
+      cancel: 'Cancel',
+      title: 'EDIT',
+      done: 'Done',
+      focusTitle: 'Focus Mode',
+      focusHint: 'The camera follows the play, zooming in when the action gathers.',
+      focusHold: 'Hold your finger on the video to see the original clip',
+      trimBefore: '-7s',
+      trimCut: 'Trim: 5s',
+      trimTrigger: 'trigger',
+      tools: { focus: 'Focus', speed: 'Speed', sound: 'Sound', zoom: 'Zoom', rotate: 'Rotate' },
+    },
   },
   privacy: {
     eyebrow: 'Privacy',
