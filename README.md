@@ -1,6 +1,6 @@
 # Reprize LP
 
-Landing page do Reprize (https://reprize.app), em Astro 7 + Tailwind v4 + TypeScript. Português (BR) na raiz, inglês em `/en`.
+Landing page do Reprize (https://reprizeapp.com), em Astro 7 + Tailwind v4 + TypeScript. Português (BR) na raiz, inglês em `/en`.
 
 ## Requisitos
 
@@ -37,7 +37,7 @@ Copie `.env.example` para `.env` e preencha `PUBLIC_APP_STORE_URL` e `PUBLIC_PLA
 
 ## Rotas legais
 
-As lojas apontam para `reprize.app/privacy` e `reprize.app/terms`. Por isso as URLs não têm barra final (`trailingSlash: 'never'`).
+As lojas apontam para `reprizeapp.com/privacy` e `reprizeapp.com/terms`. Por isso as URLs não têm barra final (`trailingSlash: 'never'`).
 
 ## Prints do app
 

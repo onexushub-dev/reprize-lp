@@ -6,13 +6,13 @@ updated: 2026-11-02
 
 # Termos de Uso
 
-Estes Termos regulam o uso do aplicativo **Reprize** e do site **reprize.app**. Ao baixar, instalar ou usar o Reprize, você declara que leu e concorda com eles. Se não concordar, não use o app.
+Estes Termos regulam o uso do aplicativo **Reprize** e do site **reprizeapp.com**. Ao baixar, instalar ou usar o Reprize, você declara que leu e concorda com eles. Se não concordar, não use o app.
 
 O tratamento de dados pessoais está descrito na [Política de Privacidade](/privacy), que faz parte destes Termos.
 
 ## 1. Quem somos
 
-O Reprize é oferecido pela **Nexus Hub**, nome fantasia de **Victor Hugo Marques Ltda.**, CNPJ **64.669.130/0001-02**, São Paulo/SP. Contato: [support@reprize.app](mailto:support@reprize.app).
+O Reprize é oferecido pela **Nexus Hub**, CNPJ **64.669.130/0001-02**, São Paulo/SP. Contato: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
 
 ## 2. O que é o Reprize
 
@@ -92,7 +92,7 @@ Você pode parar de usar o Reprize a qualquer momento, desinstalando o app e can
 
 ## 14. Alterações nestes Termos
 
-Podemos atualizar estes Termos. A versão vigente fica em [reprize.app/terms](/terms), com a data da última atualização. Em mudanças relevantes, avisaremos no app ou no site com antecedência razoável. Se você continuar usando o app após a vigência da nova versão, ela passa a valer para você. Se não concordar, deixe de usar o app e cancele eventuais assinaturas.
+Podemos atualizar estes Termos. A versão vigente fica em [reprizeapp.com/terms](/terms), com a data da última atualização. Em mudanças relevantes, avisaremos no app ou no site com antecedência razoável. Se você continuar usando o app após a vigência da nova versão, ela passa a valer para você. Se não concordar, deixe de usar o app e cancele eventuais assinaturas.
 
 ## 15. Lei aplicável e foro
 
@@ -104,4 +104,4 @@ Se alguma parte destes Termos for considerada inválida, as demais continuam em 
 
 ## 17. Contato
 
-Dúvidas, suporte e reclamações: [support@reprize.app](mailto:support@reprize.app).
+Dúvidas, suporte e reclamações: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).

@@ -6,7 +6,7 @@ updated: 2026-11-02
 
 # Política de Privacidade
 
-Esta Política explica quais dados pessoais são tratados quando você usa o aplicativo **Reprize** e o site **reprize.app**, por que são tratados e quais são os seus direitos, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, a "LGPD").
+Esta Política explica quais dados pessoais são tratados quando você usa o aplicativo **Reprize** e o site **reprizeapp.com**, por que são tratados e quais são os seus direitos, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, a "LGPD").
 
 > **Resumo em linguagem simples**
 >
@@ -17,9 +17,9 @@ Esta Política explica quais dados pessoais são tratados quando você usa o apl
 
 ## 1. Quem é o responsável
 
-O controlador dos dados é a **Nexus Hub**, nome fantasia de **Victor Hugo Marques Ltda.**, inscrita no CNPJ sob o nº **64.669.130/0001-02**, com sede em São Paulo/SP ("**Reprize**", "**nós**").
+O controlador dos dados é a **Nexus Hub**, inscrita no CNPJ sob o nº **64.669.130/0001-02**, com sede em São Paulo/SP ("**Reprize**", "**nós**").
 
-Canal de contato para privacidade, incluindo o exercício dos seus direitos: [support@reprize.app](mailto:support@reprize.app).
+Canal de contato para privacidade, incluindo o exercício dos seus direitos: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
 
 ## 2. Dados que ficam apenas no seu celular
 
@@ -67,15 +67,17 @@ Para entender como o app é usado e melhorá-lo, o Reprize mede o uso de forma *
 - **O que nunca enviamos:** vídeos, áudio, fotos, nomes de arquivos ou de aparelhos, textos digitados nem mensagens de erro.
 - **Sem identificar você:** usamos um código aleatório gerado no seu celular na instalação. Não ligamos esse código a nome, e-mail, conta, identificador de publicidade ou endereço IP, e não criamos perfis de pessoas.
 - **Quem processa:** a **PostHog Inc.** (EUA), que recebe esses eventos em nosso nome. A política dela está em [posthog.com/privacy](https://posthog.com/privacy).
-- **Se preferir não ser medido:** o app ainda não tem um botão para desligar a medição. Escreva para [support@reprize.app](mailto:support@reprize.app) e trataremos o seu pedido.
+- **Se preferir não ser medido:** o app ainda não tem um botão para desligar a medição. Escreva para [reprize.app@gmail.com](mailto:reprize.app@gmail.com) e trataremos o seu pedido.
 
 ## 6. Dados que você nos envia por e-mail
 
 Se você escrever para o suporte, trataremos seu **e-mail, nome (se informado) e o conteúdo da mensagem** para responder. Por favor, não envie vídeos ou dados que não sejam necessários ao atendimento.
 
-## 7. Site reprize.app
+## 7. Site reprizeapp.com
 
-O site é estático e **não usa cookies de publicidade nem de rastreamento**. A hospedagem (Vercel Inc.) pode registrar dados técnicos de acesso, como endereço IP, data e hora, páginas acessadas e tipo de navegador, para entregar o site, garantir a segurança e prevenir abusos. Se adotarmos ferramentas de medição de audiência, atualizaremos esta Política antes de ativá-las.
+O site é estático e **não usa cookies**, nem de publicidade nem de rastreamento. A hospedagem (Vercel Inc.) pode registrar dados técnicos de acesso, como endereço IP, data e hora, páginas acessadas e tipo de navegador, para entregar o site, garantir a segurança e prevenir abusos.
+
+Para saber quantas pessoas visitam o site e de onde elas chegam, usamos o **Vercel Web Analytics**, que mede a audiência de forma **anônima e sem cookies**. Ele registra o horário, a página visitada, o site de origem, a localização aproximada (país, estado e cidade), o sistema, o navegador e o tipo de aparelho. Ele não grava nada no seu navegador, não usa o seu endereço IP para identificar você e não acompanha você entre sites: o visitante é identificado por um código gerado a partir da requisição, descartado em até 24 horas. Os dados são usados só em estatísticas agregadas.
 
 ## 8. Informações agregadas das lojas
 
@@ -90,6 +92,7 @@ A Apple e o Google podem nos fornecer estatísticas agregadas (como downloads, p
 | Usar câmera, microfone, fala, fotos, Bluetooth e rede local | Consentimento, dado por você nas permissões do sistema |
 | Atender pedidos de suporte e de direitos do titular | Execução de contrato e cumprimento de obrigação legal |
 | Medir o uso do app de forma anônima para melhorá-lo | Legítimo interesse |
+| Medir a audiência do site de forma anônima | Legítimo interesse |
 | Segurança, prevenção a fraudes e abusos | Legítimo interesse |
 | Cumprir obrigações legais e fiscais | Cumprimento de obrigação legal |
 
@@ -100,7 +103,7 @@ A Apple e o Google podem nos fornecer estatísticas agregadas (como downloads, p
 - **Apple e Google**, para distribuição do app e pagamentos;
 - **RevenueCat**, para gerenciar assinaturas;
 - **PostHog**, para medir o uso do app de forma anônima;
-- **Vercel**, para hospedar o site;
+- **Vercel**, para hospedar o site e medir a audiência dele de forma anônima;
 - **autoridades públicas**, quando exigido por lei ou ordem judicial.
 
 Quando **você** compartilha um lance por WhatsApp, Instagram ou outro aplicativo, o envio é feito por você, e o tratamento passa a seguir a política do aplicativo escolhido.
@@ -115,13 +118,13 @@ RevenueCat, PostHog e Vercel podem tratar dados fora do Brasil, inclusive nos Es
 - **Dados de compra e assinatura:** pelo tempo da relação com você e pelos prazos legais, fiscais e de defesa em processos.
 - **Métricas anônimas de uso:** pelo prazo configurado no serviço de análise e só enquanto forem úteis para melhorar o app.
 - **Mensagens de suporte:** pelo tempo necessário para o atendimento e para a defesa de direitos.
-- **Registros técnicos do site:** pelo período curto definido pelo provedor de hospedagem.
+- **Registros técnicos e estatísticas do site:** pelo período curto definido pelo provedor de hospedagem e, nas estatísticas de audiência, apenas de forma agregada.
 
 ## 13. Seus direitos
 
 Você pode pedir, a qualquer momento e gratuitamente (LGPD, art. 18): confirmação de que tratamos seus dados; acesso; correção; anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade; portabilidade; informação sobre com quem compartilhamos; informação sobre a possibilidade de não consentir e suas consequências; revogação do consentimento; e oposição a tratamento irregular.
 
-Para exercer seus direitos, escreva para [support@reprize.app](mailto:support@reprize.app). Podemos pedir informações para confirmar quem você é e responderemos nos prazos da lei. Como não mantemos suas gravações nem uma conta sua, os dados que existem só no seu aparelho estão sob seu controle direto.
+Para exercer seus direitos, escreva para [reprize.app@gmail.com](mailto:reprize.app@gmail.com). Podemos pedir informações para confirmar quem você é e responderemos nos prazos da lei. Como não mantemos suas gravações nem uma conta sua, os dados que existem só no seu aparelho estão sob seu controle direto.
 
 Você também pode reclamar à **Autoridade Nacional de Proteção de Dados (ANPD)**, em [gov.br/anpd](https://www.gov.br/anpd).
 
@@ -139,8 +142,8 @@ Adotamos medidas técnicas e organizacionais razoáveis para proteger os dados q
 
 ## 17. Mudanças nesta Política
 
-Podemos atualizar esta Política. A versão vigente fica sempre em [reprize.app/privacy](/privacy), com a data da última atualização. Em mudanças relevantes, avisaremos no app ou no site.
+Podemos atualizar esta Política. A versão vigente fica sempre em [reprizeapp.com/privacy](/privacy), com a data da última atualização. Em mudanças relevantes, avisaremos no app ou no site.
 
 ## 18. Contato
 
-Dúvidas, pedidos e reclamações sobre privacidade: [support@reprize.app](mailto:support@reprize.app).
+Dúvidas, pedidos e reclamações sobre privacidade: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
