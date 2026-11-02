@@ -26,13 +26,13 @@ Cada foto foi baixada em alta resolução e cortada uma vez em 4:5 (1080x1350) e
 | Arquivos em `public/media` | Pexels | Onde aparece |
 |---|---|---|
 | `beach-tennis-hero.mp4` e `.webp` | vídeo fornecido pela equipe (`Gustavorusso_video_no_watermark.mp4`), não é do Pexels | Celular do hero (tela de gravação) |
-| `beach-tennis-editor.mp4` e `.webp` | vídeo fornecido pela equipe (`Lucas_Chagas_video_no_watermark.mp4`), não é do Pexels | Celular da seção de edição |
+| `beach-tennis-editor.mp4` e `.webp` | vídeo fornecido pela equipe (`mari_video_no_watermark.mp4`), não é do Pexels | Celular da seção de edição |
 
 Como foram gerados (ffmpeg, partindo dos arquivos Full HD):
 
 - **Hero** (proporção da tela do celular, cerca de 0,458): vídeo vertical de 576x1024 e 11,4 s, corte central de 468x1024, escala para 540x1180, 30 fps, sem áudio. O pôster é o quadro de 1,2 s.
-- **Editor** (palco da tela de edição do app, cerca de 0,96 de largura por altura, que ocupa todo o espaço acima dos controles): vídeo vertical de 576x1024, trecho de 12,0 s a 17,4 s (5,4 s) que termina o primeiro ponto. O Modo Foco é simulado quadro a quadro: o enquadramento começa aberto, dá zoom (até 1,65x) e acompanha os jogadores, suavizado, e sai em 540x562 a 30 fps, sem áudio.
-- O hero e o editor entram e saem do preto em 0,3 s para o loop não "pular". Codificação H.264 (crf 27, `+faststart`), cerca de 1,5 MB e 430 KB, mais um pôster WebP de cada.
+- **Editor** (palco da tela de edição do app, cerca de 0,96 de largura por altura, que ocupa todo o espaço acima dos controles): vídeo vertical de 576x1024, trecho de 9,0 s a 14,4 s (5,4 s) de uma troca de bolas. O Modo Foco é simulado quadro a quadro: o enquadramento começa aberto, dá zoom (até 1,6x) e acompanha as jogadoras, suavizado, e sai em 540x562 a 30 fps, sem áudio.
+- O hero e o editor entram e saem do preto em 0,3 s para o loop não "pular". Codificação H.264 (crf 27, `+faststart`), cerca de 1,5 MB e 360 KB, mais um pôster WebP de cada.
 
 Se mudar o tamanho dos celulares ou o layout das telas (`src/styles/home.css`), refaça os cortes para manter a proporção do palco, senão o vídeo é recortado pelo `object-fit: cover`. As telas do celular reproduzem as do app (textos e componentes de `reprize/app`: RecordingPanel, SavedOverlay, ClipEdit); se o app mudar, atualize-as.
 
