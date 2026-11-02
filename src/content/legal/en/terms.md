@@ -1,7 +1,7 @@
 ---
 title: Terms of Use
 description: Conditions for using the Reprize app and website, including plans, payments and responsibilities.
-updated: 2026-11-01
+updated: 2026-11-02
 ---
 
 # Terms of Use
@@ -33,8 +33,8 @@ Unless the law expressly allows it, you may not: copy, modify, decompile or reve
 
 ## 5. Plans, prices and payments
 
-- **Free plan:** includes a limited number of recordings per month, with limits on duration, quality and features, as shown in the app.
-- **Single Pass and Pro:** unlock additional recordings and extra features, under the conditions and prices shown on the purchase screen, in your country's currency and including applicable taxes. Prices may change, but a change does not affect a period already purchased.
+- **Free plan:** includes unlimited recordings, with limits on clip length, quality and features in the saved or sent video, as shown in the app.
+- **Single Pass and Pro:** unlock extra features (the Single Pass on a free recording you already made; Pro on every recording), under the conditions and prices shown on the purchase screen, in your country's currency and including applicable taxes. Prices may change, but a change does not affect a period already purchased.
 - **Payment:** is handled by the **Apple App Store** or **Google Play**, which follow their own billing, tax, refund and payment-support rules. We do not receive your card details.
 - **Subscriptions and free trial:** the Pro plan is a subscription that **renews automatically** at the end of each period (monthly or yearly) until you cancel. When a free trial is offered, billing starts when it ends unless you cancel **at least 24 hours before** it ends, according to store rules.
 - **How to cancel:** in your Apple or Google Play account settings. Uninstalling the app does **not** cancel the subscription.

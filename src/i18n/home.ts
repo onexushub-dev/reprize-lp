@@ -1,5 +1,5 @@
 import type { Locale } from './ui';
-import { PLAN_PRICES as P, PLAN_PRICES_USD as PU, PLAN_PRICES_USD_ES as PE } from '../data/plans';
+import { PLAN_PRICES as P, PLAN_PRICES_USD as PU } from '../data/plans';
 
 export type TestimonialKey = 'marcus' | 'sara' | 'lorenzo' | 'lyandra' | 'victor' | 'yasmin';
 export type TriggerKey = 'tap' | 'gesture' | 'voice' | 'watch' | 'bluetooth' | 'phone';
@@ -94,7 +94,7 @@ const ptBR: HomeCopy = {
     title: 'Seu lance. De novo.',
     subtitle:
       'Apoie o celular, jogue à vontade e guarde só a jogada que valeu. Sem cadastro, sem nuvem.',
-    note: 'Grátis para começar · iPhone e Android',
+    note: 'Grátis para começar · Para iPhone',
     screen: {
       rec: 'Gravando',
       plays: 'Lances',
@@ -104,10 +104,10 @@ const ptBR: HomeCopy = {
       savedVia: 'via gesto · 15s',
     },
   },
-  facts: ['Sem cadastro', 'Tudo fica no seu celular', 'Grátis para começar'],
+  facts: ['Sem cadastro', 'Tudo fica no seu celular', 'Grátis, com gravações ilimitadas'],
   how: {
     title: 'Grave tudo. Guarde só o melhor.',
-    subtitle: 'Três passos entre o ponto e o story.',
+    subtitle: 'Três passos entre o ponto e o post.',
     steps: [
       {
         title: 'Posicione',
@@ -146,13 +146,13 @@ const ptBR: HomeCopy = {
       },
       phone: {
         title: 'Segundo celular',
-        body: 'Transforme outro iPhone num botão de salvar, a poucos metros da quadra.',
+        body: 'Transforme outro iPhone em controle: salve o lance, veja a câmera ao vivo e encerre a gravação de perto da quadra.',
       },
     },
   },
   editor: {
     eyebrow: 'Edição',
-    title: 'Do lance ao story em dois toques.',
+    title: 'Do lance ao post em dois toques.',
     subtitle: 'Corte no ponto certo, ajuste a velocidade e mande para onde quiser.',
     items: [
       { title: 'Corte preciso', body: 'Ajuste onde o lance começa e termina, dentro do trecho que o Reprize guardou.' },
@@ -161,7 +161,11 @@ const ptBR: HomeCopy = {
         title: 'Modo Foco',
         body: 'No iPhone, o enquadramento acompanha a jogada como numa transmissão de TV. Desliga com um toque.',
       },
-      { title: 'Galeria ou compartilhar', body: 'Salve na galeria ou envie para qualquer app com um toque.' },
+      {
+        title: 'Galeria ou compartilhar',
+        body: 'Salve na galeria ou envie para qualquer app, um clipe ou vários de uma vez.',
+      },
+      { title: 'Compilação de clipes', body: 'Junte os clipes de uma gravação num vídeo só. Recurso do PRO.' },
     ],
     screen: { cut: 'Corte', speed: 'Velocidade', focus: 'Foco', zoom: 'Zoom', save: 'Salvar', share: 'Enviar' },
   },
@@ -288,18 +292,23 @@ const ptBR: HomeCopy = {
       price: P.free,
       period: 'para sempre',
       items: [
-        `${P.freeRecordingsPerMonth} gravações por mês`,
-        `Full HD, clipes de até ${P.freeClipSeconds}s`,
-        'Todos os jeitos de salvar, menos o relógio',
-        'Editor e compartilhamento',
-        'Marca d’água; som, velocidade e Foco só dentro do app',
+        'Gravações e clipes ilimitados',
+        `Grava em Full HD, clipes de até ${P.freeClipSeconds}s`,
+        'Todos os jeitos de salvar, menos o Apple Watch',
+        'No app: som, Modo Foco, velocidade e edição',
+        'Vídeo salvo em HD, sem som e sem Foco, com marca d’água',
       ],
     },
     pass: {
       name: 'Passe Avulso',
       price: P.singlePass,
       period: 'uma gravação',
-      items: ['Uma gravação com tudo liberado', 'Sem marca d’água', 'Som, velocidade e Foco no vídeo', 'Sem assinatura'],
+      items: [
+        'Libera uma gravação grátis que você já fez',
+        'Full HD, som e Modo Foco, sem marca d’água',
+        'Compilação dos clipes dessa gravação',
+        'Pagamento único, sem assinatura',
+      ],
     },
     proMonthly: {
       name: 'Pro Mensal',
@@ -309,9 +318,9 @@ const ptBR: HomeCopy = {
       badge: `${P.trialDays} dias grátis`,
       items: [
         `${P.trialDays} dias grátis para testar`,
-        'Gravações ilimitadas',
-        'Sem marca d’água; som, velocidade e Foco no vídeo',
-        'Clipes acima de 15s, compilação e Apple Watch',
+        'Gravação em 4K e clipes de até 60s',
+        'Vídeo em Full HD ou 4K, com som e Modo Foco, sem marca d’água',
+        'Compilação de clipes e Apple Watch',
       ],
     },
     proYearly: {
@@ -322,12 +331,12 @@ const ptBR: HomeCopy = {
       badge: 'Recomendado',
       items: [
         `${P.trialDays} dias grátis para testar`,
-        'Gravações ilimitadas',
-        'Sem marca d’água; som, velocidade e Foco no vídeo',
-        'Clipes acima de 15s, compilação e Apple Watch',
+        'Gravação em 4K e clipes de até 60s',
+        'Vídeo em Full HD ou 4K, com som e Modo Foco, sem marca d’água',
+        'Compilação de clipes e Apple Watch',
       ],
     },
-    note: 'Cancele quando quiser nas configurações da App Store ou do Google Play. O vídeo exportado no plano Grátis leva a marca d’água do Reprize.',
+    note: 'Cancele quando quiser nas configurações da App Store. Antes de salvar ou enviar no Grátis, o app mostra o que o PRO acrescenta ao vídeo.',
   },
   faq: {
     title: 'Perguntas frequentes',
@@ -345,20 +354,24 @@ const ptBR: HomeCopy = {
         a: 'Gravar vídeo continuamente exige do aparelho. O Reprize apaga a tela depois de alguns segundos sem toque para poupar bateria e, se o celular esquentar, reduz a qualidade aos poucos (primeiro Full HD a 30 quadros, depois 720p) e avisa na tela. Se esquentar demais, a gravação para para proteger o aparelho. Em dia de sol forte, deixe o celular na sombra.',
       },
       {
-        q: 'Funciona no iPhone e no Android?',
-        a: 'Funciona nos dois. Alguns recursos hoje são só do iPhone: comando de voz, Apple Watch, segundo celular como controle e Modo Foco.',
+        q: 'Funciona em quais celulares?',
+        a: 'No iPhone. A versão para Android está em preparação.',
       },
       {
         q: 'Preciso de internet?',
         a: 'Para gravar e editar, não. A internet só entra nas compras e quando você compartilha o vídeo.',
       },
       {
+        q: 'Tem limite de gravações no plano Grátis?',
+        a: 'Não. Gravações e clipes são ilimitados. O plano muda só a duração do clipe, a gravação em 4K, o que sai do app ao salvar ou enviar, a compilação de clipes e o Apple Watch.',
+      },
+      {
         q: 'Qual a diferença entre Grátis, Passe e Pro?',
-        a: 'O Grátis traz 3 gravações por mês, em Full HD, com clipes de até 15 segundos e marca d’água. Som, velocidade e Modo Foco funcionam no editor, mas não vão no vídeo salvo ou enviado, e o app avisa isso antes de exportar. O Passe Avulso libera uma gravação com tudo, sem marca d’água, e não conta nas gravações grátis. O Pro libera gravações ilimitadas, clipes acima de 15 segundos, compilação de clipes, som, velocidade e Foco no vídeo, sem marca d’água, e o Apple Watch.',
+        a: 'No Grátis, as gravações são ilimitadas, em Full HD, com clipes de até 15 segundos. No app tudo funciona: som, Modo Foco, velocidade, zoom e corte. Ao salvar ou enviar, o vídeo sai em HD, sem som e sem Modo Foco, com marca d’água (a velocidade vai no vídeo), e o app avisa isso antes de exportar. O Passe Avulso libera, numa gravação grátis que você já fez, a exportação em Full HD com som e Modo Foco, sem marca d’água, e a compilação dos clipes dela. O Pro libera isso em todas as gravações, e ainda traz gravação em 4K, clipes de até 60 segundos, compilação de clipes e o Apple Watch.',
       },
       {
         q: 'Como cancelo o Pro?',
-        a: 'Pelas configurações da sua conta Apple ou Google Play. Quem cancela até 24 horas antes do fim do teste de 7 dias não é cobrado.',
+        a: 'Pelas configurações da sua conta Apple. Quem cancela até 24 horas antes do fim do teste de 7 dias não é cobrado.',
       },
       {
         q: 'Posso gravar outras pessoas?',
@@ -369,7 +382,7 @@ const ptBR: HomeCopy = {
   cta: {
     title: 'Nenhum lance perdido.',
     subtitle: 'Baixe o Reprize e deixe o celular ligado na quadra. O resto é jogo.',
-    legal: 'Disponível para iPhone e Android.',
+    legal: 'Disponível para iPhone. Android em breve.',
   },
   stickyLabel: 'Baixar o Reprize',
 };
@@ -380,7 +393,7 @@ const en: HomeCopy = {
     title: 'Your play. Again.',
     subtitle:
       'Set the phone down, play on, and keep only the play that mattered. No sign-up, no cloud.',
-    note: 'Free to start · iPhone and Android',
+    note: 'Free to start · For iPhone',
     screen: {
       rec: 'Recording',
       plays: 'Plays',
@@ -390,10 +403,10 @@ const en: HomeCopy = {
       savedVia: 'via gesture · 15s',
     },
   },
-  facts: ['No sign-up', 'Everything stays on your phone', 'Free to start'],
+  facts: ['No sign-up', 'Everything stays on your phone', 'Free, with unlimited recordings'],
   how: {
     title: 'Record everything. Keep the best.',
-    subtitle: 'Three steps from the point to the story.',
+    subtitle: 'Three steps from the point to the post.',
     steps: [
       {
         title: 'Position',
@@ -432,13 +445,13 @@ const en: HomeCopy = {
       },
       phone: {
         title: 'Second phone',
-        body: 'Turn another iPhone into a save button, a few meters from the court.',
+        body: 'Turn another iPhone into a remote: save the play, watch the camera live and end the recording from courtside.',
       },
     },
   },
   editor: {
     eyebrow: 'Editing',
-    title: 'From play to story in two taps.',
+    title: 'From play to post in two taps.',
     subtitle: 'Trim at the right spot, adjust the speed and send it anywhere.',
     items: [
       { title: 'Precise trim', body: 'Set where the play starts and ends, within the stretch Reprize kept.' },
@@ -447,7 +460,11 @@ const en: HomeCopy = {
         title: 'Focus Mode',
         body: 'On iPhone, the framing follows the play like a TV broadcast. Turn it off with one tap.',
       },
-      { title: 'Gallery or share', body: 'Save to your gallery or send it to any app with one tap.' },
+      {
+        title: 'Gallery or share',
+        body: 'Save to your gallery or send it to any app, one clip or several at once.',
+      },
+      { title: 'Clip compilations', body: 'Join a recording’s clips into a single video. A PRO feature.' },
     ],
     screen: { cut: 'Trim', speed: 'Speed', focus: 'Focus', zoom: 'Zoom', save: 'Save', share: 'Share' },
   },
@@ -574,18 +591,23 @@ const en: HomeCopy = {
       price: PU.free,
       period: 'forever',
       items: [
-        `${PU.freeRecordingsPerMonth} recordings per month`,
-        `Full HD, clips up to ${PU.freeClipSeconds}s`,
-        'Every way to save a play, except the watch',
-        'Editor and sharing',
-        'Watermark; sound, speed and Focus stay in the app',
+        'Unlimited recordings and clips',
+        `Records in Full HD, clips up to ${PU.freeClipSeconds}s`,
+        'Every way to save a play, except the Apple Watch',
+        'In the app: sound, Focus Mode, speed and editing',
+        'Saved video in HD, no sound and no Focus, with a watermark',
       ],
     },
     pass: {
       name: 'Single Pass',
       price: PU.singlePass,
       period: 'one recording',
-      items: ['One recording with everything unlocked', 'No watermark', 'Sound, speed and Focus in the video', 'No subscription'],
+      items: [
+        'Unlocks a free recording you already made',
+        'Full HD, sound and Focus Mode, no watermark',
+        'Compiling that recording’s clips',
+        'One-time payment, no subscription',
+      ],
     },
     proMonthly: {
       name: 'Pro Monthly',
@@ -595,9 +617,9 @@ const en: HomeCopy = {
       badge: `${PU.trialDays}-day free trial`,
       items: [
         `${PU.trialDays}-day free trial`,
-        'Unlimited recordings',
-        'No watermark; sound, speed and Focus in the video',
-        'Clips over 15s, compilations and Apple Watch',
+        '4K recording and clips up to 60s',
+        'Full HD or 4K video, with sound and Focus Mode, no watermark',
+        'Clip compilations and Apple Watch',
       ],
     },
     proYearly: {
@@ -608,12 +630,12 @@ const en: HomeCopy = {
       badge: 'Recommended',
       items: [
         `${PU.trialDays}-day free trial`,
-        'Unlimited recordings',
-        'No watermark; sound, speed and Focus in the video',
-        'Clips over 15s, compilations and Apple Watch',
+        '4K recording and clips up to 60s',
+        'Full HD or 4K video, with sound and Focus Mode, no watermark',
+        'Clip compilations and Apple Watch',
       ],
     },
-    note: 'Cancel anytime in your App Store or Google Play settings. Videos exported on the Free plan carry the Reprize watermark.',
+    note: 'Cancel anytime in your App Store settings. Before you save or send on Free, the app shows what PRO adds to the video.',
   },
   faq: {
     title: 'Frequently asked questions',
@@ -631,20 +653,24 @@ const en: HomeCopy = {
         a: 'Recording video continuously is demanding. Reprize turns the screen off after a few seconds without a touch to save battery and, if the phone warms up, lowers the quality step by step (Full HD at 30 fps first, then 720p) and tells you on screen. If it gets too hot, the recording stops to protect the device. On a sunny day, keep the phone in the shade.',
       },
       {
-        q: 'Does it work on iPhone and Android?',
-        a: 'Both. A few features are iPhone-only for now: voice command, Apple Watch, a second phone as a remote and Focus Mode.',
+        q: 'Which phones does it work on?',
+        a: 'iPhone. The Android version is in the works.',
       },
       {
         q: 'Do I need internet?',
         a: 'Not to record or edit. The internet is only used for purchases and when you share a video.',
       },
       {
+        q: 'Is there a limit on recordings on the Free plan?',
+        a: 'No. Recordings and clips are unlimited. The plan only changes the clip length, 4K recording, what leaves the app when you save or send, compiling clips and the Apple Watch.',
+      },
+      {
         q: 'What is the difference between Free, Pass and Pro?',
-        a: 'Free gives 3 recordings a month, in Full HD, with clips up to 15 seconds and a watermark. Sound, speed and Focus Mode work in the editor but do not make it into the saved or sent video, and the app tells you so before exporting. The Single Pass unlocks one recording with everything, no watermark, and does not count against the free recordings. Pro unlocks unlimited recordings, clips over 15 seconds, compiling clips, sound, speed and Focus in the video, no watermark, and the Apple Watch.',
+        a: 'On Free, recordings are unlimited, in Full HD, with clips up to 15 seconds. Everything works in the app: sound, Focus Mode, speed, zoom and trim. When you save or send, the video comes out in HD, with no sound and no Focus Mode, with a watermark (the speed you chose is kept), and the app tells you so before exporting. The Single Pass unlocks, on a free recording you already made, Full HD export with sound and Focus Mode, no watermark, and compiling its clips. Pro unlocks that on every recording, and adds 4K recording, clips up to 60 seconds, compiling clips and the Apple Watch.',
       },
       {
         q: 'How do I cancel Pro?',
-        a: 'In your Apple or Google Play account settings. If you cancel at least 24 hours before the 7-day trial ends, you are not charged.',
+        a: 'In your Apple account settings. If you cancel at least 24 hours before the 7-day trial ends, you are not charged.',
       },
       {
         q: 'Can I record other people?',
@@ -655,295 +681,9 @@ const en: HomeCopy = {
   cta: {
     title: 'No play missed.',
     subtitle: 'Download Reprize and leave the phone running on the court. The rest is just playing.',
-    legal: 'Available for iPhone and Android.',
+    legal: 'Available for iPhone. Android coming soon.',
   },
   stickyLabel: 'Get Reprize',
 };
 
-const es: HomeCopy = {
-  hero: {
-    eyebrow: 'Replay para quien juega',
-    title: 'Tu jugada. Otra vez.',
-    subtitle:
-      'Apoya el celular, juega tranquilo y guarda solo la jugada que valió la pena. Sin registro, sin nube.',
-    note: 'Gratis para empezar · iPhone y Android',
-    screen: {
-      rec: 'Grabando',
-      plays: 'Jugadas',
-      buffer: 'Últimos 15s listos',
-      hint: 'Mueve los brazos para guardar',
-      savedTitle: 'Clip #3 guardado',
-      savedVia: 'por gesto · 15s',
-    },
-  },
-  facts: ['Sin registro', 'Todo queda en tu celular', 'Gratis para empezar'],
-  how: {
-    title: 'Graba todo. Guarda lo mejor.',
-    subtitle: 'Tres pasos entre el punto y el story.',
-    steps: [
-      {
-        title: 'Colócalo',
-        body: 'En un punto firme, de frente al juego. Reprize muestra la guía de la cancha y el nivel del horizonte.',
-      },
-      {
-        title: 'Juega',
-        body: 'La cámara graba todo el tiempo, pero solo conserva los instantes más recientes. Lo que queda atrás desaparece solo.',
-      },
-      {
-        title: 'Guarda',
-        body: '¿Salió bien? Mueve los brazos, habla, toca o usa el reloj. La jugada llega a tu celular, lista para publicar.',
-      },
-    ],
-  },
-  triggers: {
-    title: 'Guarda sin quitar los ojos del juego.',
-    subtitle: 'Seis formas de guardar una jugada. Usa la que mejor te quede.',
-    items: {
-      tap: { title: 'Toca la pantalla', body: 'Lo básico: un toque en cualquier lugar guarda la jugada.' },
-      gesture: {
-        title: 'Brazos arriba',
-        body: 'Levanta los dos brazos y la app la guarda. Funciona con cualquier persona en el cuadro.',
-      },
-      voice: {
-        title: 'Di “guardar”',
-        body: 'Comando de voz procesado en el propio dispositivo. Ningún audio va a la nube.',
-      },
-      watch: {
-        title: 'Apple Watch',
-        body: 'Un botón grande en la muñeca. El reloj vibra cuando la jugada se guarda.',
-      },
-      bluetooth: {
-        title: 'Control Bluetooth',
-        body: 'Usa el botón de un control Bluetooth de cámara o de selfie.',
-      },
-      phone: {
-        title: 'Segundo celular',
-        body: 'Convierte otro iPhone en un botón de guardar, a unos metros de la cancha.',
-      },
-    },
-  },
-  editor: {
-    eyebrow: 'Edición',
-    title: 'De la jugada al story en dos toques.',
-    subtitle: 'Recorta en el punto justo, ajusta la velocidad y envíalo a donde quieras.',
-    items: [
-      { title: 'Corte preciso', body: 'Ajusta dónde empieza y termina la jugada, dentro del tramo que Reprize guardó.' },
-      { title: 'Velocidad, zoom y giro', body: 'Acelera, ralentiza y encuadra la jugada como se merece.' },
-      {
-        title: 'Modo Enfoque',
-        body: 'En iPhone, el encuadre sigue la jugada como en una transmisión de TV. Se apaga con un toque.',
-      },
-      { title: 'Galería o compartir', body: 'Guarda en tu galería o envíalo a cualquier app con un toque.' },
-    ],
-    screen: { cut: 'Corte', speed: 'Velocidad', focus: 'Enfoque', zoom: 'Zoom', save: 'Guardar', share: 'Enviar' },
-  },
-  privacy: {
-    eyebrow: 'Privacidad',
-    title: 'Graba todo. Guarda solo la jugada.',
-    body: 'Mientras juegas, Reprize mantiene solo los instantes más recientes en una memoria temporal del celular. Lo que queda atrás se borra al instante. Solo permanecen las jugadas que guardas.',
-    bullets: [
-      'Sin cuenta y sin inicio de sesión',
-      'Ningún video llega a nuestros servidores',
-      'Gestos y voz reconocidos en el propio dispositivo',
-    ],
-    link: 'Leer la Política de Privacidad',
-    ring: { center: 'Ahora', label: 'memoria temporal', kept: 'jugada guardada' },
-  },
-  sports: {
-    title: 'Cualquier deporte. Cualquier cancha.',
-    subtitle: 'Apoya el celular, empieza a grabar y juega. A Reprize no le importa cuál sea el deporte.',
-    credit: 'Fotos y videos: Pexels.',
-    nav: { region: 'Deportes', prev: 'Deporte anterior', next: 'Siguiente deporte', slide: 'Deporte {n} de {total}' },
-    items: {
-      beachTennis: {
-        title: 'Tenis de playa',
-        body: 'Peloteo corto, pelota rápida, un punto que se va en dos segundos.',
-        alt: 'Dos jugadoras de tenis de playa riendo en la arena, con las raquetas en las manos',
-      },
-      footvolley: {
-        title: 'Futvóley',
-        body: 'Pecho, pie y cabeza: la jugada que nadie alcanzó a ver bien.',
-        alt: 'Jugador de futvóley haciendo una chilena junto a la red',
-      },
-      beachVolley: {
-        title: 'Vóley playa',
-        body: 'Remate, bloqueo y defensa con garra, una y otra vez.',
-        alt: 'Partido de vóley playa en Lloret de Mar, con un jugador saltando a rematar cerca de la red',
-      },
-      tennis: {
-        title: 'Tenis',
-        body: 'Saque, resto y pasada: el punto que define el partido.',
-        alt: 'Tenista sacando en una cancha de arcilla',
-      },
-      padel: {
-        title: 'Pádel',
-        body: 'Rallies contra la pared, bandejas y smashes. El punto que parecía perdido.',
-        alt: 'Jugador de pádel avanzando con la raqueta en una cancha cubierta',
-      },
-      tableTennis: {
-        title: 'Tenis de mesa',
-        body: 'Efecto, reflejos y una pelota que se va en un segundo.',
-        alt: 'Jugador de tenis de mesa en plena jugada, con la pelota frente al rostro',
-      },
-      volleyball: {
-        title: 'Voleibol',
-        body: 'Armado, remate y bloqueo en la cancha cubierta.',
-        alt: 'Jugadoras de voleibol en una cancha cubierta, en el aire durante un ataque',
-      },
-      basketball: {
-        title: 'Básquetbol',
-        body: 'Clavadas, bandejas y triples: la jugada que se vuelve replay.',
-        alt: 'Jugador de básquetbol en el aire durante una clavada en un gimnasio',
-      },
-      handball: {
-        title: 'Balonmano',
-        body: 'Salto, tiro y atajada en una fracción de segundo.',
-        alt: 'Jugador de balonmano en el aire durante un tiro',
-      },
-      futsal: {
-        title: 'Futsal',
-        body: 'Regate rápido, remate fuerte y gol en espacio reducido.',
-        alt: 'Jugador de futsal corriendo con el balón en una cancha cubierta',
-      },
-      societyFootball: {
-        title: 'Fútbol 5',
-        body: 'Un golazo en pasto sintético y una jugada de crack entre amigos.',
-        alt: 'Dos jugadores disputando el balón en un partido de fútbol 5',
-      },
-      snooker: {
-        title: 'Snooker',
-        body: 'La tacada perfecta también merece un replay.',
-        alt: 'Un jugador prepara una tacada en una mesa de billar mientras una mujer lo observa',
-      },
-      any: {
-        title: 'Cualquier deporte',
-        body: 'Si hay un deporte, hay una jugada. Solo apoya el celular y juega.',
-        alt: '',
-      },
-    },
-  },
-  testimonials: {
-    title: 'Lo cuentan quienes lo probaron.',
-    subtitle: 'Lo que más les gustó de Reprize a quienes jugaron con la app.',
-    items: {
-      marcus: {
-        tag: 'Básquetbol',
-        quote: 'Qué buena app, cambió mi forma de jugar. Y guardar la jugada con el Apple Watch es genial.',
-      },
-      lorenzo: {
-        tag: 'Fútbol 5',
-        quote: 'Qué idea genial, la uso en cada partido. Editar y publicar es facilísimo.',
-      },
-      victor: {
-        tag: 'Básquetbol',
-        quote: 'Esta app es una maravilla, graba todo y no me pierdo ninguna jugada. Y la memoria del celular nunca se llena.',
-      },
-      sara: {
-        tag: 'Tenis de playa',
-        quote: 'Me encantó Reprize, es muy fácil de usar. Solo levantas los brazos y la jugada queda guardada.',
-      },
-      lyandra: {
-        tag: 'Futvóley',
-        quote: 'Qué app increíble, mis videos quedaron con aspecto profesional. El Modo Enfoque sigue la jugada solo.',
-      },
-      yasmin: {
-        tag: 'Tenis de playa',
-        quote: 'Me gustó mucho Reprize. Sin registro y sin enviar videos a la nube, estoy tranquila.',
-      },
-    },
-  },
-  plans: {
-    title: 'Empieza gratis. Paga solo si necesitas más.',
-    subtitle: 'Sin registro para probar. Solo ves una pantalla de pago cuando quieres desbloquearlo todo.',
-    free: {
-      name: 'Gratis',
-      price: PE.free,
-      period: 'para siempre',
-      items: [
-        `${PE.freeRecordingsPerMonth} grabaciones por mes`,
-        `Full HD, clips de hasta ${PE.freeClipSeconds}s`,
-        'Todas las formas de guardar, menos el reloj',
-        'Editor y envío',
-        'Marca de agua; sonido, velocidad y Enfoque solo dentro de la app',
-      ],
-    },
-    pass: {
-      name: 'Pase único',
-      price: PE.singlePass,
-      period: 'una grabación',
-      items: ['Una grabación con todo desbloqueado', 'Sin marca de agua', 'Sonido, velocidad y Enfoque en el video', 'Sin suscripción'],
-    },
-    proMonthly: {
-      name: 'Pro mensual',
-      price: PE.proMonthly,
-      period: 'al mes',
-      alt: 'Se renueva cada mes, cancela cuando quieras',
-      badge: `${PE.trialDays} días gratis`,
-      items: [
-        `${PE.trialDays} días gratis para probar`,
-        'Grabaciones ilimitadas',
-        'Sin marca de agua; sonido, velocidad y Enfoque en el video',
-        'Clips de más de 15s, compilación y Apple Watch',
-      ],
-    },
-    proYearly: {
-      name: 'Pro anual',
-      price: PE.proYearly,
-      period: 'al año',
-      alt: `Cerca de ${PE.proYearlyPerMonth} al mes · ahorras ${PE.yearlySavingsPercent}%`,
-      badge: 'Recomendado',
-      items: [
-        `${PE.trialDays} días gratis para probar`,
-        'Grabaciones ilimitadas',
-        'Sin marca de agua; sonido, velocidad y Enfoque en el video',
-        'Clips de más de 15s, compilación y Apple Watch',
-      ],
-    },
-    note: 'Cancela cuando quieras en los ajustes de la App Store o de Google Play. El video exportado en el plan Gratis lleva la marca de agua de Reprize.',
-  },
-  faq: {
-    title: 'Preguntas frecuentes',
-    items: [
-      {
-        q: '¿Mis videos van a la nube?',
-        a: 'No. Todo queda en tu celular: Reprize no tiene registro ni servidor de videos. Los detalles están en la Política de Privacidad.',
-      },
-      {
-        q: '¿La app graba todo el partido?',
-        a: 'Graba todo el tiempo, pero solo conserva los instantes más recientes en una memoria temporal del celular. Lo que queda atrás se borra. Solo permanecen las jugadas que guardas.',
-      },
-      {
-        q: '¿El celular se calienta? ¿Y la batería?',
-        a: 'Grabar video de forma continua exige mucho al aparato. Reprize apaga la pantalla después de unos segundos sin toques para ahorrar batería y, si el celular se calienta, baja la calidad poco a poco (primero Full HD a 30 fps y luego 720p) y te avisa en la pantalla. Si se calienta demasiado, la grabación se detiene para proteger el aparato. En un día de sol, deja el celular a la sombra.',
-      },
-      {
-        q: '¿Funciona en iPhone y en Android?',
-        a: 'En los dos. Algunas funciones son solo para iPhone por ahora: comando de voz, Apple Watch, segundo celular como control y Modo Enfoque.',
-      },
-      {
-        q: '¿Necesito internet?',
-        a: 'No para grabar ni para editar. Internet solo se usa para las compras y cuando envías un video.',
-      },
-      {
-        q: '¿Cuál es la diferencia entre Gratis, Pase y Pro?',
-        a: 'Gratis ofrece 3 grabaciones al mes, en Full HD, con clips de hasta 15 segundos y marca de agua. El sonido, la velocidad y el Modo Enfoque funcionan en el editor, pero no van en el video guardado o enviado, y la app te avisa antes de exportar. El Pase único desbloquea una grabación con todo, sin marca de agua, y no cuenta en las grabaciones gratis. Pro desbloquea grabaciones ilimitadas, clips de más de 15 segundos, compilación de clips, sonido, velocidad y Enfoque en el video, sin marca de agua, y el Apple Watch.',
-      },
-      {
-        q: '¿Cómo cancelo Pro?',
-        a: 'En los ajustes de tu cuenta de Apple o de Google Play. Si cancelas al menos 24 horas antes de que termine la prueba de 7 días, no se te cobra.',
-      },
-      {
-        q: '¿Puedo grabar a otras personas?',
-        a: 'Sí, con cuidado: avísales y, antes de publicar, pide permiso a quien aparezca en el video, sobre todo a los niños. No grabes en vestuarios ni en otros lugares privados.',
-      },
-    ],
-  },
-  cta: {
-    title: 'Ninguna jugada perdida.',
-    subtitle: 'Descarga Reprize y deja el celular encendido en la cancha. Lo demás es jugar.',
-    legal: 'Disponible para iPhone y Android.',
-  },
-  stickyLabel: 'Descargar Reprize',
-};
-
-export const homeCopy: Record<Locale, HomeCopy> = { 'pt-BR': ptBR, en, es };
+export const homeCopy: Record<Locale, HomeCopy> = { 'pt-BR': ptBR, en };

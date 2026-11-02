@@ -15,7 +15,7 @@ import FinalCta from './home/final-cta.astro';
 import StickyCta from './home/sticky-cta.astro';
 import { getAbsoluteLocaleUrl } from 'astro:i18n';
 import { homeCopy } from '../i18n/home';
-import { SUPPORT_EMAIL, useTranslations, type Locale } from '../i18n/ui';
+import { SOCIAL_LINKS, SUPPORT_EMAIL, useTranslations, type Locale } from '../i18n/ui';
 
 interface Props {
   locale: Locale;
@@ -32,6 +32,7 @@ const publisher = {
   name: 'Reprize',
   url: site,
   logo: `${site}/icon-512.png`,
+  sameAs: Object.values(SOCIAL_LINKS),
   contactPoint: { '@type': 'ContactPoint', email: SUPPORT_EMAIL, contactType: 'customer support' },
 };
 const jsonLd = [
@@ -44,7 +45,7 @@ const jsonLd = [
     description: t('meta.homeDescription'),
     inLanguage: locale,
     applicationCategory: 'SportsApplication',
-    operatingSystem: 'iOS, Android',
+    operatingSystem: 'iOS',
     offers: { '@type': 'Offer', price: '0', priceCurrency: locale === 'pt-BR' ? 'BRL' : 'USD' },
     publisher: { '@id': publisher['@id'] },
   },

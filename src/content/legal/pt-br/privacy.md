@@ -1,7 +1,7 @@
 ---
 title: Política de Privacidade
 description: Como o Reprize trata dados pessoais. Suas gravações ficam só no seu celular e não são enviadas aos nossos servidores.
-updated: 2026-11-01
+updated: 2026-11-02
 ---
 
 # Política de Privacidade
@@ -12,8 +12,8 @@ Esta Política explica quais dados pessoais são tratados quando você usa o apl
 >
 > - **Suas gravações ficam só no seu celular.** Vídeos, áudio e fotos que o Reprize captura não são enviados aos nossos servidores e nós não temos acesso a eles.
 > - **Não há cadastro nem conta.** Você abre o app e usa.
-> - **Não vendemos dados** e o app não usa publicidade nem ferramentas de análise de uso.
-> - A única troca de dados com terceiros é a necessária para **compras e assinaturas** (Apple, Google e RevenueCat).
+> - **Não vendemos dados** e o app não usa publicidade. O uso do app é medido de forma anônima, sem identificar você.
+> - A troca de dados com terceiros se limita a **compras e assinaturas** (Apple, Google e RevenueCat) e a **métricas anônimas de uso** (PostHog).
 
 ## 1. Quem é o responsável
 
@@ -26,7 +26,7 @@ Canal de contato para privacidade, incluindo o exercício dos seus direitos: [su
 O Reprize funciona no seu aparelho. Para isso, o app usa e guarda localmente:
 
 - **Imagem e som da câmera e do microfone.** O app mantém um registro temporário e contínuo dos últimos instantes do jogo (uma janela móvel que guarda de alguns segundos a cerca de um minuto, conforme o plano e o modo de uso). O que sai dessa janela é apagado automaticamente. **Só os lances que você salva permanecem** no aparelho.
-- **Lances, jogos e ajustes**, como nomes de jogos, contagem de lances, esporte escolhido, preferências, estado dos gatilhos e o contador mensal de gravações do plano grátis.
+- **Lances, jogos e ajustes**, como nomes de jogos, contagem de lances, esporte escolhido, preferências e estado dos gatilhos.
 - **Reconhecimento de gesto** (câmera) e **de voz** (no iOS): a análise é feita no próprio aparelho. A imagem e o áudio usados para isso não são enviados a nós.
 
 Esses dados **não são transmitidos para nós**. Por isso, não conseguimos acessá-los, recuperá-los nem apagá-los por você. Para removê-los, exclua os lances e jogos no app ou desinstale o Reprize. Os vídeos que você exportou para a galeria do celular ou compartilhou com outros aplicativos passam a existir fora do Reprize e continuam onde você os colocou.
@@ -59,19 +59,29 @@ Parte do Reprize é paga (passe avulso e plano Pro). Para isso:
 
 Esses dados são usados para confirmar sua compra, liberar as funções pagas, evitar fraudes e atender pedidos de suporte e reembolso.
 
-## 5. Dados que você nos envia por e-mail
+## 5. Métricas anônimas de uso
+
+Para entender como o app é usado e melhorá-lo, o Reprize mede o uso de forma **anônima**:
+
+- **O que medimos:** eventos como abrir o app, as etapas da apresentação inicial, o início e o fim de uma gravação, qual gatilho salvou um lance, quais ferramentas de edição foram usadas, exportações e compartilhamentos, conexões com outros aparelhos e as telas de compra. Os valores são categorias ou faixas (por exemplo, uma faixa de duração), nunca o conteúdo.
+- **O que nunca enviamos:** vídeos, áudio, fotos, nomes de arquivos ou de aparelhos, textos digitados nem mensagens de erro.
+- **Sem identificar você:** usamos um código aleatório gerado no seu celular na instalação. Não ligamos esse código a nome, e-mail, conta, identificador de publicidade ou endereço IP, e não criamos perfis de pessoas.
+- **Quem processa:** a **PostHog Inc.** (EUA), que recebe esses eventos em nosso nome. A política dela está em [posthog.com/privacy](https://posthog.com/privacy).
+- **Se preferir não ser medido:** o app ainda não tem um botão para desligar a medição. Escreva para [support@reprize.app](mailto:support@reprize.app) e trataremos o seu pedido.
+
+## 6. Dados que você nos envia por e-mail
 
 Se você escrever para o suporte, trataremos seu **e-mail, nome (se informado) e o conteúdo da mensagem** para responder. Por favor, não envie vídeos ou dados que não sejam necessários ao atendimento.
 
-## 6. Site reprize.app
+## 7. Site reprize.app
 
 O site é estático e **não usa cookies de publicidade nem de rastreamento**. A hospedagem (Vercel Inc.) pode registrar dados técnicos de acesso, como endereço IP, data e hora, páginas acessadas e tipo de navegador, para entregar o site, garantir a segurança e prevenir abusos. Se adotarmos ferramentas de medição de audiência, atualizaremos esta Política antes de ativá-las.
 
-## 7. Informações agregadas das lojas
+## 8. Informações agregadas das lojas
 
 A Apple e o Google podem nos fornecer estatísticas agregadas (como downloads, países e relatórios de falhas dos usuários que autorizaram esse compartilhamento nas configurações do sistema). Esses dados não identificam você para nós.
 
-## 8. Para que usamos os dados e em quais bases legais
+## 9. Para que usamos os dados e em quais bases legais
 
 | Finalidade | Base legal (LGPD, art. 7º) |
 | --- | --- |
@@ -79,32 +89,35 @@ A Apple e o Google podem nos fornecer estatísticas agregadas (como downloads, p
 | Processar compras e assinaturas, liberar funções pagas | Execução de contrato |
 | Usar câmera, microfone, fala, fotos, Bluetooth e rede local | Consentimento, dado por você nas permissões do sistema |
 | Atender pedidos de suporte e de direitos do titular | Execução de contrato e cumprimento de obrigação legal |
+| Medir o uso do app de forma anônima para melhorá-lo | Legítimo interesse |
 | Segurança, prevenção a fraudes e abusos | Legítimo interesse |
 | Cumprir obrigações legais e fiscais | Cumprimento de obrigação legal |
 
-## 9. Com quem compartilhamos
+## 10. Com quem compartilhamos
 
 **Não vendemos dados pessoais.** Compartilhamos o mínimo necessário apenas com:
 
 - **Apple e Google**, para distribuição do app e pagamentos;
 - **RevenueCat**, para gerenciar assinaturas;
+- **PostHog**, para medir o uso do app de forma anônima;
 - **Vercel**, para hospedar o site;
 - **autoridades públicas**, quando exigido por lei ou ordem judicial.
 
 Quando **você** compartilha um lance por WhatsApp, Instagram ou outro aplicativo, o envio é feito por você, e o tratamento passa a seguir a política do aplicativo escolhido.
 
-## 10. Transferência internacional
+## 11. Transferência internacional
 
-RevenueCat e Vercel podem tratar dados fora do Brasil, inclusive nos Estados Unidos. Nesses casos, a transferência ocorre com base nas hipóteses do art. 33 da LGPD, como cláusulas contratuais e medidas de segurança adotadas por esses fornecedores.
+RevenueCat, PostHog e Vercel podem tratar dados fora do Brasil, inclusive nos Estados Unidos. Nesses casos, a transferência ocorre com base nas hipóteses do art. 33 da LGPD, como cláusulas contratuais e medidas de segurança adotadas por esses fornecedores.
 
-## 11. Por quanto tempo guardamos
+## 12. Por quanto tempo guardamos
 
 - **Dados no seu celular:** até você apagá-los ou desinstalar o app.
 - **Dados de compra e assinatura:** pelo tempo da relação com você e pelos prazos legais, fiscais e de defesa em processos.
+- **Métricas anônimas de uso:** pelo prazo configurado no serviço de análise e só enquanto forem úteis para melhorar o app.
 - **Mensagens de suporte:** pelo tempo necessário para o atendimento e para a defesa de direitos.
 - **Registros técnicos do site:** pelo período curto definido pelo provedor de hospedagem.
 
-## 12. Seus direitos
+## 13. Seus direitos
 
 Você pode pedir, a qualquer momento e gratuitamente (LGPD, art. 18): confirmação de que tratamos seus dados; acesso; correção; anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade; portabilidade; informação sobre com quem compartilhamos; informação sobre a possibilidade de não consentir e suas consequências; revogação do consentimento; e oposição a tratamento irregular.
 
@@ -112,22 +125,22 @@ Para exercer seus direitos, escreva para [support@reprize.app](mailto:support@re
 
 Você também pode reclamar à **Autoridade Nacional de Proteção de Dados (ANPD)**, em [gov.br/anpd](https://www.gov.br/anpd).
 
-## 13. Imagem e voz de outras pessoas
+## 14. Imagem e voz de outras pessoas
 
 Ao gravar um jogo, o app pode captar imagem e voz de outras pessoas. **Você é responsável por usar o Reprize de forma lícita**, informar e, quando necessário, obter autorização de quem aparece nas gravações, respeitar locais onde gravar é proibido e decidir com cuidado antes de compartilhar o conteúdo. Mais detalhes estão nos [Termos de Uso](/terms).
 
-## 14. Crianças e adolescentes
+## 15. Crianças e adolescentes
 
 O Reprize não é direcionado a crianças. O uso por menores de 18 anos deve ser acompanhado por pai, mãe ou responsável legal, que deve autorizar compras e o uso de câmera e microfone. Como não há cadastro, não pedimos a idade nem criamos perfil de usuários. Se você é responsável por um menor e acredita que dados dele foram enviados a nós, fale com o suporte.
 
-## 15. Segurança
+## 16. Segurança
 
 Adotamos medidas técnicas e organizacionais razoáveis para proteger os dados que tratamos. Os dados guardados no seu celular dependem também das proteções do aparelho, como bloqueio de tela e atualizações do sistema, que são de sua responsabilidade. Nenhum sistema é totalmente seguro. Se ocorrer um incidente que possa causar risco ou dano relevante, comunicaremos os titulares e a ANPD nos termos da lei.
 
-## 16. Mudanças nesta Política
+## 17. Mudanças nesta Política
 
 Podemos atualizar esta Política. A versão vigente fica sempre em [reprize.app/privacy](/privacy), com a data da última atualização. Em mudanças relevantes, avisaremos no app ou no site.
 
-## 17. Contato
+## 18. Contato
 
 Dúvidas, pedidos e reclamações sobre privacidade: [support@reprize.app](mailto:support@reprize.app).
