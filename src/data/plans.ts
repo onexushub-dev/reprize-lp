@@ -2,11 +2,10 @@
  * Prices shown on the landing page. The app itself carries no prices (the stores are the source of truth), so these
  * must be kept in sync by hand with the offers configured in App Store Connect, Google Play and RevenueCat.
  *
- * Portuguese shows Brazilian reais; English and Spanish show US dollars. In the stores, each country then gets its
+ * Portuguese shows Brazilian reais; English shows US dollars. In the stores, each country then gets its
  * own local price (the dollar list is the base for every country outside Brazil).
  */
 const common = {
-  freeRecordingsPerMonth: 3,
   freeClipSeconds: 15,
   trialDays: 7,
 } as const;
@@ -34,4 +33,3 @@ const build = (currency: 'BRL' | 'USD', format: (value: number) => string) => ({
 
 export const PLAN_PRICES = build('BRL', brl);
 export const PLAN_PRICES_USD = build('USD', usd('$'));
-export const PLAN_PRICES_USD_ES = build('USD', usd('US$ '));

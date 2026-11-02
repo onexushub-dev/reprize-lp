@@ -1,7 +1,7 @@
 ---
 title: Termos de Uso
 description: Condições para usar o aplicativo e o site do Reprize, incluindo planos, pagamentos e responsabilidades.
-updated: 2026-11-01
+updated: 2026-11-02
 ---
 
 # Termos de Uso
@@ -33,8 +33,8 @@ Concedemos a você uma licença **pessoal, limitada, não exclusiva, intransfer�
 
 ## 5. Planos, preços e pagamentos
 
-- **Plano grátis:** inclui um número limitado de gravações por mês, com limites de duração, qualidade e recursos, conforme informado no app.
-- **Passe Avulso e Pro:** liberam gravações adicionais e recursos extras, nas condições e nos preços exibidos na tela de compra, na moeda e com os impostos do seu país. Os valores podem mudar, mas a mudança não afeta o período já contratado.
+- **Plano grátis:** inclui gravações ilimitadas, com limites de duração do clipe, de qualidade e de recursos no vídeo salvo ou enviado, conforme informado no app.
+- **Passe Avulso e Pro:** liberam recursos extras (o Passe Avulso, numa gravação grátis já feita; o Pro, em todas as gravações), nas condições e nos preços exibidos na tela de compra, na moeda e com os impostos do seu país. Os valores podem mudar, mas a mudança não afeta o período já contratado.
 - **Pagamento:** é feito pela **Apple App Store** ou pelo **Google Play**, que seguem as próprias regras de cobrança, impostos, reembolso e suporte de pagamento. Não recebemos os dados do seu cartão.
 - **Assinaturas e teste grátis:** o plano Pro é uma assinatura **renovada automaticamente** ao fim de cada período (mensal ou anual) até que você cancele. Quando houver período de teste grátis, a cobrança começa ao fim dele, a menos que você cancele **pelo menos 24 horas antes** do término, conforme as regras da loja.
 - **Como cancelar:** nas configurações da sua conta Apple ou Google Play. Desinstalar o app **não** cancela a assinatura.

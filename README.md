@@ -1,6 +1,6 @@
 # Reprize LP
 
-Landing page do Reprize (https://reprize.app), em Astro 7 + Tailwind v4 + TypeScript. Português (BR) na raiz, inglês em `/en` e espanhol em `/es`.
+Landing page do Reprize (https://reprize.app), em Astro 7 + Tailwind v4 + TypeScript. Português (BR) na raiz, inglês em `/en`.
 
 ## Requisitos
 
@@ -20,9 +20,9 @@ pnpm preview   # serve a pasta dist
 
 | Pasta | O que tem |
 |---|---|
-| `src/pages` | Rotas. A raiz é pt-BR, `src/pages/en` é o inglês e `src/pages/es` é o espanhol. |
+| `src/pages` | Rotas. A raiz é pt-BR, `src/pages/en` é o inglês. |
 | `src/components` | `HomePage`, `LegalPage` e peças de layout. |
-| `src/content/legal` | Textos de Privacidade e Termos em markdown, por idioma (`pt-br`, `en`, `es`). |
+| `src/content/legal` | Textos de Privacidade e Termos em markdown, por idioma (`pt-br`, `en`). |
 | `src/i18n/ui.ts` | Textos da interface nos dois idiomas. |
 | `src/styles/global.css` | Tokens da marca (Ink, Paper, Amber, Dark amber) e estilo dos textos legais. |
 | `public` | Favicons, manifest, logos e imagem OG copiados do kit de marca. |

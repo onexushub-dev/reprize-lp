@@ -1,12 +1,11 @@
-export const locales = ['pt-BR', 'en', 'es'] as const;
+export const locales = ['pt-BR', 'en'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'pt-BR';
 
 /** Each language is named in its own language, with the flag shown next to it in the language menu. */
-export const localeMeta: Record<Locale, { label: string; flag: 'br' | 'us' | 'es' }> = {
+export const localeMeta: Record<Locale, { label: string; flag: 'br' | 'us' }> = {
   'pt-BR': { label: 'Português', flag: 'br' },
   en: { label: 'English', flag: 'us' },
-  es: { label: 'Español', flag: 'es' },
 };
 
 export const ui = {
@@ -30,6 +29,9 @@ export const ui = {
     'footer.company':
       'Reprize é um produto da Nexus Hub, CNPJ 64.669.130/0001-02, São Paulo/SP.',
     'footer.contact': 'Contato e suporte',
+    'footer.social': 'Redes sociais',
+    'footer.instagram': 'Reprize no Instagram',
+    'footer.tiktok': 'Reprize no TikTok',
     'footer.rights': 'Todos os direitos reservados.',
     'legal.updated': 'Última atualização',
     'legal.backHome': 'Voltar ao início',
@@ -54,33 +56,12 @@ export const ui = {
     'footer.company':
       'Reprize is a product of Nexus Hub, Brazilian company registration (CNPJ) 64.669.130/0001-02, São Paulo, Brazil.',
     'footer.contact': 'Contact and support',
+    'footer.social': 'Social media',
+    'footer.instagram': 'Reprize on Instagram',
+    'footer.tiktok': 'Reprize on TikTok',
     'footer.rights': 'All rights reserved.',
     'legal.updated': 'Last updated',
     'legal.backHome': 'Back to home',
-  },
-  es: {
-    'meta.siteName': 'Reprize',
-    'meta.homeTitle': 'Reprize: tu jugada. Otra vez. | App de replay para deportes',
-    'meta.homeDescription':
-      'App de replay para deportes: tu celular graba todo el juego y guarda solo la jugada que decidas. Sin registro y sin enviar nada a la nube.',
-    'meta.ogImageAlt': 'Reprize: tu jugada. Otra vez.',
-    'notFound.title': 'Página no encontrada',
-    'notFound.body': 'La dirección que abriste no existe o cambió de lugar.',
-    'a11y.skip': 'Saltar al contenido',
-    'a11y.home': 'Reprize, página de inicio',
-    'nav.privacy': 'Privacidad',
-    'nav.terms': 'Términos',
-    'lang.label': 'Idioma',
-    'store.appStore': 'App Store',
-    'store.googlePlay': 'Google Play',
-    'store.soon': 'Próximamente',
-    'store.availableOn': 'Descargar en',
-    'footer.company':
-      'Reprize es un producto de Nexus Hub, CNPJ 64.669.130/0001-02, São Paulo, Brasil.',
-    'footer.contact': 'Contacto y soporte',
-    'footer.rights': 'Todos los derechos reservados.',
-    'legal.updated': 'Última actualización',
-    'legal.backHome': 'Volver al inicio',
   },
 } as const satisfies Record<Locale, Record<string, string>>;
 
@@ -95,3 +76,9 @@ export function isLocale(value: string | undefined): value is Locale {
 }
 
 export const SUPPORT_EMAIL = 'support@reprize.app';
+
+/** Official profiles, handle @reprize.app on both networks. Used by the footer and the structured data. */
+export const SOCIAL_LINKS = {
+  instagram: 'https://www.instagram.com/reprize.app',
+  tiktok: 'https://www.tiktok.com/@reprize.app',
+} as const;
