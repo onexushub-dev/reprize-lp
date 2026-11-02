@@ -6,13 +6,13 @@ updated: 2026-11-02
 
 # Terms of Use
 
-These Terms govern the use of the **Reprize** app and the **reprize.app** website. By downloading, installing or using Reprize, you state that you have read and agree to them. If you do not agree, do not use the app. This English version is provided for convenience; the Portuguese version is the original.
+These Terms govern the use of the **Reprize** app and the **reprizeapp.com** website. By downloading, installing or using Reprize, you state that you have read and agree to them. If you do not agree, do not use the app. This English version is provided for convenience; the Portuguese version is the original.
 
 How personal data is handled is described in the [Privacy Policy](/en/privacy), which is part of these Terms.
 
 ## 1. Who we are
 
-Reprize is offered by **Nexus Hub**, trade name of **Victor Hugo Marques Ltda.**, Brazilian company registration (CNPJ) **64.669.130/0001-02**, São Paulo, Brazil. Contact: [support@reprize.app](mailto:support@reprize.app).
+Reprize is offered by **Nexus Hub**, Brazilian company registration (CNPJ) **64.669.130/0001-02**, São Paulo, Brazil. Contact: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
 
 ## 2. What Reprize is
 
@@ -92,7 +92,7 @@ You may stop using Reprize at any time by uninstalling the app and canceling act
 
 ## 14. Changes to these Terms
 
-We may update these Terms. The current version is at [reprize.app/en/terms](/en/terms), with the date of the last update. For relevant changes, we will notify you in the app or on the website with reasonable notice. If you keep using the app after the new version takes effect, it applies to you. If you do not agree, stop using the app and cancel any subscriptions.
+We may update these Terms. The current version is at [reprizeapp.com/en/terms](/en/terms), with the date of the last update. For relevant changes, we will notify you in the app or on the website with reasonable notice. If you keep using the app after the new version takes effect, it applies to you. If you do not agree, stop using the app and cancel any subscriptions.
 
 ## 15. Governing law and jurisdiction
 
@@ -104,4 +104,4 @@ If any part of these Terms is found invalid, the rest remains in force. Toleranc
 
 ## 17. Contact
 
-Questions, support and complaints: [support@reprize.app](mailto:support@reprize.app).
+Questions, support and complaints: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).

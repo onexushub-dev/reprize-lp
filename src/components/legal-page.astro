@@ -21,7 +21,7 @@ const updated = new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: '
 
 <BaseLayout locale={locale} title={`${entry.data.title} | Reprize`} description={entry.data.description} slug={slug}>
   <article class="legal mx-auto max-w-3xl px-4 pt-14 pb-24 sm:px-6 sm:pt-20">
-    <a href={getRelativeLocaleUrl(locale, '')} class="text-muted hover:text-amber text-sm font-semibold no-underline">
+    <a href={getRelativeLocaleUrl(locale, '')} class="text-muted hover:text-amber mb-8 inline-block text-sm font-semibold no-underline sm:mb-10">
       ← {t('legal.backHome')}
     </a>
     <Content />
