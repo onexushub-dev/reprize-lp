@@ -650,7 +650,11 @@
   padding: 1.1rem;
   border-radius: 1.25rem;
   border: 1px solid var(--color-line);
-  background: linear-gradient(160deg, rgb(20 20 20 / 0.9), rgb(10 10 10 / 0.9));
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--color-surface) 90%, transparent),
+    color-mix(in srgb, var(--color-ink) 90%, transparent)
+  );
   transition:
     border-color 0.25s,
     transform 0.25s;
@@ -968,7 +972,7 @@
   inset: auto 0 0;
   z-index: 30;
   padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
-  background: linear-gradient(180deg, transparent, rgb(10 10 10 / 0.92) 38%);
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--color-ink) 92%, transparent) 38%);
   backdrop-filter: blur(8px);
 }
 

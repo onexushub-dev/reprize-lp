@@ -16,12 +16,14 @@ const playStoreUrl = import.meta.env.PUBLIC_PLAY_STORE_URL || undefined;
 
 <div class:list={['flex flex-wrap gap-3', className]}>
   <StoreButton
+    icon="apple"
     store={t('store.appStore')}
     href={appStoreUrl}
     soonLabel={t('store.soon')}
     availableLabel={t('store.availableOn')}
   />
   <StoreButton
+    icon="play"
     store={t('store.googlePlay')}
     href={playStoreUrl}
     soonLabel={t('store.soon')}

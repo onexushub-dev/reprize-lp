@@ -1,4 +1,5 @@
 ---
+import BrandLogo from '../brand-logo.astro';
 import StoreButtons from '../store-buttons.astro';
 import { homeCopy } from '../../i18n/home';
 import type { Locale } from '../../i18n/ui';
@@ -13,14 +14,7 @@ const c = homeCopy[locale].cta;
 
 <section id="download" class="hero-glow grain relative isolate scroll-mt-8 overflow-hidden">
   <div class="mx-auto max-w-6xl px-4 py-20 text-center sm:px-6 sm:py-28">
-    <img
-      src="/brand/reprize-simbolo-fundo-escuro.svg"
-      alt=""
-      width="71"
-      height="48"
-      class="reveal mx-auto h-12 w-auto"
-      loading="lazy"
-    />
+    <BrandLogo name="simbolo" width={71} height={48} class="reveal mx-auto h-12 w-auto" loading="lazy" />
     <h2 class="reveal mx-auto mt-6 max-w-3xl text-4xl font-extrabold sm:text-6xl lg:text-7xl">{c.title}</h2>
     <p class="text-paper/80 reveal mx-auto mt-6 max-w-xl text-lg leading-8">{c.subtitle}</p>
     <StoreButtons locale={locale} class="reveal mt-10 justify-center" />

@@ -17,11 +17,49 @@
   --font-sans: var(--font-manrope);
 }
 
+/*
+ * Light theme (brand guide): White ground, Ink text, Dark amber as the accent, since Amber never goes on a light
+ * background. The roles keep their names: ink is the page ground, paper is the text color. Dark is the default; the
+ * visitor's choice is kept in localStorage and set on <html data-theme> before the first paint (base-layout.astro).
+ */
+:root[data-theme='light'] {
+  --color-ink: #ffffff;
+  --color-paper: #0a0a0a;
+  --color-amber: #946200;
+  /* Darker still, so the yearly plan card stays apart from the monthly one. */
+  --color-amber-dark: #5f3e00;
+  --color-surface: #f4f3f0;
+  --color-line: #dcdad4;
+  --color-muted: #5c5a55;
+}
+
+/* Parts that are always dark, whatever the theme: the phone mockups and anything laid over a photo or video. */
+.phone,
+.sport-slide,
+.theme-dark {
+  --color-ink: #0a0a0a;
+  --color-paper: #ffffff;
+  --color-amber: #ffb000;
+  --color-surface: #141414;
+  --color-line: #2e2e2e;
+  --color-muted: #b3b3b3;
+  color: #ffffff;
+}
+
 @layer base {
   html {
     background-color: var(--color-ink);
     color-scheme: dark;
     scroll-behavior: smooth;
+    /* The header is fixed: anchors land below it. */
+    scroll-padding-top: 5rem;
+    /* No sideways scroll on any screen: whatever pokes out of the width (a tilted phone, a glow) is clipped, and the
+       header keeps working because clip, unlike hidden, does not make a scroll container. */
+    overflow-x: clip;
+  }
+
+  html[data-theme='light'] {
+    color-scheme: light;
   }
 
   body {
@@ -135,4 +173,17 @@
 
 .legal hr {
   @apply border-line my-10;
+}
+
+/* Each logo comes in a dark-background and a light-background version; the theme picks one. */
+.logo-light {
+  display: none;
+}
+
+html[data-theme='light'] .logo-dark {
+  display: none;
+}
+
+html[data-theme='light'] .logo-light {
+  display: block;
 }
