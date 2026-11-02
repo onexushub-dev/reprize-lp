@@ -149,7 +149,6 @@
 
 /* ---------- Recording screen (9s loop) ---------- */
 .rec {
-  --loop: 9s;
   position: absolute;
   inset: 0;
   font-family: var(--font-manrope), sans-serif;
@@ -221,34 +220,17 @@
   place-items: center;
 }
 
-@keyframes count-old {
-  0%,
-  54% {
-    opacity: 1;
-  }
-  56%,
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes count-new {
-  0%,
-  54% {
-    opacity: 0;
-  }
-  56%,
-  100% {
-    opacity: 1;
-  }
-}
-
-.rec__pill--count .old {
-  animation: count-old var(--loop) step-end infinite;
-}
-
+/* The count goes from 2 to 3 clips when the save moment of the video has passed (see recording-screen.astro). */
 .rec__pill--count .new {
-  animation: count-new var(--loop) step-end infinite;
+  opacity: 0;
+}
+
+.rec[data-counted] .rec__pill--count .old {
+  opacity: 0;
+}
+
+.rec[data-counted] .rec__pill--count .new {
+  opacity: 1;
 }
 
 .rec__bottom {
@@ -308,23 +290,15 @@
   height: 4.103cqw;
 }
 
-@keyframes way-hit {
-  0%,
-  54%,
-  67%,
-  100% {
-    border-color: #2e2e2e;
-    background: transparent;
-  }
-  57%,
-  63% {
-    border-color: var(--color-amber);
-    background: rgb(255 176 0 / 0.18);
-  }
+.rec__way {
+  transition:
+    border-color 0.15s,
+    background-color 0.15s;
 }
 
-.rec__way--hit {
-  animation: way-hit var(--loop) ease-out infinite;
+.rec[data-saved] .rec__way--hit {
+  border-color: var(--color-amber);
+  background: rgb(255 176 0 / 0.18);
 }
 
 .rec__hold {
@@ -338,21 +312,6 @@
   font-weight: 700;
 }
 
-@keyframes saved-in {
-  0%,
-  54% {
-    opacity: 0;
-  }
-  56%,
-  63% {
-    opacity: 1;
-  }
-  66%,
-  100% {
-    opacity: 0;
-  }
-}
-
 .rec__saved {
   position: absolute;
   inset: 0;
@@ -364,7 +323,12 @@
   /* Follows the rounded corners of the phone screen (.phone__screen), so the frame is not cut square. */
   border-radius: 2.45rem;
   opacity: 0;
-  animation: saved-in var(--loop) ease-out infinite;
+  transition: opacity 0.14s ease-out;
+}
+
+/* Shown only while the video is at its save moment: after the point, as the player reacts and looks at the crowd. */
+.rec[data-saved] .rec__saved {
+  opacity: 1;
 }
 
 .rec__saved-card {

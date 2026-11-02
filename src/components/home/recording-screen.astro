@@ -14,7 +14,7 @@ const { copy } = Astro.props;
 const stroke = { fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' } as const;
 ---
 
-<div class="rec" aria-hidden="true">
+<div class="rec" aria-hidden="true" data-save-at="10.0" data-save-until="10.9">
   <PhoneVideo name="beach-tennis-hero" eager />
 
   <div class="rec__top">
@@ -80,3 +80,30 @@ const stroke = { fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'ro
     </div>
   </div>
 </div>
+
+<script>
+  // The "clip saved" card follows the video, not a timer of its own: once per loop, after the player's point, when he
+  // reacts and looks at the crowd. The count goes from 2 to 3 clips at that moment and back to 2 when the video starts
+  // over. The seconds (of beach-tennis-hero.mp4) are on the root element.
+  const rec = document.querySelector<HTMLElement>('.rec');
+  const video = rec?.querySelector('video');
+  if (rec && video) {
+    const from = Number(rec.dataset.saveAt);
+    const to = Number(rec.dataset.saveUntil);
+    const sync = () => {
+      const t = video.currentTime;
+      rec.toggleAttribute('data-saved', t >= from && t < to);
+      rec.toggleAttribute('data-counted', t >= from);
+    };
+    // Every frame where the browser can tell (smooth edges), and the media events as the safety net.
+    if ('requestVideoFrameCallback' in video) {
+      const tick = () => {
+        sync();
+        video.requestVideoFrameCallback(tick);
+      };
+      video.requestVideoFrameCallback(tick);
+    }
+    video.addEventListener('timeupdate', sync);
+    video.addEventListener('seeked', sync);
+  }
+</script>

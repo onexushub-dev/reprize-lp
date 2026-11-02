@@ -23,7 +23,6 @@ export interface HomeCopy {
     eyebrow: string;
     title: string;
     subtitle: string;
-    note: string;
     /** The app's recording screen, texts as in the app (reprize/app/src/i18n/locales). */
     screen: {
       rec: string;
@@ -113,7 +112,6 @@ const ptBR: HomeCopy = {
     title: 'Seu lance. De novo.',
     subtitle:
       'Apoie o celular, jogue à vontade e guarde só a jogada que valeu. Sem cadastro, sem nuvem.',
-    note: 'Grátis para começar',
     screen: {
       rec: 'Gravando',
       elapsed: '00:12:08',
@@ -429,7 +427,6 @@ const en: HomeCopy = {
     title: 'Your play. Again.',
     subtitle:
       'Set the phone down, play on, and keep only the play that mattered. No sign-up, no cloud.',
-    note: 'Free to start',
     screen: {
       rec: 'Recording',
       elapsed: '00:12:08',
