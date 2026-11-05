@@ -1,7 +1,7 @@
 ---
 title: Terms of Use
 description: Conditions for using the Reprize app and website, including plans, payments and responsibilities.
-updated: 2026-11-02
+updated: 2026-11-04
 ---
 
 # Terms of Use
@@ -12,7 +12,7 @@ How personal data is handled is described in the [Privacy Policy](/en/privacy), 
 
 ## 1. Who we are
 
-Reprize is offered by **Nexus Hub**, Brazilian company registration (CNPJ) **64.669.130/0001-02**, São Paulo, Brazil. Contact: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+Reprize is offered by **Victor Hugo Marques Ltda** (trading as **Nexus Hub**), Brazilian company registration (CNPJ) **64.669.130/0001-02**, headquartered at Rua Pais Leme, 215, suite 1713, Pinheiros, São Paulo, SP, 05424-150, Brazil. Contact: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
 
 ## 2. What Reprize is
 
@@ -67,7 +67,7 @@ For that reason we **do not guarantee** that every play will be captured, that t
 
 ## 9. Intellectual property
 
-The app, the website, the **Reprize** name and logo, the design, the texts and the code belong to Nexus Hub or are licensed to it and are protected by law. These Terms transfer no rights beyond the license in item 4. You may not use the Reprize brand in a way that suggests sponsorship or partnership without written permission.
+The app, the website, the **Reprize** name and logo, the design, the texts and the code belong to Victor Hugo Marques Ltda (Nexus Hub) or are licensed to it and are protected by law. These Terms transfer no rights beyond the license in item 4. You may not use the Reprize brand in a way that suggests sponsorship or partnership without written permission.
 
 ## 10. Third-party services
 

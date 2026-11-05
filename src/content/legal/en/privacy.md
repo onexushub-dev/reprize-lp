@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 description: How Reprize handles personal data. Your recordings stay on your phone and are never sent to our servers.
-updated: 2026-11-02
+updated: 2026-11-04
 ---
 
 # Privacy Policy
@@ -17,7 +17,7 @@ This Policy explains what personal data is processed when you use the **Reprize*
 
 ## 1. Who is responsible
 
-The data controller is **Nexus Hub**, registered in Brazil under CNPJ **64.669.130/0001-02**, based in São Paulo, Brazil ("**Reprize**", "**we**").
+The data controller is **Victor Hugo Marques Ltda** (trading as **Nexus Hub**), registered in Brazil under CNPJ **64.669.130/0001-02**, headquartered at Rua Pais Leme, 215, suite 1713, Pinheiros, São Paulo, SP, 05424-150, Brazil ("**Reprize**", "**we**").
 
 Privacy contact, including for exercising your rights: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
 
