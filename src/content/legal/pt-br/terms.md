@@ -1,7 +1,7 @@
 ---
 title: Termos de Uso
 description: Condições para usar o aplicativo e o site do Reprize, incluindo planos, pagamentos e responsabilidades.
-updated: 2026-11-02
+updated: 2026-11-04
 ---
 
 # Termos de Uso
@@ -12,7 +12,7 @@ O tratamento de dados pessoais está descrito na [Política de Privacidade](/pri
 
 ## 1. Quem somos
 
-O Reprize é oferecido pela **Nexus Hub**, CNPJ **64.669.130/0001-02**, São Paulo/SP. Contato: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+O Reprize é oferecido pela **Victor Hugo Marques Ltda** (nome fantasia **Nexus Hub**), CNPJ **64.669.130/0001-02**, com sede na Rua Pais Leme, 215, conj. 1713, Pinheiros, São Paulo/SP, CEP 05424-150. Contato: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
 
 ## 2. O que é o Reprize
 
@@ -67,7 +67,7 @@ Por isso **não garantimos** que todo lance seja capturado, que a imagem tenha d
 
 ## 9. Propriedade intelectual
 
-O app, o site, o nome e o logotipo **Reprize**, o design, os textos e o código são de propriedade da Nexus Hub ou licenciados a ela e protegidos pela legislação. Estes Termos não transferem nenhum direito, além da licença de uso do item 4. Você não pode usar a marca Reprize de forma que sugira patrocínio ou parceria sem autorização por escrito.
+O app, o site, o nome e o logotipo **Reprize**, o design, os textos e o código são de propriedade da Victor Hugo Marques Ltda (Nexus Hub) ou licenciados a ela e protegidos pela legislação. Estes Termos não transferem nenhum direito, além da licença de uso do item 4. Você não pode usar a marca Reprize de forma que sugira patrocínio ou parceria sem autorização por escrito.
 
 ## 10. Serviços de terceiros
 

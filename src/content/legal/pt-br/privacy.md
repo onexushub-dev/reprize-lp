@@ -1,7 +1,7 @@
 ---
 title: Política de Privacidade
 description: Como o Reprize trata dados pessoais. Suas gravações ficam só no seu celular e não são enviadas aos nossos servidores.
-updated: 2026-11-02
+updated: 2026-11-04
 ---
 
 # Política de Privacidade
@@ -17,7 +17,7 @@ Esta Política explica quais dados pessoais são tratados quando você usa o apl
 
 ## 1. Quem é o responsável
 
-O controlador dos dados é a **Nexus Hub**, inscrita no CNPJ sob o nº **64.669.130/0001-02**, com sede em São Paulo/SP ("**Reprize**", "**nós**").
+O controlador dos dados é a **Victor Hugo Marques Ltda** (nome fantasia **Nexus Hub**), inscrita no CNPJ sob o nº **64.669.130/0001-02**, com sede na Rua Pais Leme, 215, conj. 1713, Pinheiros, São Paulo/SP, CEP 05424-150 ("**Reprize**", "**nós**").
 
 Canal de contato para privacidade, incluindo o exercício dos seus direitos: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
 
