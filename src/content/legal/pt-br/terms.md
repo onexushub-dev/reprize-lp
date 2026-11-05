@@ -12,7 +12,7 @@ O tratamento de dados pessoais está descrito na [Política de Privacidade](/pri
 
 ## 1. Quem somos
 
-O Reprize é oferecido pela **Victor Hugo Marques Ltda** (nome fantasia **Nexus Hub**), CNPJ **64.669.130/0001-02**, com sede na Rua Pais Leme, 215, conj. 1713, Pinheiros, São Paulo/SP, CEP 05424-150. Contato: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+O Reprize é oferecido pela **Victor Hugo Marques Ltda** (nome fantasia **Nexus Hub**), CNPJ **64.669.130/0001-02**, com sede na Rua Pais Leme, 215, conj. 1713, Pinheiros, São Paulo/SP, CEP 05424-150. Contato: [contato@reprizeapp.com](mailto:contato@reprizeapp.com).
 
 ## 2. O que é o Reprize
 
@@ -104,4 +104,4 @@ Se alguma parte destes Termos for considerada inválida, as demais continuam em 
 
 ## 17. Contato
 
-Dúvidas, suporte e reclamações: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+Dúvidas, suporte e reclamações: [contato@reprizeapp.com](mailto:contato@reprizeapp.com).

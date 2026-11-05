@@ -19,7 +19,7 @@ This Policy explains what personal data is processed when you use the **Reprize*
 
 The data controller is **Victor Hugo Marques Ltda** (trading as **Nexus Hub**), registered in Brazil under CNPJ **64.669.130/0001-02**, headquartered at Rua Pais Leme, 215, suite 1713, Pinheiros, São Paulo, SP, 05424-150, Brazil ("**Reprize**", "**we**").
 
-Privacy contact, including for exercising your rights: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+Privacy contact, including for exercising your rights: [contato@reprizeapp.com](mailto:contato@reprizeapp.com).
 
 ## 2. Data that stays only on your phone
 
@@ -67,7 +67,7 @@ To understand how the app is used and improve it, Reprize measures usage **anony
 - **What we never send:** videos, audio, photos, file or device names, typed text or error messages.
 - **Without identifying you:** we use a random code generated on your phone at install. We do not link that code to a name, email, account, advertising identifier or IP address, and we do not build profiles of people.
 - **Who processes it:** **PostHog Inc.** (USA), which receives these events on our behalf. Its policy is at [posthog.com/privacy](https://posthog.com/privacy).
-- **If you prefer not to be measured:** the app does not yet have a switch to turn the measurement off. Write to [reprize.app@gmail.com](mailto:reprize.app@gmail.com) and we will handle your request.
+- **If you prefer not to be measured:** the app does not yet have a switch to turn the measurement off. Write to [contato@reprizeapp.com](mailto:contato@reprizeapp.com) and we will handle your request.
 
 ## 6. Data you send us by email
 
@@ -124,7 +124,7 @@ RevenueCat, PostHog and Vercel may process data outside Brazil, including in the
 
 At any time and free of charge you may request (LGPD, art. 18): confirmation that we process your data; access; correction; anonymization, blocking or deletion of unnecessary data or data processed unlawfully; portability; information about who we share data with; information about the possibility of refusing consent and its consequences; withdrawal of consent; and objection to unlawful processing.
 
-To exercise your rights, write to [reprize.app@gmail.com](mailto:reprize.app@gmail.com). We may ask for information to confirm your identity, and we will reply within the legal deadlines. Because we do not keep your recordings or an account for you, data that exists only on your device is under your direct control.
+To exercise your rights, write to [contato@reprizeapp.com](mailto:contato@reprizeapp.com). We may ask for information to confirm your identity, and we will reply within the legal deadlines. Because we do not keep your recordings or an account for you, data that exists only on your device is under your direct control.
 
 You may also complain to Brazil's **National Data Protection Authority (ANPD)** at [gov.br/anpd](https://www.gov.br/anpd). If you are located outside Brazil, you may also have rights under your local law, and you can contact us at the same address.
 
@@ -146,4 +146,4 @@ We may update this Policy. The current version is always at [reprizeapp.com/en/p
 
 ## 18. Contact
 
-Questions, requests and complaints about privacy: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+Questions, requests and complaints about privacy: [contato@reprizeapp.com](mailto:contato@reprizeapp.com).
