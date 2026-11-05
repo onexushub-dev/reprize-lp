@@ -85,7 +85,7 @@ export function isLocale(value: string | undefined): value is Locale {
   return value !== undefined && (locales as readonly string[]).includes(value);
 }
 
-export const SUPPORT_EMAIL = 'reprize.app@gmail.com';
+export const SUPPORT_EMAIL = 'contato@reprizeapp.com';
 
 /** Official profiles, handle @reprize.app on both networks. Used by the footer and the structured data. */
 export const SOCIAL_LINKS = {

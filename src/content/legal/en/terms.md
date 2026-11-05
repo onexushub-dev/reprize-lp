@@ -12,7 +12,7 @@ How personal data is handled is described in the [Privacy Policy](/en/privacy), 
 
 ## 1. Who we are
 
-Reprize is offered by **Victor Hugo Marques Ltda** (trading as **Nexus Hub**), Brazilian company registration (CNPJ) **64.669.130/0001-02**, headquartered at Rua Pais Leme, 215, suite 1713, Pinheiros, São Paulo, SP, 05424-150, Brazil. Contact: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+Reprize is offered by **Victor Hugo Marques Ltda** (trading as **Nexus Hub**), Brazilian company registration (CNPJ) **64.669.130/0001-02**, headquartered at Rua Pais Leme, 215, suite 1713, Pinheiros, São Paulo, SP, 05424-150, Brazil. Contact: [contato@reprizeapp.com](mailto:contato@reprizeapp.com).
 
 ## 2. What Reprize is
 
@@ -104,4 +104,4 @@ If any part of these Terms is found invalid, the rest remains in force. Toleranc
 
 ## 17. Contact
 
-Questions, support and complaints: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+Questions, support and complaints: [contato@reprizeapp.com](mailto:contato@reprizeapp.com).

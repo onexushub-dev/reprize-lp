@@ -19,7 +19,7 @@ Esta Política explica quais dados pessoais são tratados quando você usa o apl
 
 O controlador dos dados é a **Victor Hugo Marques Ltda** (nome fantasia **Nexus Hub**), inscrita no CNPJ sob o nº **64.669.130/0001-02**, com sede na Rua Pais Leme, 215, conj. 1713, Pinheiros, São Paulo/SP, CEP 05424-150 ("**Reprize**", "**nós**").
 
-Canal de contato para privacidade, incluindo o exercício dos seus direitos: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+Canal de contato para privacidade, incluindo o exercício dos seus direitos: [contato@reprizeapp.com](mailto:contato@reprizeapp.com).
 
 ## 2. Dados que ficam apenas no seu celular
 
@@ -67,7 +67,7 @@ Para entender como o app é usado e melhorá-lo, o Reprize mede o uso de forma *
 - **O que nunca enviamos:** vídeos, áudio, fotos, nomes de arquivos ou de aparelhos, textos digitados nem mensagens de erro.
 - **Sem identificar você:** usamos um código aleatório gerado no seu celular na instalação. Não ligamos esse código a nome, e-mail, conta, identificador de publicidade ou endereço IP, e não criamos perfis de pessoas.
 - **Quem processa:** a **PostHog Inc.** (EUA), que recebe esses eventos em nosso nome. A política dela está em [posthog.com/privacy](https://posthog.com/privacy).
-- **Se preferir não ser medido:** o app ainda não tem um botão para desligar a medição. Escreva para [reprize.app@gmail.com](mailto:reprize.app@gmail.com) e trataremos o seu pedido.
+- **Se preferir não ser medido:** o app ainda não tem um botão para desligar a medição. Escreva para [contato@reprizeapp.com](mailto:contato@reprizeapp.com) e trataremos o seu pedido.
 
 ## 6. Dados que você nos envia por e-mail
 
@@ -124,7 +124,7 @@ RevenueCat, PostHog e Vercel podem tratar dados fora do Brasil, inclusive nos Es
 
 Você pode pedir, a qualquer momento e gratuitamente (LGPD, art. 18): confirmação de que tratamos seus dados; acesso; correção; anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade; portabilidade; informação sobre com quem compartilhamos; informação sobre a possibilidade de não consentir e suas consequências; revogação do consentimento; e oposição a tratamento irregular.
 
-Para exercer seus direitos, escreva para [reprize.app@gmail.com](mailto:reprize.app@gmail.com). Podemos pedir informações para confirmar quem você é e responderemos nos prazos da lei. Como não mantemos suas gravações nem uma conta sua, os dados que existem só no seu aparelho estão sob seu controle direto.
+Para exercer seus direitos, escreva para [contato@reprizeapp.com](mailto:contato@reprizeapp.com). Podemos pedir informações para confirmar quem você é e responderemos nos prazos da lei. Como não mantemos suas gravações nem uma conta sua, os dados que existem só no seu aparelho estão sob seu controle direto.
 
 Você também pode reclamar à **Autoridade Nacional de Proteção de Dados (ANPD)**, em [gov.br/anpd](https://www.gov.br/anpd).
 
@@ -146,4 +146,4 @@ Podemos atualizar esta Política. A versão vigente fica sempre em [reprizeapp.c
 
 ## 18. Contato
 
-Dúvidas, pedidos e reclamações sobre privacidade: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+Dúvidas, pedidos e reclamações sobre privacidade: [contato@reprizeapp.com](mailto:contato@reprizeapp.com).
