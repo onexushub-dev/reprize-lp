@@ -49,6 +49,8 @@ export default defineConfig({
 
   integrations: [
     sitemap({
+      // The download page (/baixar, the QR code target) redirects phones to their store and is not indexed.
+      filter: (page) => !page.endsWith('/baixar'),
       i18n: {
         defaultLocale: 'pt-BR',
         locales: { 'pt-BR': 'pt-BR', en: 'en' },
