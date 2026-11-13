@@ -35,6 +35,10 @@ Os arquivos vêm do kit de marca do Reprize (artefato "Reprize: marca e lojas"),
 
 Copie `.env.example` para `.env` e preencha `PUBLIC_APP_STORE_URL` e `PUBLIC_PLAY_STORE_URL`. Enquanto estiverem vazias, os botões aparecem como "Em breve".
 
+## Página de download (QR code)
+
+`/baixar` é o destino do QR code dos materiais impressos (`https://www.reprizeapp.com/baixar`). No iPhone e no iPad ela abre a App Store automaticamente. No Android mostra o aviso "Em breve" enquanto `PUBLIC_PLAY_STORE_URL` estiver vazia; depois de preenchida, o Android passa a abrir o Google Play do mesmo jeito. No computador aparecem os dois botões. O link da App Store usa `PUBLIC_APP_STORE_URL` e, sem ela, o endereço do app pelo id (`src/components/download-page.astro`).
+
 ## Rotas legais
 
 As lojas apontam para `reprizeapp.com/privacy` e `reprizeapp.com/terms`. Por isso as URLs não têm barra final (`trailingSlash: 'never'`).
