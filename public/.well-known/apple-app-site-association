@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["R885ZD42ZG.app.reprize.mobile"],
+        "components": [{ "/": "/p/*", "comment": "Partner referral links" }]
+      }
+    ]
+  }
+}

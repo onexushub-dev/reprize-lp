@@ -49,6 +49,8 @@ export default defineConfig({
 
   integrations: [
     sitemap({
+      // The partner link page (/p/CODE, one page for every partner) is not indexed.
+      filter: (page) => !page.endsWith('/p'),
       i18n: {
         defaultLocale: 'pt-BR',
         locales: { 'pt-BR': 'pt-BR', en: 'en' },

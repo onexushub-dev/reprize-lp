@@ -1,0 +1,98 @@
+---
+import '../styles/home.css';
+import BaseLayout from '../layouts/base-layout.astro';
+import BrandLogo from '../components/brand-logo.astro';
+import StoreButton from '../components/store-button.astro';
+import { useTranslations } from '../i18n/ui';
+
+// The address a partner shares is /p/CODE; the host rewrites it to this page (vercel.json) and the code is read from the
+// address in the browser, so one static page serves every partner and a new partner needs no deploy.
+const t = useTranslations('pt-BR');
+
+// The iPhone link cannot depend on the environment (same fallback as /baixar): the listing by id opens in the visitor's country.
+const appStoreUrl = import.meta.env.PUBLIC_APP_STORE_URL || 'https://apps.apple.com/app/id6833159162';
+// Empty until the Android app is published: Android then shows the "coming soon" button.
+const playStoreUrl = import.meta.env.PUBLIC_PLAY_STORE_URL || '';
+// The provider token of App Store Connect's campaign links; with it the iPhone installs of each partner show in App Analytics.
+const appStoreProviderToken = import.meta.env.PUBLIC_APP_STORE_PROVIDER_TOKEN || '';
+
+const eyebrow = 'text-amber text-xs font-bold tracking-[0.24em] uppercase sm:text-sm';
+const body = 'text-paper/80 mx-auto mt-5 max-w-md text-base leading-7 sm:text-lg sm:leading-8';
+const copied = t('partner.copied');
+const copy = t('partner.copy');
+---
+
+<BaseLayout locale="pt-BR" title={`${t('partner.metaTitle')} | Reprize`} description={t('partner.metaDescription')} slug="p" noindex>
+  <section class="hero-glow grain relative isolate overflow-hidden">
+    <div class="mx-auto flex min-h-[70vh] max-w-3xl flex-col items-center justify-center px-4 py-16 text-center sm:px-6 sm:py-24">
+      <BrandLogo name="simbolo" width={71} height={48} class="h-12 w-auto" />
+      <p class={`${eyebrow} mt-8`}>{t('partner.eyebrow')}</p>
+      <h1 class="mt-4 text-4xl font-extrabold sm:text-6xl">{t('partner.title')}</h1>
+      <p class={body}>{t('partner.body')}</p>
+
+      <p class="text-muted mt-8 text-sm font-semibold">{t('partner.codeLabel')}</p>
+      <p id="partner-code" class="font-display text-amber mt-1 text-5xl font-extrabold tracking-widest sm:text-6xl"></p>
+      <button id="partner-copy" type="button" class="border-line hover:border-amber hover:text-amber mt-4 min-h-[44px] rounded-xl border px-5 py-2 font-bold transition-colors">
+        {copy}
+      </button>
+
+      <div class="mt-9 flex flex-wrap justify-center gap-3">
+        <span id="partner-ios">
+          <StoreButton icon="apple" store={t('store.appStore')} href={appStoreUrl} soonLabel={t('store.soon')} availableLabel={t('store.availableOn')} />
+        </span>
+        <span id="partner-android">
+          <StoreButton icon="play" store={t('store.googlePlay')} href={playStoreUrl || undefined} soonLabel={t('store.soon')} availableLabel={t('store.availableOn')} />
+        </span>
+      </div>
+      <a id="partner-open" href="/" class="text-muted hover:text-amber mt-6 font-semibold underline">{t('partner.openApp')}</a>
+      <p id="partner-steps-ios" class={`${body} text-sm`} hidden>{t('partner.stepsIos')}</p>
+      <p id="partner-steps-android" class={`${body} text-sm`} hidden>{t('partner.stepsAndroid')}</p>
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ appStoreUrl, playStoreUrl, appStoreProviderToken, copied, copy }}>
+    // The same rule as the app (src/partner/code.ts): accents folded, only A-Z and 0-9, 3 to 20 characters.
+    function normalize(raw) {
+      var code = decodeURIComponent(raw).normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+      return code.length >= 3 && code.length <= 20 ? code : null;
+    }
+    var code = null;
+    try {
+      var match = /^\/p\/([^/?#]+)/.exec(location.pathname);
+      code = match ? normalize(match[1]) : null;
+    } catch (e) {}
+    // No code, or one that cannot be a code: nothing to show here.
+    if (!code) {
+      location.replace('/');
+    } else {
+      var ua = navigator.userAgent;
+      var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      var android = !ios && /Android/i.test(ua);
+      document.getElementById('partner-code').textContent = code;
+      var iosLink = document.querySelector('#partner-ios a');
+      if (iosLink) {
+        var query = (appStoreProviderToken ? 'pt=' + encodeURIComponent(appStoreProviderToken) + '&' : '') + 'ct=' + code + '&mt=8';
+        iosLink.href = appStoreUrl + (appStoreUrl.indexOf('?') === -1 ? '?' : '&') + query;
+      }
+      var androidLink = document.querySelector('#partner-android a');
+      if (androidLink && playStoreUrl) {
+        // The Play install referrer carries the code to the first launch of the app.
+        androidLink.href = playStoreUrl + (playStoreUrl.indexOf('?') === -1 ? '?' : '&') + 'referrer=' + encodeURIComponent('partner=' + code);
+      }
+      document.getElementById('partner-open').href = 'reprize://p/' + code;
+      // Phones see their own store and the short note; computers see both stores.
+      if (ios) document.getElementById('partner-android').hidden = true;
+      if (android) document.getElementById('partner-ios').hidden = true;
+      if (ios) document.getElementById('partner-steps-ios').hidden = false;
+      if (android) document.getElementById('partner-steps-android').hidden = false;
+      var button = document.getElementById('partner-copy');
+      button.addEventListener('click', function () {
+        var done = function () {
+          button.textContent = copied;
+          setTimeout(function () { button.textContent = copy; }, 2000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(code).then(done, function () {});
+      });
+    }
+  </script>
+</BaseLayout>
