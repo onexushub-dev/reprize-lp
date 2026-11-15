@@ -1,7 +1,7 @@
 ---
 title: Política de Privacidade
 description: Como o Reprize trata dados pessoais. Suas gravações ficam só no seu celular e não são enviadas aos nossos servidores.
-updated: 2026-11-04
+updated: 2026-11-15
 ---
 
 # Política de Privacidade
@@ -55,7 +55,7 @@ Se você negar uma permissão, as funções que dependem dela ficam indisponíve
 Parte do Reprize é paga (passe avulso e plano Pro). Para isso:
 
 - **Apple App Store e Google Play** processam o pagamento. Nós **não recebemos** número de cartão nem dados bancários.
-- **RevenueCat, Inc.** (EUA) é o serviço que gerencia assinaturas e libera as funções pagas. Ele recebe, em nosso nome, um **identificador anônimo** do usuário no app, informações da compra (produto, datas, status e loja), dados técnicos do aparelho e do app, o país e o endereço IP. A política dele está em [revenuecat.com/privacy](https://www.revenuecat.com/privacy).
+- **RevenueCat, Inc.** (EUA) é o serviço que gerencia assinaturas e libera as funções pagas. Ele recebe, em nosso nome, um **identificador anônimo** do usuário no app, informações da compra (produto, datas, status e loja), dados técnicos do aparelho e do app, o país e o endereço IP. A política dele está em [revenuecat.com/privacy](https://www.revenuecat.com/privacy). Se você usar um **código de indicação**, esse código (que identifica o parceiro que indicou, nunca uma pessoa) é associado ao seu identificador anônimo, para sabermos qual indicação gerou a assinatura.
 
 Esses dados são usados para confirmar sua compra, liberar as funções pagas, evitar fraudes e atender pedidos de suporte e reembolso.
 

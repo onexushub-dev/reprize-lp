@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 description: How Reprize handles personal data. Your recordings stay on your phone and are never sent to our servers.
-updated: 2026-11-04
+updated: 2026-11-15
 ---
 
 # Privacy Policy
@@ -55,7 +55,7 @@ If you deny a permission, the features that depend on it become unavailable, and
 Part of Reprize is paid (single pass and Pro plan). For that:
 
 - **Apple App Store and Google Play** process the payment. We **do not receive** card numbers or bank details.
-- **RevenueCat, Inc.** (USA) is the service that manages subscriptions and unlocks paid features. On our behalf, it receives an **anonymous app user identifier**, purchase information (product, dates, status and store), technical data about the device and app, the country and the IP address. Its policy is at [revenuecat.com/privacy](https://www.revenuecat.com/privacy).
+- **RevenueCat, Inc.** (USA) is the service that manages subscriptions and unlocks paid features. On our behalf, it receives an **anonymous app user identifier**, purchase information (product, dates, status and store), technical data about the device and app, the country and the IP address. Its policy is at [revenuecat.com/privacy](https://www.revenuecat.com/privacy). If you use a **referral code**, that code (which identifies the partner who referred you, never a person) is associated with your anonymous identifier, so we know which referral led to a subscription.
 
 This data is used to confirm your purchase, unlock paid features, prevent fraud and handle support and refund requests.
 
