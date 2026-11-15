@@ -30,9 +30,9 @@ const copy = t('partner.copy');
       <h1 class="mt-4 text-4xl font-extrabold sm:text-6xl">{t('partner.title')}</h1>
       <p class={body}>{t('partner.body')}</p>
 
-      <p class="text-muted mt-8 text-sm font-semibold">{t('partner.codeLabel')}</p>
-      <p id="partner-code" class="font-display text-amber mt-1 text-5xl font-extrabold tracking-widest sm:text-6xl"></p>
-      <button id="partner-copy" type="button" class="border-line hover:border-amber hover:text-amber mt-4 min-h-[44px] rounded-xl border px-5 py-2 font-bold transition-colors">
+      <p id="partner-code-label" class="text-muted mt-8 text-sm font-semibold" hidden>{t('partner.codeLabel')}</p>
+      <p id="partner-code" class="font-display text-amber mt-1 text-5xl font-extrabold tracking-widest sm:text-6xl" hidden></p>
+      <button id="partner-copy" type="button" hidden class="border-line hover:border-amber hover:text-amber mt-4 min-h-[44px] rounded-xl border px-5 py-2 font-bold transition-colors">
         {copy}
       </button>
 
@@ -68,7 +68,11 @@ const copy = t('partner.copy');
       var ua = navigator.userAgent;
       var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
       var android = !ios && /Android/i.test(ua);
-      document.getElementById('partner-code').textContent = code;
+      var codeEl = document.getElementById('partner-code');
+      codeEl.textContent = code;
+      codeEl.hidden = false;
+      document.getElementById('partner-code-label').hidden = false;
+      document.getElementById('partner-copy').hidden = false;
       var iosLink = document.querySelector('#partner-ios a');
       if (iosLink) {
         var query = (appStoreProviderToken ? 'pt=' + encodeURIComponent(appStoreProviderToken) + '&' : '') + 'ct=' + code + '&mt=8';
@@ -91,7 +95,19 @@ const copy = t('partner.copy');
           button.textContent = copied;
           setTimeout(function () { button.textContent = copy; }, 2000);
         };
-        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(code).then(done, function () {});
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(done, function () {});
+        } else {
+          // In-app browsers without the Clipboard API: select the code and use the old command.
+          var range = document.createRange();
+          range.selectNodeContents(codeEl);
+          var selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          try {
+            if (document.execCommand('copy')) done();
+          } catch (e) {}
+        }
       });
     }
   </script>

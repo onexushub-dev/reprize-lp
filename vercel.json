@@ -1,5 +1,8 @@
 {
-  "rewrites": [{ "source": "/p/:code", "destination": "/p" }],
+  "rewrites": [
+    { "source": "/p/:code", "destination": "/p" },
+    { "source": "/p/:code/", "destination": "/p" }
+  ],
   "headers": [
     {
       "source": "/.well-known/apple-app-site-association",

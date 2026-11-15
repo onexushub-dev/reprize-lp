@@ -40,7 +40,7 @@ export const ui = {
     'partner.copy': 'Copiar código',
     'partner.copied': 'Código copiado',
     'partner.openApp': 'Já tenho o app',
-    'partner.stepsIos': 'No iPhone: baixe o app, abra e toque em "Tenho um código de indicação" na tela inicial.',
+    'partner.stepsIos': 'No iPhone: baixe o app, abra e toque em "Tenho um código de indicação" perto do botão de começar a gravação.',
     'partner.stepsAndroid': 'No Android o código é aplicado sozinho quando você abre o app.',
     'footer.company':
       'Reprize é um produto de Victor Hugo Marques Ltda (Nexus Hub), CNPJ 64.669.130/0001-02, Rua Pais Leme, 215, conj. 1713, Pinheiros, São Paulo/SP, CEP 05424-150.',
@@ -83,7 +83,7 @@ export const ui = {
     'partner.copy': 'Copy code',
     'partner.copied': 'Code copied',
     'partner.openApp': 'I already have the app',
-    'partner.stepsIos': 'On iPhone: download the app, open it and tap "I have a referral code" on the start screen.',
+    'partner.stepsIos': 'On iPhone: download the app, open it and tap "I have a referral code" near the start recording button.',
     'partner.stepsAndroid': 'On Android the code is applied by itself when you open the app.',
     'footer.company':
       'Reprize is a product of Victor Hugo Marques Ltda (trading as Nexus Hub), Brazilian company registration (CNPJ) 64.669.130/0001-02, Rua Pais Leme, 215, suite 1713, Pinheiros, São Paulo, SP, 05424-150, Brazil.',
