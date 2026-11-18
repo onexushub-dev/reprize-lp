@@ -3,6 +3,7 @@ import '../styles/home.css';
 import BaseLayout from '../layouts/base-layout.astro';
 import BrandLogo from './brand-logo.astro';
 import StoreButton from './store-button.astro';
+import type { Share } from '../data/share';
 import { APP_STORE_URL } from '../data/stores';
 import { SUPPORT_EMAIL, useTranslations, type Locale } from '../i18n/ui';
 
@@ -12,40 +13,17 @@ import { SUPPORT_EMAIL, useTranslations, type Locale } from '../i18n/ui';
 
 interface Props {
   locale: Locale;
+  code: string;
+  /** Loaded by the page, which sets the status and the headers (a component cannot, once the page is streaming). */
+  share: Share;
 }
 
-type Active = {
-  state: 'active';
-  kind: 'recording' | 'clip';
-  title: string | null;
-  clips: number;
-  from: string | null;
-  expiresAt: string;
-  cover: { video: string; image: string } | null;
-};
-type Share = Active | { state: 'expired' | 'off' | 'removed' | 'not_found' | 'error' };
-
-const { locale } = Astro.props;
+const { locale, code, share } = Astro.props;
 const t = useTranslations(locale);
 const fill = (text: string, values: Record<string, string | number>) =>
   text.replace(/\{(\w+)\}/g, (_, key: string) => String(values[key] ?? ''));
 
-const code = Astro.params.code ?? '';
-// Public values (the function is public and the key is the publishable one); set per environment on Vercel.
-const api = import.meta.env.SHARE_PAGE_API || 'https://wkscydgikynfpfltpmht.supabase.co/functions/v1/share-page';
-const key = import.meta.env.SHARE_PAGE_KEY || 'sb_publishable_VU8AnV3M3N15GhXpT-ML6w_Q38uuhqB';
 const appStoreUrl = APP_STORE_URL;
-
-let share: Share = { state: 'error' };
-try {
-  const response = await fetch(`${api}?code=${encodeURIComponent(code)}`, { headers: { apikey: key } });
-  if (response.status === 404) share = { state: 'not_found' };
-  else if (response.ok) share = (await response.json()) as Share;
-} catch {
-  share = { state: 'error' };
-}
-Astro.response.headers.set('Cache-Control', 'no-store');
-if (share.state === 'not_found') Astro.response.status = 404;
 
 const ua = Astro.request.headers.get('user-agent') ?? '';
 const ios = /iPhone|iPad|iPod/.test(ua);
