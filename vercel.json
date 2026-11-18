@@ -11,12 +11,6 @@
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/v/:code",
-      "destination": "/download"
-    }
-  ],
   "redirects": [
     {
       "source": "/baixar",

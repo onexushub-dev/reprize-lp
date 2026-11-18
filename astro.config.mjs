@@ -3,12 +3,16 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://reprizeapp.com',
   // The store listings point to reprizeapp.com/privacy and reprizeapp.com/terms, so canonical URLs have no trailing slash.
   trailingSlash: 'never',
+
+  // The site stays static; only the shared-link page (/v/<code>) is rendered on each visit, as a Vercel function.
+  adapter: vercel(),
 
   i18n: {
     defaultLocale: 'pt-BR',
@@ -49,8 +53,9 @@ export default defineConfig({
 
   integrations: [
     sitemap({
-      // The download page (/download, the QR code target) redirects phones to their store and is not indexed.
-      filter: (page) => !page.endsWith('/download'),
+      // The download page (/download, the QR code target) redirects phones to their store, and a shared link
+      // (/v/<code>) lives 24 hours: neither is indexed.
+      filter: (page) => !page.endsWith('/download') && !page.includes('/v/'),
       i18n: {
         defaultLocale: 'pt-BR',
         locales: { 'pt-BR': 'pt-BR', en: 'en' },
