@@ -3,6 +3,7 @@ import '../styles/home.css';
 import BaseLayout from '../layouts/base-layout.astro';
 import BrandLogo from './brand-logo.astro';
 import StoreButton from './store-button.astro';
+import { APP_STORE_URL } from '../data/stores';
 import { SUPPORT_EMAIL, useTranslations, type Locale } from '../i18n/ui';
 
 // The page of a shared recording or clip, reprizeapp.com/v/<code> (Lance repo:
@@ -33,7 +34,7 @@ const code = Astro.params.code ?? '';
 // Public values (the function is public and the key is the publishable one); set per environment on Vercel.
 const api = import.meta.env.SHARE_PAGE_API || 'https://wkscydgikynfpfltpmht.supabase.co/functions/v1/share-page';
 const key = import.meta.env.SHARE_PAGE_KEY || 'sb_publishable_VU8AnV3M3N15GhXpT-ML6w_Q38uuhqB';
-const appStoreUrl = import.meta.env.PUBLIC_APP_STORE_URL || 'https://apps.apple.com/app/id6833159162';
+const appStoreUrl = APP_STORE_URL;
 
 let share: Share = { state: 'error' };
 try {

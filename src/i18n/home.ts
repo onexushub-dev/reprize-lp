@@ -75,7 +75,7 @@ export interface HomeCopy {
     body: string;
     bullets: string[];
     link: string;
-    ring: { center: string; label: string; kept: string };
+    timeline: { label: string; old: string; kept: string; trigger: string };
   };
   sports: {
     title: string;
@@ -213,7 +213,7 @@ const ptBR: HomeCopy = {
       'Gesto e voz reconhecidos no próprio aparelho',
     ],
     link: 'Ler a Política de Privacidade',
-    ring: { center: 'Agora', label: 'memória temporária', kept: 'lance salvo' },
+    timeline: { label: 'Memória temporária do celular', old: 'o que é antigo é apagado', kept: 'os segundos anteriores ficam salvos', trigger: 'você aciona' },
   },
   sports: {
     title: 'Qualquer esporte. Qualquer quadra.',
@@ -528,7 +528,7 @@ const en: HomeCopy = {
       'Gesture and voice recognized on the device',
     ],
     link: 'Read the Privacy Policy',
-    ring: { center: 'Now', label: 'temporary memory', kept: 'saved play' },
+    timeline: { label: 'The phone’s temporary memory', old: 'old footage is deleted', kept: 'the seconds before stay saved', trigger: 'you trigger' },
   },
   sports: {
     title: 'Any sport. Any court.',

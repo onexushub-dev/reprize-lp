@@ -53,8 +53,9 @@ export default defineConfig({
 
   integrations: [
     sitemap({
-      // The download page (/baixar, the QR code target) redirects phones to their store and is not indexed.
-      filter: (page) => !page.endsWith('/baixar') && !page.includes('/v/'),
+      // The download page (/download, the QR code target) redirects phones to their store, and a shared link
+      // (/v/<code>) lives 24 hours: neither is indexed.
+      filter: (page) => !page.endsWith('/download') && !page.includes('/v/'),
       i18n: {
         defaultLocale: 'pt-BR',
         locales: { 'pt-BR': 'pt-BR', en: 'en' },
