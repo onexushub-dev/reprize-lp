@@ -39,7 +39,7 @@ O botão "Baixar" do topo leva à seção de download da página inicial; no iPh
 
 ## Página de download (QR code)
 
-`/baixar` é o destino do QR code dos materiais impressos (`https://www.reprizeapp.com/baixar`). No iPhone e no iPad ela abre a App Store automaticamente. No Android mostra o aviso "Em breve" enquanto `PUBLIC_PLAY_STORE_URL` estiver vazia; depois de preenchida, o Android passa a abrir o Google Play do mesmo jeito. No computador aparecem os dois botões. Os links vêm de `src/data/stores.ts`.
+`/download` (e `/en/download`) é o destino do QR code dos materiais impressos (`https://www.reprizeapp.com/download`). No iPhone e no iPad ela abre a App Store automaticamente. No Android mostra o aviso "Em breve" enquanto `PUBLIC_PLAY_STORE_URL` estiver vazia; depois de preenchida, o Android passa a abrir o Google Play do mesmo jeito. No computador aparecem os dois botões. Os links vêm de `src/data/stores.ts`. O endereço antigo, `/baixar`, continua funcionando: o `vercel.json` redireciona para `/download`, porque pode haver QR code impresso com ele.
 
 ## Rotas legais
 
