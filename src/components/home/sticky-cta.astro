@@ -1,5 +1,6 @@
 ---
 import { homeCopy } from '../../i18n/home';
+import { APP_STORE_URL, PLAY_STORE_URL } from '../../data/stores';
 import { useTranslations, type Locale } from '../../i18n/ui';
 
 interface Props {
@@ -10,8 +11,8 @@ const { locale } = Astro.props;
 const t = useTranslations(locale);
 const label = homeCopy[locale].stickyLabel;
 
-const appStoreUrl = import.meta.env.PUBLIC_APP_STORE_URL || undefined;
-const playStoreUrl = import.meta.env.PUBLIC_PLAY_STORE_URL || undefined;
+const appStoreUrl = APP_STORE_URL;
+const playStoreUrl = PLAY_STORE_URL || undefined;
 const links = [
   { name: t('store.appStore'), href: appStoreUrl },
   { name: t('store.googlePlay'), href: playStoreUrl },
@@ -24,7 +25,7 @@ const links = [
       <div class="flex items-center gap-3">
         <span class="flex-1 text-sm font-extrabold tracking-wide uppercase">{label}</span>
         {links.map((l) => (
-          <a href={l.href} class="bg-amber text-ink rounded-xl px-4 py-3 text-sm font-extrabold">
+          <a href={l.href} target="_blank" rel="noopener noreferrer" class="bg-amber text-ink rounded-xl px-4 py-3 text-sm font-extrabold">
             {l.name}
           </a>
         ))}

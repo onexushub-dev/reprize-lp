@@ -3,6 +3,7 @@ import '../styles/home.css';
 import BaseLayout from '../layouts/base-layout.astro';
 import BrandLogo from './brand-logo.astro';
 import StoreButton from './store-button.astro';
+import { APP_STORE_URL, PLAY_STORE_URL } from '../data/stores';
 import { SOCIAL_LINKS, useTranslations, type Locale } from '../i18n/ui';
 
 interface Props {
@@ -12,18 +13,17 @@ interface Props {
 const { locale } = Astro.props;
 const t = useTranslations(locale);
 
-// This page is the target of the QR code on printed material, so the iPhone link cannot depend on the environment:
-// without PUBLIC_APP_STORE_URL it falls back to the App Store listing by id, which opens in the visitor's own country.
-const appStoreUrl = import.meta.env.PUBLIC_APP_STORE_URL || 'https://apps.apple.com/app/id6833159162';
-// Empty until the Android app is published. Once set, Android phones are sent to Google Play like iPhones to the App Store.
-const playStoreUrl = import.meta.env.PUBLIC_PLAY_STORE_URL || '';
+// This page is the target of the QR code on printed material (see src/data/stores.ts for the links). The Play link is
+// empty until the Android app is published; once set, Android phones are sent to Google Play like iPhones to the App Store.
+const appStoreUrl = APP_STORE_URL;
+const playStoreUrl = PLAY_STORE_URL;
 
 const eyebrow = 'text-amber text-xs font-bold tracking-[0.24em] uppercase sm:text-sm';
 const title = 'mt-4 text-5xl font-extrabold sm:text-7xl';
 const body = 'text-paper/80 mx-auto mt-5 max-w-md text-base leading-7 sm:text-lg sm:leading-8';
 ---
 
-<BaseLayout locale={locale} title={t('download.metaTitle')} description={t('download.metaDescription')} slug="baixar" noindex>
+<BaseLayout locale={locale} title={t('download.metaTitle')} description={t('download.metaDescription')} slug="download" noindex>
   <!-- Runs before the content below is painted: marks the phone's system on <html> and sends it to its store. -->
   <script is:inline define:vars={{ appStoreUrl, playStoreUrl }}>
     var ua = navigator.userAgent;

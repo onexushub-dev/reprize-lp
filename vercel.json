@@ -14,7 +14,19 @@
   "rewrites": [
     {
       "source": "/v/:code",
-      "destination": "/baixar"
+      "destination": "/download"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/baixar",
+      "destination": "/download",
+      "permanent": true
+    },
+    {
+      "source": "/en/baixar",
+      "destination": "/en/download",
+      "permanent": true
     }
   ]
 }
