@@ -24,6 +24,8 @@ const base = 'inline-flex min-h-[52px] items-center gap-3 rounded-2xl px-5 py-2 
   href ? (
     <a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       class:list={[base, 'bg-amber text-ink font-bold transition-transform hover:-translate-y-0.5']}
     >
       <svg viewBox="0 0 24 24" class="size-[22px] shrink-0" fill="currentColor" aria-hidden="true"><path d={marks[icon]}></path></svg>

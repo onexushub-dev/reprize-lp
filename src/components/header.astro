@@ -140,7 +140,12 @@ const downloadHref = `${getRelativeLocaleUrl(locale, '')}#download`;
   // iPadOS reports itself as a Mac, so a Mac with a touch screen counts as iOS.
   const ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
   const download = header?.querySelector<HTMLAnchorElement>('[data-download-link]');
-  if (ios && download?.dataset.iosHref) download.href = download.dataset.iosHref;
+  if (ios && download?.dataset.iosHref) {
+    // Leaves the site for the store, so it opens in a new tab like the other store buttons.
+    download.href = download.dataset.iosHref;
+    download.target = '_blank';
+    download.rel = 'noopener noreferrer';
+  }
 
   if (header && button && menu) {
     button.addEventListener('click', () => setOpen(menu.hidden));
