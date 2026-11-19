@@ -3,7 +3,7 @@ import '../styles/home.css';
 import BaseLayout from '../layouts/base-layout.astro';
 import BrandLogo from './brand-logo.astro';
 import StoreButton from './store-button.astro';
-import type { Share } from '../data/share';
+import { REPORT_CATEGORIES, type Share } from '../data/share';
 import { APP_STORE_URL } from '../data/stores';
 import { SUPPORT_EMAIL, useTranslations, type Locale } from '../i18n/ui';
 
@@ -34,8 +34,16 @@ const opened = Astro.url.searchParams.get('open') === '1';
 // button points to the other host; the app claims /v/* on both.
 const otherHost = Astro.url.host === 'www.reprizeapp.com' ? 'reprizeapp.com' : 'www.reprizeapp.com';
 const openHref = `https://${otherHost}/v/${encodeURIComponent(code)}?open=1`;
-const pageUrl = `https://reprizeapp.com/v/${encodeURIComponent(code)}`;
-const reportHref = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(t('share.reportSubject'))}&body=${encodeURIComponent(pageUrl)}`;
+// Back from the report form (src/pages/api/report.ts): ok, too_many or error.
+const reported = Astro.url.searchParams.get('reported');
+const reportLabels = {
+  not_authorized: t('share.reportNotAuthorized'),
+  minor: t('share.reportMinor'),
+  inappropriate: t('share.reportInappropriate'),
+  other: t('share.reportOther'),
+};
+const reportError =
+  reported === 'too_many' ? fill(t('share.reportTooMany'), { email: SUPPORT_EMAIL }) : reported === 'error' ? t('share.reportFailed') : null;
 
 const active = share.state === 'active' ? share : null;
 const hours = active ? Math.max(0, Math.floor((Date.parse(active.expiresAt) - Date.now()) / 3_600_000)) : 0;
@@ -52,7 +60,8 @@ const left = hours >= 1 ? fill(hours === 1 ? t('share.hoursLeftOne') : t('share.
 const ended = {
   expired: [t('share.expiredTitle'), t('share.expiredBody')],
   off: [t('share.offTitle'), t('share.offBody')],
-  removed: [t('share.removedTitle'), t('share.removedBody')],
+  // Just reported from this page: thank the person instead of telling them it was reported.
+  removed: reported === 'ok' ? [t('share.reportedTitle'), t('share.reportedBody')] : [t('share.removedTitle'), t('share.removedBody')],
   not_found: [t('share.notFoundTitle'), t('share.notFoundBody')],
   error: [t('share.errorTitle'), t('share.errorBody')],
 }[share.state === 'active' ? 'error' : share.state];
@@ -132,9 +141,39 @@ const button = 'bg-amber text-ink inline-flex min-h-[56px] items-center justify-
                 </div>
               </div>
             )}
-            <a href={reportHref} class="text-muted hover:text-amber mt-10 text-xs font-semibold underline-offset-4 hover:underline">
-              {t('share.report')}
-            </a>
+            <details class="mt-10 w-full max-w-sm text-left" open={reportError !== null}>
+              <summary class="text-muted hover:text-amber cursor-pointer text-center text-xs font-semibold underline-offset-4 hover:underline">
+                {t('share.report')}
+              </summary>
+              <form method="post" action="/api/report" class="border-line bg-surface mt-4 rounded-2xl border p-5">
+                <input type="hidden" name="code" value={code} />
+                <input type="hidden" name="locale" value={locale} />
+                <fieldset>
+                  <legend class="text-sm font-bold">{t('share.reportWhy')}</legend>
+                  {REPORT_CATEGORIES.map((category) => (
+                    <label class="text-paper/80 mt-3 flex items-start gap-3 text-sm">
+                      <input type="radio" name="category" value={category} required class="accent-amber mt-1" />
+                      <span>{reportLabels[category]}</span>
+                    </label>
+                  ))}
+                </fieldset>
+                <label class="mt-4 block text-sm font-bold" for="report-details">
+                  {t('share.reportDetails')}
+                </label>
+                <textarea
+                  id="report-details"
+                  name="details"
+                  maxlength="500"
+                  rows="3"
+                  class="border-line bg-ink text-paper mt-2 w-full rounded-xl border p-3 text-sm"
+                />
+                <button type="submit" class="bg-amber text-ink mt-4 w-full rounded-xl px-4 py-3 text-sm font-extrabold">
+                  {t('share.reportSend')}
+                </button>
+                <p class="text-muted mt-3 text-xs leading-5">{t('share.reportNote')}</p>
+                {reportError ? <p class="text-amber mt-3 text-xs font-semibold">{reportError}</p> : null}
+              </form>
+            </details>
           </>
         ) : (
           <>
