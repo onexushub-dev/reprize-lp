@@ -1,7 +1,7 @@
 ---
 title: Termos de Uso
-description: Condições para usar o aplicativo e o site do Reprize, incluindo planos, pagamentos e responsabilidades.
-updated: 2026-11-04
+description: Condições para usar o aplicativo e o site do Reprize, incluindo planos, pagamentos, compartilhamento de gravações e responsabilidades.
+updated: 2026-11-19
 ---
 
 # Termos de Uso
@@ -18,7 +18,7 @@ O Reprize é oferecido pela **Victor Hugo Marques Ltda** (nome fantasia **Nexus 
 
 O Reprize usa a câmera do seu celular, preso à grade, a um tripé ou a outro apoio, para manter uma gravação temporária dos últimos instantes de um jogo. Quando você aciona um gatilho (toque na tela, gesto, voz, controle Bluetooth, relógio ou outro celular), o app salva o lance recente no seu aparelho, e você pode editar, exportar e compartilhar.
 
-**Suas gravações ficam no seu celular.** Nós não as recebemos nem as armazenamos.
+**Suas gravações ficam no seu celular.** Nós não as recebemos nem as armazenamos, a não ser quando você cria um link para compartilhar uma gravação pelo Reprize (item 7).
 
 ## 3. Quem pode usar
 
@@ -34,6 +34,7 @@ Concedemos a você uma licença **pessoal, limitada, não exclusiva, intransfer�
 ## 5. Planos, preços e pagamentos
 
 - **Plano grátis:** inclui gravações ilimitadas, com limites de duração do clipe, de qualidade e de recursos no vídeo salvo ou enviado, conforme informado no app.
+- **Compartilhar pelo Reprize** (criar um link de uma gravação) é um recurso do plano **Pro**. Assistir a uma gravação recebida é gratuito em qualquer plano. Quem não tem o Pro tem **1 gravação de cortesia** no total, sem renovação, para salvar e enviar os clipes de uma gravação recebida (em Full HD, com a marca do Reprize). O Passe Avulso não se aplica a gravações recebidas.
 - **Passe Avulso e Pro:** liberam recursos extras (o Passe Avulso, numa gravação grátis já feita; o Pro, em todas as gravações), nas condições e nos preços exibidos na tela de compra, na moeda e com os impostos do seu país. Os valores podem mudar, mas a mudança não afeta o período já contratado.
 - **Pagamento:** é feito pela **Apple App Store** ou pelo **Google Play**, que seguem as próprias regras de cobrança, impostos, reembolso e suporte de pagamento. Não recebemos os dados do seu cartão.
 - **Assinaturas e teste grátis:** o plano Pro é uma assinatura **renovada automaticamente** ao fim de cada período (mensal ou anual) até que você cancele. Quando houver período de teste grátis, a cobrança começa ao fim dele, a menos que você cancele **pelo menos 24 horas antes** do término, conforme as regras da loja.
@@ -43,11 +44,21 @@ Concedemos a você uma licença **pessoal, limitada, não exclusiva, intransfer�
 
 ## 6. Seu conteúdo e suas gravações
 
-As gravações e os lances **pertencem a você** (ou a quem tiver os direitos sobre eles). Como o Reprize não recebe esse conteúdo, **não adquirimos nenhum direito sobre ele**.
+As gravações e os lances **pertencem a você** (ou a quem tiver os direitos sobre eles). **Não adquirimos nenhum direito sobre eles.** Quando você compartilha uma gravação pelo Reprize, nos autoriza apenas a guardá-la, transmiti-la e exibi-la para quem tem o link, durante as 24 horas do link, e a removê-la em caso de denúncia (item 7).
 
 Os vídeos exportados podem incluir elementos gráficos do Reprize, como o logotipo. Você deve preservá-los quando eles fizerem parte do vídeo exportado, e pode compartilhar o conteúdo à vontade, observando os itens abaixo.
 
-## 7. Uso responsável e segurança
+## 7. Compartilhar e receber gravações
+
+1. **Conta.** Para compartilhar uma gravação, ou para usar a cortesia numa gravação recebida, você entra com Apple ou Google. Mantenha o acesso à sua conta seguro. Você pode excluí-la no app, em **Conta → Excluir conta**.
+2. **Como funciona o link.** Ao compartilhar, o Reprize cria um link e um QR code. Qualquer pessoa que tenha o link pode assistir à gravação no app e repassá-lo. O link funciona por **24 horas** a partir da criação, e você pode desligá-lo antes. Depois disso, os arquivos são apagados da nuvem.
+3. **Você responde pelo que compartilha.** Antes do primeiro compartilhamento, você declara que está ciente deste item. O Reprize **não assiste, não revisa e não controla** o conteúdo das gravações. Ao compartilhar, você declara que tem o direito de enviar a gravação e a **autorização das pessoas que aparecem nela**. Se houver crianças ou adolescentes, a autorização é dos responsáveis legais.
+4. **O que já foi recebido não volta.** Quem abriu o link no app guarda uma cópia da gravação no próprio celular. Desligar o link ou excluir a sua conta impede novos acessos, mas não apaga essas cópias.
+5. **Quem recebe** pode assistir no app, mas não pode capturar a tela da gravação recebida. Salvar e enviar os clipes dela segue as regras do item 5 (Pro ou cortesia). Quem recebe deve respeitar as pessoas que aparecem no vídeo, como no item 8.
+6. **Denúncias e moderação.** Qualquer pessoa com o link pode denunciar o conteúdo. Um link denunciado sai do ar até ser revisado. Se o conteúdo violar estes Termos ou a lei, podemos removê-lo e **suspender ou encerrar a conta** de quem o compartilhou. Podemos também preservar e fornecer informações às autoridades quando a lei exigir.
+7. **Limites.** Para evitar abusos, há limites de quantos links uma conta cria e de quantas denúncias um aparelho envia por dia. O compartilhamento depende da internet e de serviços de terceiros, e pode falhar ou atrasar.
+
+## 8. Uso responsável e segurança
 
 Você se compromete a:
 
@@ -59,49 +70,49 @@ Você se compromete a:
 
 Você responde pelo que grava, edita e compartilha com o app.
 
-## 8. Limites técnicos e ausência de garantia de captura
+## 9. Limites técnicos e ausência de garantia de captura
 
 O Reprize depende do aparelho, do sistema operacional, da bateria, do espaço livre, da temperatura (o app pode reduzir a qualidade sozinho para evitar superaquecimento), da posição do celular e do funcionamento de gatilhos como gesto, voz, relógio e controle, que **podem falhar ou não reconhecer um comando**.
 
 Por isso **não garantimos** que todo lance seja capturado, que a imagem tenha determinada qualidade, nem que o app funcione sem interrupções ou erros. **Não use o Reprize como única fonte de registro** em situações em que perder um vídeo possa causar dano relevante, como arbitragem oficial, provas ou competições com consequências. Faça cópias do que for importante, exportando para a galeria ou para outro local.
 
-## 9. Propriedade intelectual
+## 10. Propriedade intelectual
 
 O app, o site, o nome e o logotipo **Reprize**, o design, os textos e o código são de propriedade da Victor Hugo Marques Ltda (Nexus Hub) ou licenciados a ela e protegidos pela legislação. Estes Termos não transferem nenhum direito, além da licença de uso do item 4. Você não pode usar a marca Reprize de forma que sugira patrocínio ou parceria sem autorização por escrito.
 
-## 10. Serviços de terceiros
+## 11. Serviços de terceiros
 
-O app e o site dependem de serviços de terceiros, como Apple, Google, RevenueCat, Vercel e os aplicativos para os quais você compartilha conteúdo. Eles têm termos e políticas próprios, e **não respondemos** por falhas ou condutas desses terceiros, na medida em que a lei permitir.
+O app e o site dependem de serviços de terceiros, como Apple, Google, RevenueCat, Supabase, Cloudflare, Vercel e os aplicativos para os quais você compartilha conteúdo. Eles têm termos e políticas próprios, e **não respondemos** por falhas ou condutas desses terceiros, na medida em que a lei permitir.
 
-## 11. Disponibilidade e mudanças no serviço
+## 12. Disponibilidade e mudanças no serviço
 
 Podemos atualizar, alterar, suspender ou encerrar funções do app ou do site, por razões técnicas, de segurança, legais ou comerciais, procurando minimizar o impacto sobre você. Se uma mudança relevante afetar um plano pago já contratado, trataremos o caso de forma a respeitar seus direitos de consumidor.
 
-## 12. Limitação de responsabilidade
+## 13. Limitação de responsabilidade
 
 Na extensão máxima permitida pela lei, e **sem afastar** a responsabilidade que a lei não permite excluir (como a responsabilidade por dolo, por culpa grave, por defeito do serviço ou por direitos garantidos ao consumidor):
 
-- o app é fornecido **como está e conforme disponível**, dentro dos limites do item 8;
-- não respondemos por **danos indiretos**, lucros cessantes ou perda de oportunidade, nem por danos decorrentes de uso em desacordo com estes Termos, de conteúdo gravado ou compartilhado por você, de falhas do aparelho, da rede ou de terceiros, ou de ausência de captura de um lance.
+- o app é fornecido **como está e conforme disponível**, dentro dos limites do item 9;
+- não respondemos por **danos indiretos**, lucros cessantes ou perda de oportunidade, nem por danos decorrentes de uso em desacordo com estes Termos, de conteúdo gravado ou compartilhado por você, de falhas do aparelho, da rede ou de terceiros, ou de ausência de captura de um lance, nem por cópias de uma gravação compartilhada que quem a recebeu guardou.
 
 Nada nestes Termos limita direitos que você tenha por lei.
 
-## 13. Suspensão e encerramento
+## 14. Suspensão e encerramento
 
-Você pode parar de usar o Reprize a qualquer momento, desinstalando o app e cancelando assinaturas ativas na loja. Podemos suspender ou encerrar o seu acesso às funções pagas se houver violação grave destes Termos, fraude ou exigência legal, dando a você a chance de se explicar quando for razoável.
+Você pode parar de usar o Reprize a qualquer momento, desinstalando o app e cancelando assinaturas ativas na loja. Podemos suspender ou encerrar o seu acesso às funções pagas, ao compartilhamento ou à sua conta se houver violação grave destes Termos (como compartilhar conteúdo ilícito ou sem autorização de quem aparece nele), fraude ou exigência legal, dando a você a chance de se explicar quando for razoável.
 
-## 14. Alterações nestes Termos
+## 15. Alterações nestes Termos
 
 Podemos atualizar estes Termos. A versão vigente fica em [reprizeapp.com/terms](/terms), com a data da última atualização. Em mudanças relevantes, avisaremos no app ou no site com antecedência razoável. Se você continuar usando o app após a vigência da nova versão, ela passa a valer para você. Se não concordar, deixe de usar o app e cancele eventuais assinaturas.
 
-## 15. Lei aplicável e foro
+## 16. Lei aplicável e foro
 
 Estes Termos são regidos pelas **leis do Brasil**. Fica eleito o foro do **domicílio do consumidor** para dúvidas e disputas decorrentes da relação de consumo. Nos demais casos, fica eleito o foro da comarca de **São Paulo/SP**. Antes de qualquer ação, buscaremos resolver a questão de forma amigável pelo suporte.
 
-## 16. Disposições gerais
+## 17. Disposições gerais
 
 Se alguma parte destes Termos for considerada inválida, as demais continuam em vigor. A tolerância quanto a um descumprimento não significa renúncia a direitos. Estes Termos, com a Política de Privacidade, formam o acordo completo entre você e nós sobre o uso do Reprize.
 
-## 17. Contato
+## 18. Contato
 
 Dúvidas, suporte e reclamações: [contato@reprizeapp.com](mailto:contato@reprizeapp.com).

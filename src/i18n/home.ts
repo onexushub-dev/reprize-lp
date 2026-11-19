@@ -127,7 +127,7 @@ const ptBR: HomeCopy = {
       undo: 'Desfazer',
     },
   },
-  facts: ['Sem cadastro', 'Tudo fica no seu celular', 'Comece grátis'],
+  facts: ['Sem cadastro para gravar', 'Seus lances ficam no seu celular', 'Comece grátis'],
   how: {
     title: 'Grave tudo. Guarde só o melhor.',
     subtitle: 'Três passos entre o lance e o post.',
@@ -208,8 +208,8 @@ const ptBR: HomeCopy = {
     title: 'Grava tudo. Guarda só o lance.',
     body: 'Enquanto você joga, o Reprize mantém só os instantes mais recentes numa memória temporária do celular. O que fica para trás é apagado na hora. Só os lances que você salva permanecem.',
     bullets: [
-      'Sem conta e sem login',
-      'Nenhum vídeo vai para os nossos servidores',
+      'Grave sem conta e sem login',
+      'Nenhum vídeo sai do celular sem você compartilhar',
       'Gesto e voz reconhecidos no próprio aparelho',
     ],
     link: 'Ler a Política de Privacidade',
@@ -377,7 +377,7 @@ const ptBR: HomeCopy = {
     items: [
       {
         q: 'Meus vídeos vão para a nuvem?',
-        a: 'Não. Tudo fica no seu celular: o Reprize não tem cadastro nem servidor de vídeos. Os detalhes estão na Política de Privacidade.',
+        a: 'Só se você compartilhar. Gravar não pede cadastro, e os seus lances ficam no seu celular. Quando você cria um link para compartilhar uma gravação, ela fica na nuvem por 24 horas e depois é apagada. Para compartilhar, você entra com Apple ou Google. Os detalhes estão na Política de Privacidade.',
       },
       {
         q: 'O app grava o jogo inteiro?',
@@ -442,7 +442,7 @@ const en: HomeCopy = {
       undo: 'Undo',
     },
   },
-  facts: ['No sign-up', 'Everything stays on your phone', 'Start free'],
+  facts: ['No sign-up to record', 'Your plays stay on your phone', 'Start free'],
   how: {
     title: 'Record everything. Keep the best.',
     subtitle: 'Three steps from the play to the post.',
@@ -523,8 +523,8 @@ const en: HomeCopy = {
     title: 'Records everything. Keeps only the play.',
     body: 'While you play, Reprize keeps only the most recent moments in your phone’s temporary memory. What falls behind is deleted on the spot. Only the plays you save stay.',
     bullets: [
-      'No account, no login',
-      'No video ever reaches our servers',
+      'Record with no account and no login',
+      'No video leaves your phone unless you share it',
       'Gesture and voice recognized on the device',
     ],
     link: 'Read the Privacy Policy',
@@ -692,7 +692,7 @@ const en: HomeCopy = {
     items: [
       {
         q: 'Do my videos go to the cloud?',
-        a: 'No. Everything stays on your phone: Reprize has no sign-up and no video servers. Details are in the Privacy Policy.',
+        a: 'Only if you share. Recording needs no sign-up, and your plays stay on your phone. When you create a link to share a recording, it stays in the cloud for 24 hours and is then deleted. To share, you sign in with Apple or Google. Details are in the Privacy Policy.',
       },
       {
         q: 'Does the app record the whole game?',
