@@ -4,12 +4,17 @@
  */
 export type ActiveShare = {
   state: 'active';
-  kind: 'recording' | 'clip';
+  kind: 'recording' | 'clip' | 'group';
   title: string | null;
   clips: number;
   from: string | null;
   expiresAt: string;
   cover: { video: string; image: string } | null;
+  /**
+   * A group link (Lance repo: docs/superpowers/specs/2026-11-22-multi-recording-share-design.md §7): its recordings in
+   * the sender's order, by title (null when the sender left it unnamed) and clip count. `clips` is all of them together.
+   */
+  recordings?: { title: string | null; clips: number }[];
 };
 export type Share = ActiveShare | { state: 'expired' | 'off' | 'removed' | 'not_found' | 'error' };
 

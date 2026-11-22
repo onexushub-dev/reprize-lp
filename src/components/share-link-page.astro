@@ -8,7 +8,9 @@ import { APP_STORE_URL } from '../data/stores';
 import { SUPPORT_EMAIL, useTranslations, type Locale } from '../i18n/ui';
 
 // The page of a shared recording or clip, reprizeapp.com/v/<code> (Lance repo:
-// docs/superpowers/specs/2026-11-16-recording-sharing-design.md §3.2, §7). Rendered on each visit: the share can expire
+// docs/superpowers/specs/2026-11-16-recording-sharing-design.md §3.2, §7), or of a group link holding several
+// recordings (docs/superpowers/specs/2026-11-22-multi-recording-share-design.md §7): "5 gravações de Ana", the cover of
+// the first one and the list of the recordings. Rendered on each visit: the share can expire
 // or be turned off at any time, and the social preview (WhatsApp, iMessage) needs the cover in the HTML.
 
 interface Props {
@@ -47,12 +49,18 @@ const reportError =
 
 const active = share.state === 'active' ? share : null;
 const hours = active ? Math.max(0, Math.floor((Date.parse(active.expiresAt) - Date.now()) / 3_600_000)) : 0;
-const title = active ? active.title || t('share.defaultTitle') : t('share.metaTitle');
+const clipCount = (count: number) => (count === 1 ? t('share.clipsOne') : fill(t('share.clipsMany'), { count }));
+const recordings = active && active.kind === 'group' && active.recordings ? active.recordings : null;
+const title = recordings
+  ? active && active.from
+    ? fill(t('share.groupTitle'), { count: recordings.length, name: active.from })
+    : fill(t('share.groupTitleNoName'), { count: recordings.length })
+  : active
+    ? active.title || t('share.defaultTitle')
+    : t('share.metaTitle');
+// A group's title already says who sent it.
 const meta = active
-  ? [
-      active.clips === 1 ? t('share.clipsOne') : fill(t('share.clipsMany'), { count: active.clips }),
-      active.from ? fill(t('share.from'), { name: active.from }) : null,
-    ]
+  ? [clipCount(active.clips), active.from && !recordings ? fill(t('share.from'), { name: active.from }) : null]
       .filter((part) => part !== null)
       .join(' · ')
   : '';
@@ -113,10 +121,28 @@ const button = 'bg-amber text-ink inline-flex min-h-[56px] items-center justify-
               )}
             </div>
             <p class="text-amber mt-5 text-sm font-bold">{left}</p>
+            {recordings ? (
+              <div class="mt-7 w-full text-left">
+                <h2 class="text-muted text-xs font-bold tracking-[0.18em] uppercase">{t('share.groupList')}</h2>
+                <ol class="border-line bg-surface mt-3 divide-line divide-y overflow-hidden rounded-2xl border">
+                  {recordings.map((recording, index) => (
+                    <li class="flex items-center gap-3 px-4 py-3">
+                      <span class="border-line text-muted flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-xs font-bold">
+                        {index + 1}
+                      </span>
+                      <span class="min-w-0 flex-1 truncate text-sm font-semibold">
+                        {recording.title || fill(t('share.recordingFallback'), { number: index + 1 })}
+                      </span>
+                      <span class="text-muted shrink-0 text-sm">{clipCount(recording.clips)}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ) : null}
             {opened && ios ? (
               <div class="mt-7">
                 <h2 class="text-2xl font-extrabold">{t('share.installTitle')}</h2>
-                <p class={body}>{t('share.installBody')}</p>
+                <p class={body}>{recordings ? t('share.groupInstallBody') : t('share.installBody')}</p>
                 <div class="mt-6 flex justify-center">
                   <StoreButton icon="apple" store={t('store.appStore')} href={appStoreUrl} soonLabel={t('store.soon')} availableLabel={t('store.availableOn')} />
                 </div>
@@ -131,7 +157,9 @@ const button = 'bg-amber text-ink inline-flex min-h-[56px] items-center justify-
                 <a href={openHref} class={button}>
                   {t('share.open')}
                 </a>
-                <p class="text-muted mx-auto mt-4 max-w-sm text-sm leading-6">{t('share.openHint')}</p>
+                <p class="text-muted mx-auto mt-4 max-w-sm text-sm leading-6">
+                  {recordings ? t('share.groupOpenHint') : t('share.openHint')}
+                </p>
               </div>
             ) : (
               <div class="mt-7 flex flex-col items-center">
