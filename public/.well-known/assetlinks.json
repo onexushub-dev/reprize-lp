@@ -4,7 +4,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "app.reprize.mobile",
-      "sha256_cert_fingerprints": ["REPLACE_WITH_PLAY_APP_SIGNING_KEY_SHA256"]
+      "sha256_cert_fingerprints": ["3C:6A:55:C5:BB:82:AB:0C:69:86:3E:9A:90:A6:E8:D1:CE:1D:3D:5C:03:E0:8B:02:7F:AB:F6:2F:E7:95:67:7F"]
     }
   }
 ]
