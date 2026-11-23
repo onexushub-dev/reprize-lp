@@ -52,7 +52,7 @@ Se você negar uma permissão, as funções que dependem dela ficam indisponíve
 
 ## 4. Dados tratados por causa de compras e assinaturas
 
-Parte do Reprize é paga (passe avulso e plano Pro). Para isso:
+Parte do Reprize é paga (passe avulso e plano PRO). Para isso:
 
 - **Apple App Store e Google Play** processam o pagamento. Nós **não recebemos** número de cartão nem dados bancários.
 - **RevenueCat, Inc.** (EUA) é o serviço que gerencia assinaturas e libera as funções pagas. Ele recebe, em nosso nome, um **identificador** do usuário no app (anônimo; se você entrou numa conta do Reprize, o identificador dessa conta), informações da compra (produto, datas, status e loja), dados técnicos do aparelho e do app, o país e o endereço IP. A política dele está em [revenuecat.com/privacy](https://www.revenuecat.com/privacy).
@@ -75,7 +75,7 @@ Compartilhar é opcional. Se você nunca compartilhar nem receber um link, nada 
 
 ### Conta
 
-Para criar um link (plano Pro) ou para usar a cortesia numa gravação recebida, você entra com **Apple** ou **Google**. Recebemos deles o identificador da conta, o **e-mail** (com a Apple, pode ser um e-mail de retransmissão que esconde o seu) e o **nome**, se você permitir. Guardamos também a data em que você aceitou o aviso de responsabilidade antes do primeiro compartilhamento e se a sua cortesia já foi usada. A conta é gerenciada pela **Supabase, Inc.**, que hospeda o nosso servidor. Assistir a uma gravação recebida não pede conta.
+Para criar um link (plano PRO) ou para usar a cortesia numa gravação recebida, você entra com **Apple** ou **Google**. Recebemos deles o identificador da conta, o **e-mail** (com a Apple, pode ser um e-mail de retransmissão que esconde o seu) e o **nome**, se você permitir. Guardamos também a data em que você aceitou o aviso de responsabilidade antes do primeiro compartilhamento e se a sua cortesia já foi usada. A conta é gerenciada pela **Supabase, Inc.**, que hospeda o nosso servidor. Assistir a uma gravação recebida não pede conta.
 
 ### O que vai para a nuvem quando você compartilha
 
