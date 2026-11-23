@@ -55,14 +55,20 @@ export interface HomeCopy {
     title: string;
     subtitle: string;
     items: { title: string; body: string }[];
+    /** A small line under the list (Modo Foco on very old phones). */
+    note: string;
     /** The app's clip edit mode with Modo Foco open, texts as in the app. */
     screen: {
       cancel: string;
       title: string;
       done: string;
       focusTitle: string;
-      focusHint: string;
-      focusHold: string;
+      /** The Foco panel's sport chip and its three cards (FocusPanel in the app). */
+      sport: string;
+      sportDetected: string;
+      framingOriginal: string;
+      framingPlayers: string;
+      framingBall: string;
       trimBefore: string;
       trimCut: string;
       trimTrigger: string;
@@ -169,7 +175,7 @@ const ptBR: HomeCopy = {
       },
       phone: {
         title: 'Segundo celular',
-        body: 'Transforme outro iPhone em controle: salve o lance, veja a câmera ao vivo e encerre a gravação de perto da quadra.',
+        body: 'Transforme outro celular em controle (iPhone com iPhone, Android com Android): salve o lance, veja a câmera ao vivo e encerre a gravação de perto da quadra.',
       },
     },
   },
@@ -181,8 +187,8 @@ const ptBR: HomeCopy = {
       { title: 'Corte preciso', body: 'Ajuste onde o lance começa e termina, dentro do trecho que o Reprize guardou.' },
       { title: 'Velocidade, zoom e giro', body: 'Acelere, desacelere e enquadre o lance do jeito que ele merece.' },
       {
-        title: 'Modo Foco',
-        body: 'No iPhone, o enquadramento acompanha a jogada como numa transmissão de TV. Desliga com um toque.',
+        title: 'Modo Foco: Jogadores e Bola',
+        body: 'Jogadores acompanha a jogada como numa transmissão de TV. Bola segue a bola no basquete e no beach tennis. Liga e desliga com um toque.',
       },
       {
         title: 'Galeria ou compartilhar',
@@ -190,13 +196,17 @@ const ptBR: HomeCopy = {
       },
       { title: 'Compilação de clipes', body: 'Junte os clipes de uma gravação num vídeo só. Recurso do PRO.' },
     ],
+    note: 'Em celulares muito antigos, o Modo Foco pode não ter a qualidade esperada.',
     screen: {
       cancel: 'Cancelar',
       title: 'EDITAR',
       done: 'Concluir',
       focusTitle: 'Modo Foco',
-      focusHint: 'A câmera acompanha o lance, com zoom quando a jogada se concentra.',
-      focusHold: 'Mantenha o dedo pressionado no vídeo para ver o clipe original',
+      sport: 'Beach tennis',
+      sportDetected: '· identificado',
+      framingOriginal: 'Original',
+      framingPlayers: 'Jogadores',
+      framingBall: 'Bola',
       trimBefore: '-7s',
       trimCut: 'Corte: 0:08',
       trimTrigger: 'gatilho',
@@ -345,7 +355,7 @@ const ptBR: HomeCopy = {
       ],
     },
     proMonthly: {
-      name: 'Pro Mensal',
+      name: 'PRO Mensal',
       price: P.proMonthly,
       period: 'por mês',
       alt: 'Renova todo mês, cancele quando quiser',
@@ -358,7 +368,7 @@ const ptBR: HomeCopy = {
       ],
     },
     proYearly: {
-      name: 'Pro Anual',
+      name: 'PRO Anual',
       price: P.proYearly,
       period: 'por ano',
       alt: `Cerca de ${P.proYearlyPerMonth} por mês · economia de ${P.yearlySavingsPercent}%`,
@@ -370,7 +380,7 @@ const ptBR: HomeCopy = {
         'Compilação de clipes e Apple Watch',
       ],
     },
-    note: 'Cancele quando quiser nas configurações da App Store. Antes de salvar ou enviar no Grátis, o app mostra o que o PRO acrescenta ao vídeo.',
+    note: 'Cancele quando quiser nas configurações da App Store ou do Google Play. Antes de salvar ou enviar no Grátis, o app mostra o que o PRO acrescenta ao vídeo.',
   },
   faq: {
     title: 'Perguntas frequentes',
@@ -400,12 +410,12 @@ const ptBR: HomeCopy = {
         a: 'Não. Gravações e clipes são ilimitados. O plano muda só a duração do clipe, a gravação em 4K, o que sai do app ao salvar ou enviar, a compilação de clipes e o Apple Watch.',
       },
       {
-        q: 'Qual a diferença entre Grátis, Passe e Pro?',
-        a: 'No Grátis, as gravações são ilimitadas, em Full HD, com clipes de até 15 segundos. No app tudo funciona: som, Modo Foco, velocidade, zoom e corte. Ao salvar ou enviar, o vídeo sai em HD, sem som e sem Modo Foco, com marca d’água (a velocidade vai no vídeo), e o app avisa isso antes de exportar. O Passe Avulso libera, numa gravação grátis que você já fez, a exportação em Full HD com som e Modo Foco, sem marca d’água, e a compilação dos clipes dela. O Pro libera isso em todas as gravações, e ainda traz gravação em 4K, clipes de até 60 segundos, compilação de clipes e o Apple Watch.',
+        q: 'Qual a diferença entre Grátis, Passe e PRO?',
+        a: 'No Grátis, as gravações são ilimitadas, em Full HD, com clipes de até 15 segundos. No app tudo funciona: som, Modo Foco, velocidade, zoom e corte. Ao salvar ou enviar, o vídeo sai em HD, sem som e sem Modo Foco, com marca d’água (a velocidade vai no vídeo), e o app avisa isso antes de exportar. O Passe Avulso libera, numa gravação grátis que você já fez, a exportação em Full HD com som e Modo Foco, sem marca d’água, e a compilação dos clipes dela. O PRO libera isso em todas as gravações, e ainda traz gravação em 4K, clipes de até 60 segundos, compilação de clipes e o Apple Watch.',
       },
       {
-        q: 'Como cancelo o Pro?',
-        a: 'Pelas configurações da sua conta Apple. Quem cancela até 24 horas antes do fim do teste de 7 dias não é cobrado.',
+        q: 'Como cancelo o PRO?',
+        a: 'Pelas assinaturas da sua conta Apple ou do Google Play. Para não ser cobrado, cancele até 24 horas antes do fim do teste de 7 dias na App Store, ou antes do fim do teste no Google Play.',
       },
       {
         q: 'Posso gravar outras pessoas?',
@@ -484,7 +494,7 @@ const en: HomeCopy = {
       },
       phone: {
         title: 'Second phone',
-        body: 'Turn another iPhone into a remote: save the play, watch the camera live and end the recording from courtside.',
+        body: 'Turn another phone into a remote (iPhone with iPhone, Android with Android): save the play, watch the camera live and end the recording from courtside.',
       },
     },
   },
@@ -496,8 +506,8 @@ const en: HomeCopy = {
       { title: 'Precise trim', body: 'Set where the play starts and ends, within the stretch Reprize kept.' },
       { title: 'Speed, zoom and rotate', body: 'Speed it up, slow it down and frame the play the way it deserves.' },
       {
-        title: 'Focus Mode',
-        body: 'On iPhone, the framing follows the play like a TV broadcast. Turn it off with one tap.',
+        title: 'Focus Mode: Players and Ball',
+        body: 'Players follows the play like a TV broadcast. Ball follows the ball in basketball and beach tennis. Turn it on or off with one tap.',
       },
       {
         title: 'Gallery or share',
@@ -505,13 +515,17 @@ const en: HomeCopy = {
       },
       { title: 'Clip compilations', body: 'Join a recording’s clips into a single video. A PRO feature.' },
     ],
+    note: 'On very old phones, Focus Mode may not perform as expected.',
     screen: {
       cancel: 'Cancel',
       title: 'EDIT',
       done: 'Done',
       focusTitle: 'Focus Mode',
-      focusHint: 'The camera follows the play, zooming in when the action gathers.',
-      focusHold: 'Hold your finger on the video to see the original clip',
+      sport: 'Beach tennis',
+      sportDetected: '· detected',
+      framingOriginal: 'Original',
+      framingPlayers: 'Players',
+      framingBall: 'Ball',
       trimBefore: '-7s',
       trimCut: 'Trim: 0:08',
       trimTrigger: 'trigger',
@@ -660,7 +674,7 @@ const en: HomeCopy = {
       ],
     },
     proMonthly: {
-      name: 'Pro Monthly',
+      name: 'PRO Monthly',
       price: PU.proMonthly,
       period: 'per month',
       alt: 'Renews monthly, cancel anytime',
@@ -673,7 +687,7 @@ const en: HomeCopy = {
       ],
     },
     proYearly: {
-      name: 'Pro Yearly',
+      name: 'PRO Yearly',
       price: PU.proYearly,
       period: 'per year',
       alt: `About ${PU.proYearlyPerMonth} per month · save ${PU.yearlySavingsPercent}%`,
@@ -685,7 +699,7 @@ const en: HomeCopy = {
         'Clip compilations and Apple Watch',
       ],
     },
-    note: 'Cancel anytime in your App Store settings. Before you save or send on Free, the app shows what PRO adds to the video.',
+    note: 'Cancel anytime in your App Store or Google Play settings. Before you save or send on Free, the app shows what PRO adds to the video.',
   },
   faq: {
     title: 'Frequently asked questions',
@@ -715,12 +729,12 @@ const en: HomeCopy = {
         a: 'No. Recordings and clips are unlimited. The plan only changes the clip length, 4K recording, what leaves the app when you save or send, compiling clips and the Apple Watch.',
       },
       {
-        q: 'What is the difference between Free, Pass and Pro?',
-        a: 'On Free, recordings are unlimited, in Full HD, with clips up to 15 seconds. Everything works in the app: sound, Focus Mode, speed, zoom and trim. When you save or send, the video comes out in HD, with no sound and no Focus Mode, with a watermark (the speed you chose is kept), and the app tells you so before exporting. The Single Pass unlocks, on a free recording you already made, Full HD export with sound and Focus Mode, no watermark, and compiling its clips. Pro unlocks that on every recording, and adds 4K recording, clips up to 60 seconds, compiling clips and the Apple Watch.',
+        q: 'What is the difference between Free, Pass and PRO?',
+        a: 'On Free, recordings are unlimited, in Full HD, with clips up to 15 seconds. Everything works in the app: sound, Focus Mode, speed, zoom and trim. When you save or send, the video comes out in HD, with no sound and no Focus Mode, with a watermark (the speed you chose is kept), and the app tells you so before exporting. The Single Pass unlocks, on a free recording you already made, Full HD export with sound and Focus Mode, no watermark, and compiling its clips. PRO unlocks that on every recording, and adds 4K recording, clips up to 60 seconds, compiling clips and the Apple Watch.',
       },
       {
-        q: 'How do I cancel Pro?',
-        a: 'In your Apple account settings. If you cancel at least 24 hours before the 7-day trial ends, you are not charged.',
+        q: 'How do I cancel PRO?',
+        a: 'In the subscriptions of your Apple account or Google Play. To avoid being charged, cancel at least 24 hours before the 7-day trial ends on the App Store, or before the trial ends on Google Play.',
       },
       {
         q: 'Can I record other people?',

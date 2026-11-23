@@ -52,7 +52,7 @@ If you deny a permission, the features that depend on it become unavailable, and
 
 ## 4. Data processed because of purchases and subscriptions
 
-Part of Reprize is paid (single pass and Pro plan). For that:
+Part of Reprize is paid (single pass and PRO plan). For that:
 
 - **Apple App Store and Google Play** process the payment. We **do not receive** card numbers or bank details.
 - **RevenueCat, Inc.** (USA) is the service that manages subscriptions and unlocks paid features. On our behalf, it receives an **app user identifier** (anonymous; if you signed in to a Reprize account, that account's identifier), purchase information (product, dates, status and store), technical data about the device and app, the country and the IP address. Its policy is at [revenuecat.com/privacy](https://www.revenuecat.com/privacy).
@@ -75,7 +75,7 @@ Sharing is optional. If you never share or receive a link, nothing in this secti
 
 ### Account
 
-To create a link (Pro plan) or to use the courtesy on a received recording, you sign in with **Apple** or **Google**. We receive from them the account identifier, your **email** (with Apple, it can be a relay address that hides yours) and your **name**, if you allow it. We also keep the date you accepted the responsibility notice before your first share and whether your courtesy has been used. The account is managed by **Supabase, Inc.**, which hosts our server. Watching a received recording needs no account.
+To create a link (PRO plan) or to use the courtesy on a received recording, you sign in with **Apple** or **Google**. We receive from them the account identifier, your **email** (with Apple, it can be a relay address that hides yours) and your **name**, if you allow it. We also keep the date you accepted the responsibility notice before your first share and whether your courtesy has been used. The account is managed by **Supabase, Inc.**, which hosts our server. Watching a received recording needs no account.
 
 ### What goes to the cloud when you share
 

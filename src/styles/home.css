@@ -447,14 +447,9 @@
 
 .edit__head {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 3.077cqw;
-}
-
-.edit__head-text {
-  display: grid;
-  flex: 1;
-  gap: 0.513cqw;
 }
 
 .edit__panel-title {
@@ -465,42 +460,68 @@
   text-transform: uppercase;
 }
 
-.edit__hint {
-  font-size: 3.077cqw;
-  line-height: 3.846cqw;
+/* The sport of the recording (FocusPanel's chip): its icon, its name, "identificado" and a chevron. */
+.edit__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.538cqw;
+  min-height: 9.231cqw;
+  padding: 0 2.564cqw 0 2.051cqw;
+  border: 1px solid #2e2e2e;
+  border-radius: 999px;
+  background: #141414;
+}
+
+.edit__chip svg {
+  width: 4.615cqw;
+  height: 4.615cqw;
+}
+
+.edit__chip svg:last-child {
+  width: 4.103cqw;
+  height: 4.103cqw;
+}
+
+.edit__chip b {
+  font-size: 3.333cqw;
+  font-weight: 700;
+}
+
+.edit__chip small {
+  font-size: 2.821cqw;
   color: #b3b3b3;
 }
 
-.edit__switch {
-  display: flex;
-  flex: none;
-  justify-content: flex-end;
-  align-items: center;
-  width: 13.333cqw;
-  height: 8.205cqw;
-  padding: 0.769cqw;
-  border-radius: 4.103cqw;
-  background: var(--color-amber);
+/* Original · Jogadores · Bola: one row of cards, the chosen one with an amber border. */
+.edit__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.051cqw;
+  margin-top: 3.077cqw;
 }
 
-.edit__switch i {
-  width: 6.667cqw;
-  height: 6.667cqw;
-  border-radius: 50%;
-  background: #0a0a0a;
-}
-
-.edit__note {
+.edit__card {
   display: flex;
+  justify-content: center;
   align-items: center;
-  min-height: 10.256cqw;
-  margin-top: 2.564cqw;
-  padding: 0 3.077cqw;
-  border-radius: 3.077cqw;
+  gap: 1.538cqw;
+  min-height: 13.333cqw;
+  border: 1px solid #2e2e2e;
+  border-radius: 3.59cqw;
   background: #141414;
-  font-size: 3.077cqw;
-  line-height: 3.846cqw;
+  font-size: 3.59cqw;
+  font-weight: 700;
   color: #d9d9d9;
+}
+
+.edit__card svg {
+  width: 5.128cqw;
+  height: 5.128cqw;
+}
+
+.edit__card--on {
+  border: 2px solid var(--color-amber);
+  color: var(--color-amber);
 }
 
 .edit__cut {

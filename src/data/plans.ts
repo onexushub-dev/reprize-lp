@@ -12,7 +12,7 @@ const common = {
 
 const SINGLE_PASS = { BRL: 4.9, USD: 2.49 };
 const PRO_MONTHLY = { BRL: 14.9, USD: 6.9 };
-const PRO_YEARLY = { BRL: 119.9, USD: 49.9 };
+const PRO_YEARLY = { BRL: 119.9, USD: 49.99 };
 
 /** How much cheaper the yearly plan is than twelve monthly payments. */
 const savings = (monthly: number, yearly: number) => Math.round((1 - yearly / (monthly * 12)) * 100);
