@@ -389,7 +389,7 @@ const ptBR: HomeCopy = {
       },
       {
         q: 'Funciona em quais celulares?',
-        a: 'No iPhone. A versão para Android está em preparação.',
+        a: 'No iPhone e no Android.',
       },
       {
         q: 'Preciso de internet?',
@@ -416,7 +416,7 @@ const ptBR: HomeCopy = {
   cta: {
     title: 'Nenhum lance perdido.',
     subtitle: 'Baixe o Reprize e deixe o celular ligado na quadra. O resto é jogo.',
-    legal: 'Disponível para iPhone. Android em breve.',
+    legal: 'Disponível para iPhone e Android.',
   },
   stickyLabel: 'Baixar o Reprize',
 };
@@ -704,7 +704,7 @@ const en: HomeCopy = {
       },
       {
         q: 'Which phones does it work on?',
-        a: 'iPhone. The Android version is in the works.',
+        a: 'iPhone and Android.',
       },
       {
         q: 'Do I need internet?',
@@ -731,7 +731,7 @@ const en: HomeCopy = {
   cta: {
     title: 'No play missed.',
     subtitle: 'Download Reprize and leave the phone running on the court. The rest is just playing.',
-    legal: 'Available for iPhone. Android coming soon.',
+    legal: 'Available for iPhone and Android.',
   },
   stickyLabel: 'Get Reprize',
 };

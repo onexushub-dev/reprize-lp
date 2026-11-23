@@ -33,13 +33,13 @@ Os arquivos vêm do kit de marca do Reprize (artefato "Reprize: marca e lojas"),
 
 ## Links das lojas
 
-Os links ficam em `src/data/stores.ts`. O da App Store já aponta para o app publicado (`https://apps.apple.com/app/id6833159162`, que abre a página na loja do país de quem acessa); o do Google Play fica vazio até o app Android ser publicado, e o botão aparece como "Em breve". Para trocar um link sem mexer no código, copie `.env.example` para `.env` e preencha `PUBLIC_APP_STORE_URL` ou `PUBLIC_PLAY_STORE_URL`.
+Os links ficam em `src/data/stores.ts`. Os dois apontam para o app publicado e abrem a página na loja do país de quem acessa: `https://apps.apple.com/app/id6833159162` e `https://play.google.com/store/apps/details?id=app.reprize.mobile`. Para trocar um link sem mexer no código, copie `.env.example` para `.env` e preencha `PUBLIC_APP_STORE_URL` ou `PUBLIC_PLAY_STORE_URL`.
 
-O botão "Baixar" do topo leva à seção de download da página inicial; no iPhone e no iPad ele abre a App Store direto.
+O botão "Baixar" do topo leva à seção de download da página inicial; no iPhone e no iPad ele abre a App Store direto, e no Android abre o Google Play direto.
 
 ## Página de download (QR code)
 
-`/download` (e `/en/download`) é o destino do QR code dos materiais impressos (`https://www.reprizeapp.com/download`). No iPhone e no iPad ela abre a App Store automaticamente. No Android mostra o aviso "Em breve" enquanto `PUBLIC_PLAY_STORE_URL` estiver vazia; depois de preenchida, o Android passa a abrir o Google Play do mesmo jeito. No computador aparecem os dois botões. Os links vêm de `src/data/stores.ts`. O endereço antigo, `/baixar`, continua funcionando: o `vercel.json` redireciona para `/download`, porque pode haver QR code impresso com ele.
+`/download` (e `/en/download`) é o destino do QR code dos materiais impressos (`https://www.reprizeapp.com/download`). No iPhone e no iPad ela abre a App Store automaticamente, e no Android abre o Google Play do mesmo jeito. No computador aparecem os dois botões. Os links vêm de `src/data/stores.ts`. O endereço antigo, `/baixar`, continua funcionando: o `vercel.json` redireciona para `/download`, porque pode haver QR code impresso com ele.
 
 ## Rotas legais
 
