@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 description: How Reprize handles personal data. Your recordings stay on your phone; only the ones you choose to share go to the cloud, for 24 hours.
-updated: 2026-11-19
+updated: 2026-11-25
 ---
 
 # Privacy Policy
@@ -79,10 +79,10 @@ To create a link (PRO plan) or to use the courtesy on a received recording, you 
 
 ### What goes to the cloud when you share
 
-- The **clips of the chosen recording** (the original video, with sound), thumbnails, editing settings (cut, zoom, speed, Modo Foco and Seguir a Bola framing), title and sport, and a **short preview** (no sound, with the Reprize mark) for the link page.
+- The **clips of the chosen recordings, or the clips you picked** (the original video, with sound), thumbnails, editing settings (cut, zoom, speed, Focus Mode: Players and Ball framing), title and sport, and a **short preview** (no sound, with the Reprize mark) for the link page.
 - The files are stored on **Cloudflare R2**, by Cloudflare, Inc., and are reachable only by someone who has the link. **24 hours after creation, the link stops working and the files are deleted.** You can turn the link off earlier, and the files leave the cloud at once.
 - The link has a random code. We keep only a cryptographic summary (hash) of it.
-- The link page shows the title, the number of clips, the **first name** of whoever shared it and the preview. It is not indexed by search engines.
+- The link page shows the title, the number of clips, the **first name** of whoever shared it and the preview. On a link with several recordings, it shows the title and the number of clips of each. It is not indexed by search engines.
 - Whoever shared sees **how many phones** opened the link, not who.
 
 ### When you receive a link
@@ -96,7 +96,7 @@ Anyone with the link can report the content in the app or on the page. We keep t
 
 ### Deleting your account
 
-In the app, under **Account → Delete account**. We delete the account and your links, which stop working, and their files leave the cloud. The recordings on your phone stay. If you signed in with Apple, we also revoke Reprize's access in your Apple account.
+In the app, under **Settings → Delete account**. We delete the account and your links, which stop working, and their files leave the cloud. The recordings on your phone stay. If you signed in with Apple, we also revoke Reprize's access in your Apple account.
 
 ## 7. Data you send us by email
 
@@ -162,7 +162,7 @@ RevenueCat, PostHog, Vercel, Supabase and Cloudflare may process data outside Br
 
 At any time and free of charge you may request (LGPD, art. 18): confirmation that we process your data; access; correction; anonymization, blocking or deletion of unnecessary data or data processed unlawfully; portability; information about who we share data with; information about the possibility of refusing consent and its consequences; withdrawal of consent; and objection to unlawful processing.
 
-To exercise your rights, write to [contato@reprizeapp.com](mailto:contato@reprizeapp.com). We may ask for information to confirm your identity, and we will reply within the legal deadlines. Data that exists only on your device is under your direct control. To delete your account and your links, use **Account → Delete account** in the app.
+To exercise your rights, write to [contato@reprizeapp.com](mailto:contato@reprizeapp.com). We may ask for information to confirm your identity, and we will reply within the legal deadlines. Data that exists only on your device is under your direct control. To delete your account and your links, use **Settings → Delete account** in the app.
 
 You may also complain to Brazil's **National Data Protection Authority (ANPD)** at [gov.br/anpd](https://www.gov.br/anpd). If you are located outside Brazil, you may also have rights under your local law, and you can contact us at the same address.
 

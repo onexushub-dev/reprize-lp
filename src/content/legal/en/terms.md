@@ -1,7 +1,7 @@
 ---
 title: Terms of Use
 description: Conditions for using the Reprize app and website, including plans, payments, sharing recordings and responsibilities.
-updated: 2026-11-19
+updated: 2026-11-25
 ---
 
 # Terms of Use
@@ -34,7 +34,7 @@ Unless the law expressly allows it, you may not: copy, modify, decompile or reve
 ## 5. Plans, prices and payments
 
 - **Free plan:** includes unlimited recordings, with limits on clip length, quality and features in the saved or sent video, as shown in the app.
-- **Sharing through Reprize** (creating a link to a recording) is a **PRO** feature. Watching a received recording is free on every plan. Without PRO, you have **1 courtesy recording** in total, with no renewal, to save and send the clips of a received recording (in Full HD, with the Reprize mark). The Single Pass does not apply to received recordings.
+- **Sharing through Reprize** (creating a link to one or more recordings, up to 10 per link, or to clips picked from a recording) is a **PRO** feature. Watching a received recording is free on every plan. Without PRO, you have **1 courtesy recording** in total, with no renewal, to save and send the clips of a received recording (in Full HD). The Single Pass does not apply to received recordings.
 - **Single Pass and PRO:** unlock extra features (the Single Pass on a free recording you already made; PRO on every recording), under the conditions and prices shown on the purchase screen, in your country's currency and including applicable taxes. Prices may change, but a change does not affect a period already purchased.
 - **Payment:** is handled by the **Apple App Store** or **Google Play**, which follow their own billing, tax, refund and payment-support rules. We do not receive your card details.
 - **Subscriptions and free trial:** the PRO plan is a subscription that **renews automatically** at the end of each period (monthly or yearly) until you cancel. When a free trial is offered, billing starts when it ends unless you cancel **at least 24 hours before** it ends, according to store rules.
@@ -46,12 +46,12 @@ Unless the law expressly allows it, you may not: copy, modify, decompile or reve
 
 The recordings and plays **belong to you** (or to whoever holds the rights to them). **We acquire no rights over them.** When you share a recording through Reprize, you only authorize us to store, transmit and display it to whoever has the link, for the link's 24 hours, and to remove it if it is reported (item 7).
 
-Exported videos may include Reprize graphic elements, such as the logo. You should keep them when they are part of the exported video, and you may share the content freely, subject to the items below.
+Exported videos include the Reprize mark (the logo and @reprize.app), on every plan. A PRO subscription taken before November 25, 2026, while it stays active, and a recording unlocked with a Single Pass bought before that date keep the terms of their purchase and are exported without the mark. You should keep the mark when it is part of the exported video, and you may share the content freely, subject to the items below.
 
 ## 7. Sharing and receiving recordings
 
-1. **Account.** To share a recording, or to use the courtesy on a received one, you sign in with Apple or Google. Keep access to your account secure. You can delete it in the app, under **Account → Delete account**.
-2. **How the link works.** When you share, Reprize creates a link and a QR code. Anyone who has the link can watch the recording in the app and pass the link on. The link works for **24 hours** from its creation, and you can turn it off earlier. After that, the files are deleted from the cloud.
+1. **Account.** To share a recording, or to use the courtesy on a received one, you sign in with Apple or Google. Keep access to your account secure. You can delete it in the app, under **Settings → Delete account**.
+2. **How the link works.** When you share, Reprize creates a link and a QR code, holding one or more recordings (up to 10) or the clips you picked from a recording. Anyone who has the link can watch in the app and pass the link on. The link works for **24 hours** from its creation, and you can turn it off earlier. After that, the files are deleted from the cloud.
 3. **You are responsible for what you share.** Before your first share, you declare that you are aware of this item. Reprize **does not watch, review or control** the content of recordings. By sharing, you declare that you have the right to send the recording and the **authorization of the people who appear in it**. If there are children or teenagers, the authorization is their legal guardians'.
 4. **What was received does not come back.** Whoever opened the link in the app keeps a copy of the recording on their own phone. Turning the link off or deleting your account stops new access, but does not delete those copies.
 5. **Recipients** can watch in the app but cannot capture the screen of a received recording. Saving and sending its clips follows item 5 (PRO or the courtesy). Recipients must respect the people who appear in the video, as in item 8.

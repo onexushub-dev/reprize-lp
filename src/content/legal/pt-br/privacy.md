@@ -1,7 +1,7 @@
 ---
 title: Política de Privacidade
 description: Como o Reprize trata dados pessoais. Suas gravações ficam no seu celular; só vão para a nuvem, por 24 horas, as que você escolhe compartilhar.
-updated: 2026-11-19
+updated: 2026-11-25
 ---
 
 # Política de Privacidade
@@ -79,10 +79,10 @@ Para criar um link (plano PRO) ou para usar a cortesia numa gravação recebida,
 
 ### O que vai para a nuvem quando você compartilha
 
-- Os **clipes da gravação escolhida** (o vídeo original, com som), as miniaturas, os ajustes de edição (corte, zoom, velocidade, enquadramento do Modo Foco e do Seguir a Bola), o título e o esporte, e uma **prévia curta** (sem som e com a marca do Reprize) para a página do link.
+- Os **clipes das gravações ou os clipes que você escolheu** (o vídeo original, com som), as miniaturas, os ajustes de edição (corte, zoom, velocidade, enquadramento do Modo Foco: Jogadores e Bola), o título e o esporte, e uma **prévia curta** (sem som e com a marca do Reprize) para a página do link.
 - Os arquivos ficam guardados na **Cloudflare R2**, da Cloudflare, Inc., e só são acessíveis por quem tem o link. **Depois de 24 horas da criação, o link para de funcionar e os arquivos são apagados.** Você pode desligar o link antes, e os arquivos saem da nuvem na hora.
 - O link tem um código aleatório. Guardamos apenas um resumo criptográfico (hash) desse código.
-- A página do link mostra o título, a quantidade de clipes, o **primeiro nome** de quem compartilhou e a prévia. Ela não é indexada por buscadores.
+- A página do link mostra o título, a quantidade de clipes, o **primeiro nome** de quem compartilhou e a prévia. Num link com várias gravações, mostra o título e a quantidade de clipes de cada uma. Ela não é indexada por buscadores.
 - Quem compartilhou vê **quantos celulares** abriram o link, mas não quem.
 
 ### Quando você recebe um link
@@ -96,7 +96,7 @@ Qualquer pessoa com o link pode denunciar o conteúdo pelo app ou pela página. 
 
 ### Excluir a sua conta
 
-No app, em **Conta → Excluir conta**. Apagamos a conta e os seus links, que param de funcionar, e os arquivos deles saem da nuvem. As gravações no seu celular continuam lá. Se você entrou com a Apple, também revogamos o acesso do Reprize na sua conta Apple.
+No app, em **Ajustes → Excluir conta**. Apagamos a conta e os seus links, que param de funcionar, e os arquivos deles saem da nuvem. As gravações no seu celular continuam lá. Se você entrou com a Apple, também revogamos o acesso do Reprize na sua conta Apple.
 
 ## 7. Dados que você nos envia por e-mail
 
@@ -162,7 +162,7 @@ RevenueCat, PostHog, Vercel, Supabase e Cloudflare podem tratar dados fora do Br
 
 Você pode pedir, a qualquer momento e gratuitamente (LGPD, art. 18): confirmação de que tratamos seus dados; acesso; correção; anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade; portabilidade; informação sobre com quem compartilhamos; informação sobre a possibilidade de não consentir e suas consequências; revogação do consentimento; e oposição a tratamento irregular.
 
-Para exercer seus direitos, escreva para [contato@reprizeapp.com](mailto:contato@reprizeapp.com). Podemos pedir informações para confirmar quem você é e responderemos nos prazos da lei. Os dados que existem só no seu aparelho estão sob seu controle direto. Para apagar a sua conta e os seus links, use **Conta → Excluir conta** no app.
+Para exercer seus direitos, escreva para [contato@reprizeapp.com](mailto:contato@reprizeapp.com). Podemos pedir informações para confirmar quem você é e responderemos nos prazos da lei. Os dados que existem só no seu aparelho estão sob seu controle direto. Para apagar a sua conta e os seus links, use **Ajustes → Excluir conta** no app.
 
 Você também pode reclamar à **Autoridade Nacional de Proteção de Dados (ANPD)**, em [gov.br/anpd](https://www.gov.br/anpd).
 

@@ -3,8 +3,9 @@ import PhoneVideo from './phone-video.astro';
 import type { HomeCopy } from '../../i18n/home';
 
 /**
- * The app's recording screen (RecordingPanel + SavedOverlay in the reprize app), shown at the moment a clip is saved
- * with the Bluetooth remote. Texts come from the app's own catalogs; the icons are the app's (components/icons.tsx).
+ * The app's recording screen (RecordingPanel, SaveClipButton and SavedOverlay in the reprize app, 2026-11-21 layout):
+ * the timer and the clip count over the camera, the battery saving button, the "save the last 15 s" button, the active
+ * triggers as chips and the hold-to-end button, shown at the moment a clip is saved with the Bluetooth remote. Texts come from the app's own catalogs; the icons are the app's (components/icons.tsx).
  */
 interface Props {
   copy: HomeCopy['hero']['screen'];
@@ -20,45 +21,56 @@ const stroke = { fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'ro
   <div class="rec__top">
     <span class="rec__pill">
       <span class="rec__dot"></span>
-      <span class="rec__label">{copy.rec}</span>
       <span class="rec__elapsed">{copy.elapsed}</span>
     </span>
-    <span class="rec__pill rec__pill--count">
-      <span class="old">{copy.clipsBefore}</span>
-      <span class="new">{copy.clips}</span>
+    <span class="rec__right">
+      <span class="rec__pill rec__pill--count">
+        <span class="old">{copy.clipsBefore}</span>
+        <span class="new">{copy.clips}</span>
+      </span>
+      <span class="rec__round">
+        <svg viewBox="0 0 24 24" stroke="#0A0A0A" stroke-width="1.8" {...stroke}>
+          <rect x="2.5" y="7" width="16" height="10" rx="2.2"></rect>
+          <path d="M21 10.5v3M11.5 9l-2.5 3.2h3L9.5 15"></path>
+        </svg>
+      </span>
     </span>
   </div>
 
   <div class="rec__bottom">
-    <div class="rec__hint-card">
-      <div class="rec__hint-head">
-        <svg viewBox="0 0 24 24" stroke="#FFB000" stroke-width="1.8" {...stroke}>
-          <path d="M9 11V5a1.5 1.5 0 0 1 3 0v6M12 10V4a1.5 1.5 0 0 1 3 0v7M15 10.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.5 15a1.5 1.5 0 0 1 2.5-1.7L9 16"></path>
+    <div class="rec__save">
+      <span class="rec__save-fill">
+        <svg class="rec__save-icon" viewBox="0 0 24 24" stroke="#0A0A0A" stroke-width="2.1" {...stroke}>
+          <path d="M3.5 12a8.5 8.5 0 1 0 2.5-6"></path>
+          <path d="M3 3.5V8h4.5"></path>
+          <text x="12.6" y="15.6" text-anchor="middle" stroke="none" fill="#0A0A0A">{copy.saveSeconds}</text>
         </svg>
-        <span class="rec__hint">{copy.hint}</span>
-      </div>
-      <div class="rec__ways">
-        <span class="rec__way">
-          <svg viewBox="0 0 24 24" stroke="#FFB000" stroke-width="2.2" {...stroke}>
-            <circle cx="12" cy="9" r="2.3"></circle>
-            <path d="M12 11.8v5.2M8.4 22.2l3.6-5.2 3.6 5.2M10.6 12.6 5.6 3.4M13.4 12.6l5-9.2M2.6 5.2c-.5-1.2-.4-2.4.3-3.4M21.4 5.2c.5-1.2.4-2.4-.3-3.4"></path>
-          </svg>
-          {copy.wayWave}
-        </span>
-        <span class="rec__way rec__way--hit">
-          <svg viewBox="0 0 24 24" stroke="#FFB000" stroke-width="1.8" {...stroke}>
-            <path d="M7 7l10 10-5 5V2l5 5L7 17"></path>
-          </svg>
-          {copy.wayRemote}
-        </span>
-        <span class="rec__way">
-          <svg viewBox="0 0 24 24" stroke="#FFB000" stroke-width="1.8" {...stroke}>
-            <rect x="6" y="6" width="12" height="12" rx="3"></rect>
-            <path d="M9 6V2h6v4M9 18v4h6v-4"></path>
-          </svg>
-          {copy.wayWatch}
-        </span>
-      </div>
+        <svg class="rec__save-done" viewBox="0 0 24 24" stroke="#0A0A0A" stroke-width="2.6" {...stroke}>
+          <path d="M5 12l5 5L20 7"></path>
+        </svg>
+      </span>
+    </div>
+    <div class="rec__ways">
+      <span class="rec__way">
+        <svg viewBox="0 0 24 24" stroke="#FFB000" stroke-width="2.2" {...stroke}>
+          <circle cx="12" cy="9" r="2.3"></circle>
+          <path d="M12 11.8v5.2M8.4 22.2l3.6-5.2 3.6 5.2M10.6 12.6 5.6 3.4M13.4 12.6l5-9.2M2.6 5.2c-.5-1.2-.4-2.4.3-3.4M21.4 5.2c.5-1.2.4-2.4-.3-3.4"></path>
+        </svg>
+        {copy.wayWave}
+      </span>
+      <span class="rec__way rec__way--hit">
+        <svg viewBox="0 0 24 24" stroke="#FFB000" stroke-width="1.8" {...stroke}>
+          <path d="M7 7l10 10-5 5V2l5 5L7 17"></path>
+        </svg>
+        {copy.wayRemote}
+      </span>
+      <span class="rec__way">
+        <svg viewBox="0 0 24 24" stroke="#FFB000" stroke-width="1.8" {...stroke}>
+          <rect x="6" y="6" width="12" height="12" rx="3"></rect>
+          <path d="M9 6V2h6v4M9 18v4h6v-4"></path>
+        </svg>
+        {copy.wayWatch}
+      </span>
     </div>
     <div class="rec__hold">{copy.hold}</div>
   </div>

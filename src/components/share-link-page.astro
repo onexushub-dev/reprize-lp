@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/base-layout.astro';
 import BrandLogo from './brand-logo.astro';
 import StoreButton from './store-button.astro';
 import { REPORT_CATEGORIES, type Share } from '../data/share';
-import { APP_STORE_URL } from '../data/stores';
+import { APP_STORE_URL, PLAY_STORE_URL } from '../data/stores';
 import { SUPPORT_EMAIL, useTranslations, type Locale } from '../i18n/ui';
 
 // The page of a shared recording or clip, reprizeapp.com/v/<code> (Lance repo:
@@ -26,6 +26,7 @@ const fill = (text: string, values: Record<string, string | number>) =>
   text.replace(/\{(\w+)\}/g, (_, key: string) => String(values[key] ?? ''));
 
 const appStoreUrl = APP_STORE_URL;
+const playStoreUrl = PLAY_STORE_URL || undefined;
 
 const ua = Astro.request.headers.get('user-agent') ?? '';
 const ios = /iPhone|iPad|iPod/.test(ua);
@@ -33,7 +34,8 @@ const android = !ios && /Android/i.test(ua);
 // Back from "Ver todos no Reprize" without the app opening: the app is not installed, so this phone goes to the store.
 const opened = Astro.url.searchParams.get('open') === '1';
 // A link to the page's own domain never opens the app (iOS only hands over links tapped from another domain), so the
-// button points to the other host; the app claims /v/* on both.
+// button points to the other host; the app claims /v/* on both (Universal Links on iOS, App Links on Android).
+const phone = ios || android;
 const otherHost = Astro.url.host === 'www.reprizeapp.com' ? 'reprizeapp.com' : 'www.reprizeapp.com';
 const openHref = `https://${otherHost}/v/${encodeURIComponent(code)}?open=1`;
 // Back from the report form (src/pages/api/report.ts): ok, too_many or error.
@@ -139,20 +141,19 @@ const button = 'bg-amber text-ink inline-flex min-h-[56px] items-center justify-
                 </ol>
               </div>
             ) : null}
-            {opened && ios ? (
+            {opened && phone ? (
               <div class="mt-7">
                 <h2 class="text-2xl font-extrabold">{t('share.installTitle')}</h2>
                 <p class={body}>{recordings ? t('share.groupInstallBody') : t('share.installBody')}</p>
                 <div class="mt-6 flex justify-center">
-                  <StoreButton icon="apple" store={t('store.appStore')} href={appStoreUrl} soonLabel={t('store.soon')} availableLabel={t('store.availableOn')} />
+                  {android ? (
+                    <StoreButton icon="play" store={t('store.googlePlay')} href={playStoreUrl} soonLabel={t('store.soon')} availableLabel={t('store.availableOn')} />
+                  ) : (
+                    <StoreButton icon="apple" store={t('store.appStore')} href={appStoreUrl} soonLabel={t('store.soon')} availableLabel={t('store.availableOn')} />
+                  )}
                 </div>
               </div>
-            ) : android ? (
-              <div class="mt-7">
-                <h2 class="text-2xl font-extrabold">{t('share.androidTitle')}</h2>
-                <p class={body}>{t('share.androidBody')}</p>
-              </div>
-            ) : ios ? (
+            ) : phone ? (
               <div class="mt-7 flex flex-col items-center">
                 <a href={openHref} class={button}>
                   {t('share.open')}
@@ -164,8 +165,9 @@ const button = 'bg-amber text-ink inline-flex min-h-[56px] items-center justify-
             ) : (
               <div class="mt-7 flex flex-col items-center">
                 <p class={body}>{t('share.desktopHint')}</p>
-                <div class="mt-6 flex justify-center">
+                <div class="mt-6 flex flex-wrap justify-center gap-3">
                   <StoreButton icon="apple" store={t('store.appStore')} href={appStoreUrl} soonLabel={t('store.soon')} availableLabel={t('store.availableOn')} />
+                  <StoreButton icon="play" store={t('store.googlePlay')} href={playStoreUrl} soonLabel={t('store.soon')} availableLabel={t('store.availableOn')} />
                 </div>
               </div>
             )}
