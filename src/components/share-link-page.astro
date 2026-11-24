@@ -1,0 +1,221 @@
+---
+import '../styles/home.css';
+import BaseLayout from '../layouts/base-layout.astro';
+import BrandLogo from './brand-logo.astro';
+import StoreButton from './store-button.astro';
+import { REPORT_CATEGORIES, type Share } from '../data/share';
+import { APP_STORE_URL } from '../data/stores';
+import { SUPPORT_EMAIL, useTranslations, type Locale } from '../i18n/ui';
+
+// The page of a shared recording or clip, reprizeapp.com/v/<code> (Lance repo:
+// docs/superpowers/specs/2026-11-16-recording-sharing-design.md §3.2, §7), or of a group link holding several
+// recordings (docs/superpowers/specs/2026-11-22-multi-recording-share-design.md §7): "5 gravações de Ana", the cover of
+// the first one and the list of the recordings. Rendered on each visit: the share can expire
+// or be turned off at any time, and the social preview (WhatsApp, iMessage) needs the cover in the HTML.
+
+interface Props {
+  locale: Locale;
+  code: string;
+  /** Loaded by the page, which sets the status and the headers (a component cannot, once the page is streaming). */
+  share: Share;
+}
+
+const { locale, code, share } = Astro.props;
+const t = useTranslations(locale);
+const fill = (text: string, values: Record<string, string | number>) =>
+  text.replace(/\{(\w+)\}/g, (_, key: string) => String(values[key] ?? ''));
+
+const appStoreUrl = APP_STORE_URL;
+
+const ua = Astro.request.headers.get('user-agent') ?? '';
+const ios = /iPhone|iPad|iPod/.test(ua);
+const android = !ios && /Android/i.test(ua);
+// Back from "Ver todos no Reprize" without the app opening: the app is not installed, so this phone goes to the store.
+const opened = Astro.url.searchParams.get('open') === '1';
+// A link to the page's own domain never opens the app (iOS only hands over links tapped from another domain), so the
+// button points to the other host; the app claims /v/* on both.
+const otherHost = Astro.url.host === 'www.reprizeapp.com' ? 'reprizeapp.com' : 'www.reprizeapp.com';
+const openHref = `https://${otherHost}/v/${encodeURIComponent(code)}?open=1`;
+// Back from the report form (src/pages/api/report.ts): ok, too_many or error.
+const reported = Astro.url.searchParams.get('reported');
+const reportLabels = {
+  not_authorized: t('share.reportNotAuthorized'),
+  minor: t('share.reportMinor'),
+  inappropriate: t('share.reportInappropriate'),
+  other: t('share.reportOther'),
+};
+const reportError =
+  reported === 'too_many' ? fill(t('share.reportTooMany'), { email: SUPPORT_EMAIL }) : reported === 'error' ? t('share.reportFailed') : null;
+
+const active = share.state === 'active' ? share : null;
+const hours = active ? Math.max(0, Math.floor((Date.parse(active.expiresAt) - Date.now()) / 3_600_000)) : 0;
+const clipCount = (count: number) => (count === 1 ? t('share.clipsOne') : fill(t('share.clipsMany'), { count }));
+const recordings = active && active.kind === 'group' && active.recordings ? active.recordings : null;
+const title = recordings
+  ? active && active.from
+    ? fill(t('share.groupTitle'), { count: recordings.length, name: active.from })
+    : fill(t('share.groupTitleNoName'), { count: recordings.length })
+  : active
+    ? active.title || t('share.defaultTitle')
+    : t('share.metaTitle');
+// A group's title already says who sent it.
+const meta = active
+  ? [clipCount(active.clips), active.from && !recordings ? fill(t('share.from'), { name: active.from }) : null]
+      .filter((part) => part !== null)
+      .join(' · ')
+  : '';
+const left = hours >= 1 ? fill(hours === 1 ? t('share.hoursLeftOne') : t('share.hoursLeftMany'), { count: hours }) : t('share.lastHour');
+const ended = {
+  expired: [t('share.expiredTitle'), t('share.expiredBody')],
+  off: [t('share.offTitle'), t('share.offBody')],
+  // Just reported from this page: thank the person instead of telling them it was reported.
+  removed: reported === 'ok' ? [t('share.reportedTitle'), t('share.reportedBody')] : [t('share.removedTitle'), t('share.removedBody')],
+  not_found: [t('share.notFoundTitle'), t('share.notFoundBody')],
+  error: [t('share.errorTitle'), t('share.errorBody')],
+}[share.state === 'active' ? 'error' : share.state];
+
+const eyebrow = 'text-amber text-xs font-bold tracking-[0.24em] uppercase sm:text-sm';
+const heading = 'mt-3 text-4xl font-extrabold sm:text-6xl';
+const body = 'text-paper/80 mx-auto mt-4 max-w-md text-base leading-7 sm:text-lg';
+const button = 'bg-amber text-ink inline-flex min-h-[56px] items-center justify-center rounded-2xl px-7 text-lg font-extrabold transition-transform hover:-translate-y-0.5';
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${title} | Reprize`}
+  description={active ? `${meta}. ${t('share.metaDescription')}` : t('share.metaDescription')}
+  slug={`v/${code}`}
+  noindex
+  ogImage={active && active.cover ? active.cover.image : undefined}
+>
+  {
+    active && opened && ios ? (
+      <script is:inline define:vars={{ appStoreUrl }}>
+        // replace(), so going back does not land here and bounce to the store again.
+        location.replace(appStoreUrl);
+      </script>
+    ) : null
+  }
+  <section class="hero-glow grain relative isolate overflow-hidden">
+    <div class="mx-auto flex min-h-[70vh] max-w-xl flex-col items-center justify-center px-4 py-12 text-center sm:px-6 sm:py-20">
+      {
+        active ? (
+          <>
+            <p class={eyebrow}>{t('share.eyebrow')}</p>
+            <h1 class={heading}>{title}</h1>
+            <p class="text-paper/80 mt-3 text-base font-semibold sm:text-lg">{meta}</p>
+            <div class="border-line bg-surface mt-7 w-full overflow-hidden rounded-3xl border">
+              {active.cover ? (
+                <video
+                  class="block max-h-[60vh] w-full bg-black object-contain"
+                  src={active.cover.video}
+                  poster={active.cover.image}
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  aria-label={t('share.coverAlt')}
+                />
+              ) : (
+                <p class="text-muted px-6 py-16 text-sm">{t('share.noCover')}</p>
+              )}
+            </div>
+            <p class="text-amber mt-5 text-sm font-bold">{left}</p>
+            {recordings ? (
+              <div class="mt-7 w-full text-left">
+                <h2 class="text-muted text-xs font-bold tracking-[0.18em] uppercase">{t('share.groupList')}</h2>
+                <ol class="border-line bg-surface mt-3 divide-line divide-y overflow-hidden rounded-2xl border">
+                  {recordings.map((recording, index) => (
+                    <li class="flex items-center gap-3 px-4 py-3">
+                      <span class="border-line text-muted flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-xs font-bold">
+                        {index + 1}
+                      </span>
+                      <span class="min-w-0 flex-1 truncate text-sm font-semibold">
+                        {recording.title || fill(t('share.recordingFallback'), { number: index + 1 })}
+                      </span>
+                      <span class="text-muted shrink-0 text-sm">{clipCount(recording.clips)}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ) : null}
+            {opened && ios ? (
+              <div class="mt-7">
+                <h2 class="text-2xl font-extrabold">{t('share.installTitle')}</h2>
+                <p class={body}>{recordings ? t('share.groupInstallBody') : t('share.installBody')}</p>
+                <div class="mt-6 flex justify-center">
+                  <StoreButton icon="apple" store={t('store.appStore')} href={appStoreUrl} soonLabel={t('store.soon')} availableLabel={t('store.availableOn')} />
+                </div>
+              </div>
+            ) : android ? (
+              <div class="mt-7">
+                <h2 class="text-2xl font-extrabold">{t('share.androidTitle')}</h2>
+                <p class={body}>{t('share.androidBody')}</p>
+              </div>
+            ) : ios ? (
+              <div class="mt-7 flex flex-col items-center">
+                <a href={openHref} class={button}>
+                  {t('share.open')}
+                </a>
+                <p class="text-muted mx-auto mt-4 max-w-sm text-sm leading-6">
+                  {recordings ? t('share.groupOpenHint') : t('share.openHint')}
+                </p>
+              </div>
+            ) : (
+              <div class="mt-7 flex flex-col items-center">
+                <p class={body}>{t('share.desktopHint')}</p>
+                <div class="mt-6 flex justify-center">
+                  <StoreButton icon="apple" store={t('store.appStore')} href={appStoreUrl} soonLabel={t('store.soon')} availableLabel={t('store.availableOn')} />
+                </div>
+              </div>
+            )}
+            <details class="mt-10 w-full max-w-sm text-left" open={reportError !== null}>
+              <summary class="text-muted hover:text-amber cursor-pointer text-center text-xs font-semibold underline-offset-4 hover:underline">
+                {t('share.report')}
+              </summary>
+              <form method="post" action="/api/report" class="border-line bg-surface mt-4 rounded-2xl border p-5">
+                <input type="hidden" name="code" value={code} />
+                <input type="hidden" name="locale" value={locale} />
+                <fieldset>
+                  <legend class="text-sm font-bold">{t('share.reportWhy')}</legend>
+                  {REPORT_CATEGORIES.map((category) => (
+                    <label class="text-paper/80 mt-3 flex items-start gap-3 text-sm">
+                      <input type="radio" name="category" value={category} required class="accent-amber mt-1" />
+                      <span>{reportLabels[category]}</span>
+                    </label>
+                  ))}
+                </fieldset>
+                <label class="mt-4 block text-sm font-bold" for="report-details">
+                  {t('share.reportDetails')}
+                </label>
+                <textarea
+                  id="report-details"
+                  name="details"
+                  maxlength="500"
+                  rows="3"
+                  class="border-line bg-ink text-paper mt-2 w-full rounded-xl border p-3 text-sm"
+                />
+                <button type="submit" class="bg-amber text-ink mt-4 w-full rounded-xl px-4 py-3 text-sm font-extrabold">
+                  {t('share.reportSend')}
+                </button>
+                <p class="text-muted mt-3 text-xs leading-5">{t('share.reportNote')}</p>
+                {reportError ? <p class="text-amber mt-3 text-xs font-semibold">{reportError}</p> : null}
+              </form>
+            </details>
+          </>
+        ) : (
+          <>
+            <BrandLogo name="simbolo" width={71} height={48} class="h-12 w-auto" />
+            <h1 class={heading}>{ended[0]}</h1>
+            <p class={body}>{ended[1]}</p>
+            <div class="mt-8 flex justify-center">
+              <a href="/" class={button}>
+                {t('share.getApp')}
+              </a>
+            </div>
+          </>
+        )
+      }
+    </div>
+  </section>
+</BaseLayout>

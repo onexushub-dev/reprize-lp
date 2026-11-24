@@ -4,6 +4,7 @@ import BrandLogo from './brand-logo.astro';
 import Flag from './flag.astro';
 import LanguageSwitcher from './language-switcher.astro';
 import ThemeToggle from './theme-toggle.astro';
+import { APP_STORE_URL, PLAY_STORE_URL } from '../data/stores';
 import { localeMeta, locales, useTranslations, type Locale } from '../i18n/ui';
 
 interface Props {
@@ -14,10 +15,9 @@ interface Props {
 const { locale, slug } = Astro.props;
 const t = useTranslations(locale);
 
-// The download button goes to the App Store (iPhone first). While there is no listing yet, it goes to the download
-// section of the home page, where the stores show as "coming soon".
-const appStoreUrl = import.meta.env.PUBLIC_APP_STORE_URL || undefined;
-const downloadHref = appStoreUrl ?? `${getRelativeLocaleUrl(locale, '')}#download`;
+// The download button goes to the download section of the home page, where both stores are. On a phone or tablet the
+// script below sends it straight to that system's store instead (data-ios-href, data-android-href).
+const downloadHref = `${getRelativeLocaleUrl(locale, '')}#download`;
 ---
 
 <header class="border-line bg-ink/85 sticky top-0 z-40 border-b backdrop-blur-md" data-site-header>
@@ -33,6 +33,9 @@ const downloadHref = appStoreUrl ?? `${getRelativeLocaleUrl(locale, '')}#downloa
       </div>
       <a
         href={downloadHref}
+        data-download-link
+        data-ios-href={APP_STORE_URL}
+        data-android-href={PLAY_STORE_URL}
         class="bg-amber text-ink hover:bg-amber/90 inline-flex shrink-0 items-center gap-1.5 rounded-full py-2 pr-4 pl-3.5 text-sm font-extrabold transition-colors"
       >
         <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4M8 10l4 4 4-4M12 3v11"></path></svg>
@@ -133,6 +136,18 @@ const downloadHref = appStoreUrl ?? `${getRelativeLocaleUrl(locale, '')}#downloa
     if (label) button.setAttribute('aria-label', label);
     button.querySelector('.menu-icon-open')?.classList.toggle('hidden', open);
     button.querySelector('.menu-icon-close')?.classList.toggle('hidden', !open);
+  }
+
+  // iPadOS reports itself as a Mac, so a Mac with a touch screen counts as iOS.
+  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+  const android = !ios && /Android/i.test(navigator.userAgent);
+  const download = header?.querySelector<HTMLAnchorElement>('[data-download-link]');
+  const storeHref = ios ? download?.dataset.iosHref : android ? download?.dataset.androidHref : undefined;
+  if (download && storeHref) {
+    // Leaves the site for the store, so it opens in a new tab like the other store buttons.
+    download.href = storeHref;
+    download.target = '_blank';
+    download.rel = 'noopener noreferrer';
   }
 
   if (header && button && menu) {

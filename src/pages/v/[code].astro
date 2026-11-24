@@ -1,0 +1,16 @@
+---
+import ShareLinkPage from '../../components/share-link-page.astro';
+import { loadShare } from '../../data/share';
+
+// Rendered on each visit (the share's state changes), unlike the rest of the site.
+export const prerender = false;
+
+const code = Astro.params.code ?? '';
+const share = await loadShare(code);
+// Headers and status belong to the page: set inside a component they come too late and are dropped.
+Astro.response.headers.set('Cache-Control', 'no-store');
+Astro.response.headers.set('X-Robots-Tag', 'noindex');
+if (share.state === 'not_found') Astro.response.status = 404;
+---
+
+<ShareLinkPage locale="pt-BR" code={code} share={share} />

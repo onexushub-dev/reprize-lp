@@ -2,8 +2,20 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["R885ZD42ZG.app.reprize.mobile"],
-        "components": [{ "/": "/p/*", "comment": "Partner referral links" }]
+        "appIDs": [
+          "R885ZD42ZG.app.reprize.mobile",
+          "R885ZD42ZG.app.reprize.develop"
+        ],
+        "components": [
+          {
+            "/": "/v/*",
+            "comment": "A shared recording or clip"
+          },
+          {
+            "/": "/p/*",
+            "comment": "Partner referral links"
+          }
+        ]
       }
     ]
   }

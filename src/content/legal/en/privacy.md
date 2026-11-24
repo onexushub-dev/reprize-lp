@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
-description: How Reprize handles personal data. Your recordings stay on your phone and are never sent to our servers.
-updated: 2026-11-15
+description: How Reprize handles personal data. Your recordings stay on your phone; only the ones you choose to share go to the cloud, for 24 hours.
+updated: 2026-11-24
 ---
 
 # Privacy Policy
@@ -10,16 +10,16 @@ This Policy explains what personal data is processed when you use the **Reprize*
 
 > **Plain-language summary**
 >
-> - **Your recordings stay on your phone.** The videos, audio and photos Reprize captures are not sent to our servers, and we have no access to them.
-> - **There is no sign-up or account.** You open the app and use it.
+> - **Your recordings stay on your phone.** The videos, audio and photos Reprize captures are not sent to our servers. The exception is when **you** create a link to share a recording: it stays in the cloud for **24 hours** and is then deleted.
+> - **Recording needs no sign-up.** An account (with Apple or Google) is asked for only to share a recording or to use the courtesy on a received one.
 > - **We do not sell data**, and the app does not use advertising. App usage is measured anonymously, without identifying you.
-> - Data exchanged with third parties is limited to **purchases and subscriptions** (Apple, Google and RevenueCat) and **anonymous usage metrics** (PostHog).
+> - Data exchanged with third parties is limited to **purchases and subscriptions** (Apple, Google and RevenueCat), the **account and sharing** (Apple, Google, Supabase and Cloudflare) and **anonymous usage metrics** (PostHog).
 
 ## 1. Who is responsible
 
 The data controller is **Victor Hugo Marques Ltda** (trading as **Nexus Hub**), registered in Brazil under CNPJ **64.669.130/0001-02**, headquartered at Rua Pais Leme, 215, suite 1713, Pinheiros, São Paulo, SP, 05424-150, Brazil ("**Reprize**", "**we**").
 
-Privacy contact, including for exercising your rights: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+Privacy contact, including for exercising your rights: [contato@reprizeapp.com](mailto:contato@reprizeapp.com).
 
 ## 2. Data that stays only on your phone
 
@@ -29,7 +29,7 @@ Reprize works on your device. To do that, the app uses and stores locally:
 - **Plays, games and settings**, such as game names, play counts, chosen sport, preferences and trigger status.
 - **Gesture recognition** (camera) and **voice recognition** (on iOS): the analysis happens on the device itself. The image and audio used for it are not sent to us.
 
-This data is **not transmitted to us**, so we cannot access it, recover it or delete it for you. To remove it, delete the plays and games in the app or uninstall Reprize. Videos you exported to your phone's gallery or shared with other apps exist outside Reprize and stay wherever you put them.
+This data is **not transmitted to us**, except what you choose to share (section 6), so we cannot access it, recover it or delete it for you. To remove it, delete the plays and games in the app or uninstall Reprize. Videos you exported to your phone's gallery or shared with other apps exist outside Reprize and stay wherever you put them.
 
 ### Connections between your own devices
 
@@ -52,10 +52,10 @@ If you deny a permission, the features that depend on it become unavailable, and
 
 ## 4. Data processed because of purchases and subscriptions
 
-Part of Reprize is paid (single pass and Pro plan). For that:
+Part of Reprize is paid (single pass and PRO plan). For that:
 
 - **Apple App Store and Google Play** process the payment. We **do not receive** card numbers or bank details.
-- **RevenueCat, Inc.** (USA) is the service that manages subscriptions and unlocks paid features. On our behalf, it receives an **anonymous app user identifier**, purchase information (product, dates, status and store), technical data about the device and app, the country and the IP address. Its policy is at [revenuecat.com/privacy](https://www.revenuecat.com/privacy). If you use a **referral code**, that code (which identifies the partner who referred you, never a person) is associated with your anonymous identifier, so we know which referral led to a subscription.
+- **RevenueCat, Inc.** (USA) is the service that manages subscriptions and unlocks paid features. On our behalf, it receives an **app user identifier** (anonymous; if you signed in to a Reprize account, that account's identifier), purchase information (product, dates, status and store), technical data about the device and app, the country and the IP address. Its policy is at [revenuecat.com/privacy](https://www.revenuecat.com/privacy). If you use a **referral code**, that code (which identifies the partner who referred you, never a person) is associated with that identifier, so we know which referral led to a subscription.
 
 This data is used to confirm your purchase, unlock paid features, prevent fraud and handle support and refund requests.
 
@@ -67,28 +67,59 @@ To understand how the app is used and improve it, Reprize measures usage **anony
 - **What we never send:** videos, audio, photos, file or device names, typed text or error messages.
 - **Without identifying you:** we use a random code generated on your phone at install. We do not link that code to a name, email, account, advertising identifier or IP address, and we do not build profiles of people.
 - **Who processes it:** **PostHog Inc.** (USA), which receives these events on our behalf. Its policy is at [posthog.com/privacy](https://posthog.com/privacy).
-- **If you prefer not to be measured:** the app does not yet have a switch to turn the measurement off. Write to [reprize.app@gmail.com](mailto:reprize.app@gmail.com) and we will handle your request.
+- **If you prefer not to be measured:** the app does not yet have a switch to turn the measurement off. Write to [contato@reprizeapp.com](mailto:contato@reprizeapp.com) and we will handle your request.
 
-## 6. Data you send us by email
+## 6. Account and sharing recordings
+
+Sharing is optional. If you never share or receive a link, nothing in this section applies to you.
+
+### Account
+
+To create a link (PRO plan) or to use the courtesy on a received recording, you sign in with **Apple** or **Google**. We receive from them the account identifier, your **email** (with Apple, it can be a relay address that hides yours) and your **name**, if you allow it. We also keep the date you accepted the responsibility notice before your first share and whether your courtesy has been used. The account is managed by **Supabase, Inc.**, which hosts our server. Watching a received recording needs no account.
+
+### What goes to the cloud when you share
+
+- The **clips of the chosen recording** (the original video, with sound), thumbnails, editing settings (cut, zoom, speed, Modo Foco and Seguir a Bola framing), title and sport, and a **short preview** (no sound, with the Reprize mark) for the link page.
+- The files are stored on **Cloudflare R2**, by Cloudflare, Inc., and are reachable only by someone who has the link. **24 hours after creation, the link stops working and the files are deleted.** You can turn the link off earlier, and the files leave the cloud at once.
+- The link has a random code. We keep only a cryptographic summary (hash) of it.
+- The link page shows the title, the number of clips, the **first name** of whoever shared it and the preview. It is not indexed by search engines.
+- Whoever shared sees **how many phones** opened the link, not who.
+
+### When you receive a link
+
+- The app records the opening of the link with a **random device code**, or with your account if you are signed in. This is used to count views, apply the courtesy and limit abusive reports.
+- The clips are downloaded to your phone and stay there as a received recording, even after the link expires. To protect the people in the video, the app keeps a received recording out of screenshots and screen recordings.
+
+### Reports
+
+Anyone with the link can report the content in the app or on the page. We keep the chosen reason, the text (if any), the date, the reporter's account (if signed in) and a device code or, on the website, a summary (hash) of the IP address combined with the date, only to limit abuse. Whoever shared **does not see** who reported or why. Reported content is taken down until it is reviewed. We use this information to review the report and, where needed, remove the content and suspend accounts.
+
+### Deleting your account
+
+In the app, under **Account → Delete account**. We delete the account and your links, which stop working, and their files leave the cloud. The recordings on your phone stay. If you signed in with Apple, we also revoke Reprize's access in your Apple account.
+
+## 7. Data you send us by email
 
 If you write to support, we process your **email address, name (if provided) and the content of your message** in order to reply. Please do not send videos or data that are not needed for the support request.
 
-## 7. The reprizeapp.com website
+## 8. The reprizeapp.com website
 
-The website is static and **does not use cookies**, whether for advertising or tracking. The hosting provider (Vercel Inc.) may record technical access data such as IP address, date and time, pages visited and browser type, to deliver the site, keep it secure and prevent abuse.
+The website **does not use cookies**, whether for advertising or tracking. The page of a shared link asks our server what to show on each visit, and the report form follows section 6. The hosting provider (Vercel Inc.) may record technical access data such as IP address, date and time, pages visited and browser type, to deliver the site, keep it secure and prevent abuse.
 
 To learn how many people visit the site and where they come from, we use **Vercel Web Analytics**, which measures audience **anonymously and without cookies**. It records the time, the page visited, the referring site, the approximate location (country, state and city), the operating system, the browser and the device type. It stores nothing in your browser, does not use your IP address to identify you and does not follow you across sites: a visitor is identified by a code generated from the request, discarded within 24 hours. The data is used only for aggregated statistics.
 
-## 8. Aggregated store information
+## 9. Aggregated store information
 
 Apple and Google may give us aggregated statistics (such as downloads, countries and crash reports from users who allowed that sharing in their system settings). This data does not identify you to us.
 
-## 9. What we use data for, and legal bases
+## 10. What we use data for, and legal bases
 
 | Purpose | Legal basis (LGPD, art. 7) |
 | --- | --- |
 | Making the app work on your device | Performance of a contract |
 | Processing purchases and subscriptions, unlocking paid features | Performance of a contract |
+| Account, sharing links, received recordings and the courtesy | Performance of a contract |
+| Receiving and reviewing reports, removing content and suspending accounts | Legitimate interest and compliance with a legal obligation |
 | Using camera, microphone, speech, photos, Bluetooth and local network | Consent, given by you in the system permissions |
 | Answering support requests and data-subject requests | Performance of a contract and compliance with a legal obligation |
 | Measuring app usage anonymously to improve it | Legitimate interest |
@@ -96,54 +127,61 @@ Apple and Google may give us aggregated statistics (such as downloads, countries
 | Security, fraud and abuse prevention | Legitimate interest |
 | Meeting legal and tax obligations | Compliance with a legal obligation |
 
-## 10. Who we share it with
+## 11. Who we share it with
 
 **We do not sell personal data.** We share the minimum necessary only with:
 
 - **Apple and Google**, for app distribution and payments;
 - **RevenueCat**, to manage subscriptions;
+- **Apple and Google**, for you to sign in to your account;
+- **Supabase**, which hosts the server, the accounts and the link records;
+- **Cloudflare**, which stores the files of shared recordings for 24 hours;
+- **the people who have the link**, when you share a recording through Reprize;
 - **PostHog**, to measure app usage anonymously;
 - **Vercel**, to host the website and measure its audience anonymously;
 - **public authorities**, when required by law or court order.
 
 When **you** share a play through WhatsApp, Instagram or another app, you are the one sending it, and processing then follows the chosen app's policy.
 
-## 11. International transfers
+## 12. International transfers
 
-RevenueCat, PostHog and Vercel may process data outside Brazil, including in the United States. In those cases the transfer relies on the grounds in art. 33 of the LGPD, such as contractual clauses and the security measures those providers adopt.
+RevenueCat, PostHog, Vercel, Supabase and Cloudflare may process data outside Brazil, including in the United States. In those cases the transfer relies on the grounds in art. 33 of the LGPD, such as contractual clauses and the security measures those providers adopt.
 
-## 12. How long we keep data
+## 13. How long we keep data
 
 - **Data on your phone:** until you delete it or uninstall the app.
+- **Account:** until you delete it in the app. After that, we delete the account and the links and keep only what the law requires.
+- **Shared recordings in the cloud:** 24 hours from the link's creation, or less if you turn it off. The link records (title, number of clips and of views), without the videos, stay while the account exists.
+- **Reports:** for as long as needed for the review and the defense of rights.
 - **Purchase and subscription data:** for the duration of our relationship and for legal, tax and legal-defense periods.
 - **Anonymous usage metrics:** for the period configured in the analytics service, and only while they are useful to improve the app.
 - **Support messages:** for as long as needed to handle the request and to defend rights.
 - **Website technical logs and statistics:** for the short period set by the hosting provider and, for audience statistics, only in aggregated form.
 
-## 13. Your rights
+## 14. Your rights
 
 At any time and free of charge you may request (LGPD, art. 18): confirmation that we process your data; access; correction; anonymization, blocking or deletion of unnecessary data or data processed unlawfully; portability; information about who we share data with; information about the possibility of refusing consent and its consequences; withdrawal of consent; and objection to unlawful processing.
 
-To exercise your rights, write to [reprize.app@gmail.com](mailto:reprize.app@gmail.com). We may ask for information to confirm your identity, and we will reply within the legal deadlines. Because we do not keep your recordings or an account for you, data that exists only on your device is under your direct control.
+To exercise your rights, write to [contato@reprizeapp.com](mailto:contato@reprizeapp.com). We may ask for information to confirm your identity, and we will reply within the legal deadlines. Data that exists only on your device is under your direct control. To delete your account and your links, use **Account → Delete account** in the app.
 
 You may also complain to Brazil's **National Data Protection Authority (ANPD)** at [gov.br/anpd](https://www.gov.br/anpd). If you are located outside Brazil, you may also have rights under your local law, and you can contact us at the same address.
 
-## 14. Image and voice of other people
+## 15. Image and voice of other people
 
 When you record a game, the app may capture the image and voice of other people. **You are responsible for using Reprize lawfully**, for informing and, when necessary, obtaining permission from the people who appear in the recordings, for respecting places where recording is not allowed, and for thinking carefully before sharing the content. More details are in the [Terms of Use](/en/terms).
 
-## 15. Children and teenagers
+## 16. Children and teenagers
 
-Reprize is not directed at children. Use by anyone under 18 must be supervised by a parent or legal guardian, who must authorize purchases and the use of the camera and microphone. Since there is no sign-up, we do not ask for age or build user profiles. If you are responsible for a minor and believe their data was sent to us, contact support.
+Reprize is not directed at children. Use by anyone under 18 must be supervised by a parent or legal guardian, who must authorize purchases and the use of the camera and microphone. We do not ask for age or build user profiles. When sharing a recording with minors in it, whoever shares declares they have the guardians' authorization, and anyone can report content that exposes a minor. If you are responsible for a minor and believe their data was sent to us, contact support.
 
-## 16. Security
+## 17. Security
 
 We adopt reasonable technical and organizational measures to protect the data we process. Data stored on your phone also depends on the device's protections, such as screen lock and system updates, which are your responsibility. No system is completely secure. If an incident occurs that may cause relevant risk or harm, we will notify data subjects and the ANPD as required by law.
 
-## 17. Changes to this Policy
+## 18. Changes to this Policy
 
 We may update this Policy. The current version is always at [reprizeapp.com/en/privacy](/en/privacy), with the date of the last update. For relevant changes, we will notify you in the app or on the website.
 
-## 18. Contact
+## 19. Contact
 
-Questions, requests and complaints about privacy: [reprize.app@gmail.com](mailto:reprize.app@gmail.com).
+Questions, requests and complaints about privacy: [contato@reprizeapp.com](mailto:contato@reprizeapp.com).

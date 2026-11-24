@@ -19,6 +19,8 @@ interface Props {
   jsonLd?: Record<string, unknown>[];
   /** Image that paints first (the hero poster), preloaded so the largest paint does not wait for the video. */
   preloadImage?: string;
+  /** Social preview image instead of the site's (a shared link shows its cover); its size is not known. */
+  ogImage?: string;
 }
 
 const { locale, title, description, slug = '', noindex = false, jsonLd = [], preloadImage } = Astro.props;
@@ -26,7 +28,8 @@ const t = useTranslations(locale);
 
 const canonical = getAbsoluteLocaleUrl(locale, slug);
 const alternates = locales.map((l) => ({ locale: l, href: getAbsoluteLocaleUrl(l, slug) }));
-const ogImage = new URL('/og-1200x630-escuro.png', Astro.site).href;
+const ownImage = Astro.props.ogImage;
+const ogImage = ownImage || new URL('/og-1200x630-escuro.png', Astro.site).href;
 const ogLocale = { 'pt-BR': 'pt_BR', en: 'en_US' }[locale];
 ---
 
@@ -63,8 +66,8 @@ const ogLocale = { 'pt-BR': 'pt_BR', en: 'en_US' }[locale];
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={ogLocale} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    {ownImage ? null : <meta property="og:image:width" content="1200" />}
+    {ownImage ? null : <meta property="og:image:height" content="630" />}
     <meta property="og:image:alt" content={t('meta.ogImageAlt')} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />

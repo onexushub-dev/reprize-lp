@@ -25,14 +25,14 @@ Cada foto foi baixada em alta resolução e cortada uma vez em 4:5 (1080x1350) e
 
 | Arquivos em `public/media` | Pexels | Onde aparece |
 |---|---|---|
-| `beach-tennis-hero.mp4` e `.webp` | vídeo fornecido pela equipe (`Gustavorusso_video_no_watermark.mp4`), não é do Pexels | Celular do hero (tela de gravação) |
-| `beach-tennis-editor.mp4` e `.webp` | vídeo fornecido pela equipe (`mari_video_no_watermark.mp4`), não é do Pexels | Celular da seção de edição |
+| `beach-tennis-hero.mp4` e `.webp` | vídeo próprio da equipe (`Leo 9.MP4`), não é do Pexels | Celular do hero (tela de gravação) |
+| `beach-tennis-editor.mp4` e `.webp` | vídeo próprio da equipe (`SaveClip.App_AQMk5F2-…mp4`, um compilado de clipes exportados), não é do Pexels | Celular da seção de edição |
 
 Como foram gerados (ffmpeg, partindo dos arquivos Full HD):
 
-- **Hero** (proporção da tela do celular, cerca de 0,458): vídeo vertical de 576x1024 e 11,4 s, corte central de 468x1024, escala para 540x1180, 30 fps, sem áudio. O pôster é o quadro de 1,2 s.
-- **Editor** (palco da tela de edição do app, cerca de 0,96 de largura por altura, que ocupa todo o espaço acima dos controles): vídeo vertical de 576x1024, trecho de 21,5 s a 29,0 s (7,5 s), a jogada mais longa do arquivo (o vídeo original tem 6 jogadas separadas por cortes, em 6,6 s, 12,1 s, 15,1 s, 21,5 s e 29,1 s). O Modo Foco é simulado quadro a quadro: o enquadramento começa aberto, dá zoom (até 1,6x) e acompanha as jogadoras, suavizado, e sai em 540x562 a 30 fps, sem áudio.
-- O hero e o editor entram e saem do preto em 0,3 s para o loop não "pular". Codificação H.264 (crf 27, `+faststart`), cerca de 1,5 MB e 1,0 MB (crf 20 no editor, com nitidez leve), mais um pôster WebP de cada.
+- **Hero** (proporção da tela do celular, cerca de 0,458): vídeo vertical 1080x1920 a 60 fps, trecho de 9,0 s ao fim (16,55 s), corte de 878x1920 (deslocado 60 px da esquerda: a jogada acontece mais à direita, e o parceiro de azul ainda cabe no quadro), escala para 540x1180, 30 fps, sem áudio. O pulo do smash (de 14,1 s a 14,9 s do original) está em câmera lenta de 0,5x, com os quadros reais de 60 fps, sem interpolação; o vídeo final tem 8,4 s. O pôster é o quadro de 1,2 s. O cartão do clipe salvo aparece de 7,3 s a 8,05 s (`data-save-at` e `data-save-until` em `recording-screen.astro`), logo depois de a comemoração começar; se refizer o corte, ajuste esses dois valores.
+- **Editor** (palco da tela de edição do app, cerca de 0,96 de largura por altura, que ocupa todo o espaço acima dos controles): vídeo vertical de 720x1280 a 30 fps, trecho de 70,0 s a 78,0 s (8 s), uma troca de bolas inteira e a comemoração das jogadoras (o compilado tem outras jogadas separadas por cortes). O Modo Foco é simulado quadro a quadro: o enquadramento começa aberto, dá zoom (até 1,3x) acompanhando a bola e as quatro jogadoras, com o centro mais baixo para mostrar também o lado da quadra mais perto da câmera (abre para 1,15x quando a bola sobe muito), e sai em 540x562 a 30 fps, sem áudio. A marca d’água `@reprize.app` do compilado fica fora do quadro.
+- O hero e o editor entram e saem do preto em 0,3 s para o loop não "pular". Codificação H.264 (`+faststart`), cerca de 1,3 MB e 1,9 MB (crf 24 no hero, crf 20 no editor com nitidez leve), mais um pôster WebP de cada.
 
 Se mudar o tamanho dos celulares ou o layout das telas (`src/styles/home.css`), refaça os cortes para manter a proporção do palco, senão o vídeo é recortado pelo `object-fit: cover`. As telas do celular reproduzem as do app (textos e componentes de `reprize/app`: RecordingPanel, SavedOverlay, ClipEdit); se o app mudar, atualize-as.
 
