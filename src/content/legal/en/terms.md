@@ -46,7 +46,7 @@ Unless the law expressly allows it, you may not: copy, modify, decompile or reve
 
 The recordings and plays **belong to you** (or to whoever holds the rights to them). **We acquire no rights over them.** When you share a recording through Reprize, you only authorize us to store, transmit and display it to whoever has the link, for the link's 24 hours, and to remove it if it is reported (item 7).
 
-Exported videos include the Reprize mark (the logo and @reprize.app), on every plan. A PRO subscription taken before November 25, 2026, while it stays active, and a recording unlocked with a Single Pass bought before that date keep the terms of their purchase and are exported without the mark. You should keep the mark when it is part of the exported video, and you may share the content freely, subject to the items below.
+Exported videos include the Reprize mark (the logo and @reprize.app), on every plan. You should keep the mark when it is part of the exported video, and you may share the content freely, subject to the items below.
 
 ## 7. Sharing and receiving recordings
 

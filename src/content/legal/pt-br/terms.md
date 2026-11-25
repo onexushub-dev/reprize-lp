@@ -46,7 +46,7 @@ Concedemos a você uma licença **pessoal, limitada, não exclusiva, intransfer�
 
 As gravações e os lances **pertencem a você** (ou a quem tiver os direitos sobre eles). **Não adquirimos nenhum direito sobre eles.** Quando você compartilha uma gravação pelo Reprize, nos autoriza apenas a guardá-la, transmiti-la e exibi-la para quem tem o link, durante as 24 horas do link, e a removê-la em caso de denúncia (item 7).
 
-Os vídeos exportados incluem a marca do Reprize (o logotipo e @reprize.app), em todos os planos. A assinatura do PRO feita antes de 25 de novembro de 2026, enquanto continuar ativa, e a gravação liberada com um Passe Avulso comprado antes dessa data seguem as condições da compra e saem sem a marca. Você deve preservar a marca quando ela fizer parte do vídeo exportado, e pode compartilhar o conteúdo à vontade, observando os itens abaixo.
+Os vídeos exportados incluem a marca do Reprize (o logotipo e @reprize.app), em todos os planos. Você deve preservar a marca quando ela fizer parte do vídeo exportado, e pode compartilhar o conteúdo à vontade, observando os itens abaixo.
 
 ## 7. Compartilhar e receber gravações
 
