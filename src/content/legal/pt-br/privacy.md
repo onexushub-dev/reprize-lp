@@ -98,6 +98,8 @@ Qualquer pessoa com o link pode denunciar o conteúdo pelo app ou pela página. 
 
 No app, em **Ajustes → Excluir conta**. Apagamos a conta e os seus links, que param de funcionar, e os arquivos deles saem da nuvem. As gravações no seu celular continuam lá. Se você entrou com a Apple, também revogamos o acesso do Reprize na sua conta Apple.
 
+Sem o app, escreva para **contato@reprizeapp.com** com o assunto "Excluir conta", a partir do e-mail com que você entrou (o da sua conta Apple ou Google). Excluímos a conta em até 30 dias, da mesma forma descrita acima, e avisamos por e-mail quando terminar.
+
 ## 7. Dados que você nos envia por e-mail
 
 Se você escrever para o suporte, trataremos seu **e-mail, nome (se informado) e o conteúdo da mensagem** para responder. Por favor, não envie vídeos ou dados que não sejam necessários ao atendimento.
@@ -150,7 +152,7 @@ RevenueCat, PostHog, Vercel, Supabase e Cloudflare podem tratar dados fora do Br
 ## 13. Por quanto tempo guardamos
 
 - **Dados no seu celular:** até você apagá-los ou desinstalar o app.
-- **Conta:** até você excluí-la no app. Depois disso, apagamos a conta e os links; guardamos só o que a lei exigir.
+- **Conta:** até você excluí-la. Depois disso, apagamos a conta e os links; guardamos só o que a lei exigir.
 - **Gravações compartilhadas na nuvem:** 24 horas a partir da criação do link, ou menos, se você desligá-lo. Os registros do link (título, quantidade de clipes e de acessos), sem os vídeos, ficam enquanto a conta existir.
 - **Denúncias:** pelo tempo necessário para a revisão e para a defesa de direitos.
 - **Dados de compra e assinatura:** pelo tempo da relação com você e pelos prazos legais, fiscais e de defesa em processos.

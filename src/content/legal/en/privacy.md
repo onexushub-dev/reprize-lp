@@ -98,6 +98,8 @@ Anyone with the link can report the content in the app or on the page. We keep t
 
 In the app, under **Settings → Delete account**. We delete the account and your links, which stop working, and their files leave the cloud. The recordings on your phone stay. If you signed in with Apple, we also revoke Reprize's access in your Apple account.
 
+Without the app, email **contato@reprizeapp.com** with the subject "Delete account", from the email address you signed in with (the one on your Apple or Google account). We delete the account within 30 days, as described above, and let you know by email when it is done.
+
 ## 7. Data you send us by email
 
 If you write to support, we process your **email address, name (if provided) and the content of your message** in order to reply. Please do not send videos or data that are not needed for the support request.
@@ -150,7 +152,7 @@ RevenueCat, PostHog, Vercel, Supabase and Cloudflare may process data outside Br
 ## 13. How long we keep data
 
 - **Data on your phone:** until you delete it or uninstall the app.
-- **Account:** until you delete it in the app. After that, we delete the account and the links and keep only what the law requires.
+- **Account:** until you delete it. After that, we delete the account and the links and keep only what the law requires.
 - **Shared recordings in the cloud:** 24 hours from the link's creation, or less if you turn it off. The link records (title, number of clips and of views), without the videos, stay while the account exists.
 - **Reports:** for as long as needed for the review and the defense of rights.
 - **Purchase and subscription data:** for the duration of our relationship and for legal, tax and legal-defense periods.
