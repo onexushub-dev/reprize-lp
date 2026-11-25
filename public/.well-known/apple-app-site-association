@@ -10,6 +10,10 @@
           {
             "/": "/v/*",
             "comment": "A shared recording or clip"
+          },
+          {
+            "/": "/p/*",
+            "comment": "Partner referral links"
           }
         ]
       }

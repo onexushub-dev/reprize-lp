@@ -55,7 +55,7 @@ Se você negar uma permissão, as funções que dependem dela ficam indisponíve
 Parte do Reprize é paga (passe avulso e plano PRO). Para isso:
 
 - **Apple App Store e Google Play** processam o pagamento. Nós **não recebemos** número de cartão nem dados bancários.
-- **RevenueCat, Inc.** (EUA) é o serviço que gerencia assinaturas e libera as funções pagas. Ele recebe, em nosso nome, um **identificador** do usuário no app (anônimo; se você entrou numa conta do Reprize, o identificador dessa conta), informações da compra (produto, datas, status e loja), dados técnicos do aparelho e do app, o país e o endereço IP. A política dele está em [revenuecat.com/privacy](https://www.revenuecat.com/privacy).
+- **RevenueCat, Inc.** (EUA) é o serviço que gerencia assinaturas e libera as funções pagas. Ele recebe, em nosso nome, um **identificador** do usuário no app (anônimo; se você entrou numa conta do Reprize, o identificador dessa conta), informações da compra (produto, datas, status e loja), dados técnicos do aparelho e do app, o país e o endereço IP. A política dele está em [revenuecat.com/privacy](https://www.revenuecat.com/privacy). Se você usar um **código de indicação**, esse código (que identifica o parceiro que indicou, nunca uma pessoa) é associado a esse identificador, para sabermos qual indicação gerou a assinatura.
 
 Esses dados são usados para confirmar sua compra, liberar as funções pagas, evitar fraudes e atender pedidos de suporte e reembolso.
 

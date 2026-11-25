@@ -1,5 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/p/:code", "destination": "/p" },
+    { "source": "/p/:code/", "destination": "/p" }
+  ],
   "headers": [
     {
       "source": "/.well-known/apple-app-site-association",
