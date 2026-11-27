@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.reprize.mobile",
+      "sha256_cert_fingerprints": [
+        "06:5E:07:6B:56:E6:8F:07:43:78:27:DC:21:83:4F:AC:D8:91:FF:D8:3D:E6:AE:D3:F2:46:84:81:97:86:70:21",
+        "3C:6A:55:C5:BB:82:AB:0C:69:86:3E:9A:90:A6:E8:D1:CE:1D:3D:5C:03:E0:8B:02:7F:AB:F6:2F:E7:95:67:7F"
+      ]
+    }
+  }
+]

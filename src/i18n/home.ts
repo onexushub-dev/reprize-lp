@@ -25,11 +25,11 @@ export interface HomeCopy {
     subtitle: string;
     /** The app's recording screen, texts as in the app (reprize/app/src/i18n/locales). */
     screen: {
-      rec: string;
       elapsed: string;
       clips: string;
       clipsBefore: string;
-      hint: string;
+      /** The seconds on the save button's icon (SaveClipButton in the app). */
+      saveSeconds: string;
       wayWave: string;
       wayRemote: string;
       wayWatch: string;
@@ -75,6 +75,14 @@ export interface HomeCopy {
       tools: { focus: string; speed: string; sound: string; zoom: string; rotate: string };
     };
   };
+  /** Sharing by link (the app's ShareLinkPanel drawn as a card). */
+  share: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    bullets: string[];
+    card: { label: string; clips: string; hours: string; copy: string; send: string; pro: string };
+  };
   privacy: {
     eyebrow: string;
     title: string;
@@ -117,19 +125,18 @@ const ptBR: HomeCopy = {
     eyebrow: 'Replay para quem joga',
     title: 'Seu lance. De novo.',
     subtitle:
-      'Apoie o celular, jogue à vontade e guarde só a jogada que valeu. Sem cadastro, sem nuvem.',
+      'Apoie o celular, jogue à vontade e guarde só a jogada que valeu. Sem cadastro para gravar.',
     screen: {
-      rec: 'Gravando',
       elapsed: '00:12:08',
       clips: '3 clipes',
       clipsBefore: '2 clipes',
-      hint: 'Toque na tela para salvar os últimos 15s',
-      wayWave: 'Acene',
+      saveSeconds: '15',
+      wayWave: 'Aceno',
       wayRemote: 'Controle',
-      wayWatch: 'Apple Watch',
+      wayWatch: 'Watch',
       hold: 'Segure para encerrar a gravação',
       savedTitle: 'CLIPE #3 SALVO',
-      savedVia: 'Via Controle · 15s',
+      savedVia: 'via Controle · 15s',
       undo: 'Desfazer',
     },
   },
@@ -191,8 +198,8 @@ const ptBR: HomeCopy = {
         body: 'Jogadores acompanha a jogada como numa transmissão de TV. Bola segue a bola no basquete e no beach tennis. Liga e desliga com um toque.',
       },
       {
-        title: 'Galeria ou compartilhar',
-        body: 'Salve na galeria ou envie para qualquer app, um clipe ou vários de uma vez.',
+        title: 'Galeria, apps ou link',
+        body: 'Salve na galeria, envie para qualquer app, um clipe ou vários de uma vez, ou mande um link com a gravação inteira.',
       },
       { title: 'Compilação de clipes', body: 'Junte os clipes de uma gravação num vídeo só. Recurso do PRO.' },
     ],
@@ -211,6 +218,25 @@ const ptBR: HomeCopy = {
       trimCut: 'Corte: 0:08',
       trimTrigger: 'gatilho',
       tools: { focus: 'Foco', speed: 'Velocidade', sound: 'Som', zoom: 'Zoom', rotate: 'Girar' },
+    },
+  },
+  share: {
+    eyebrow: 'Compartilhamento',
+    title: 'O jogo inteiro para a turma.',
+    subtitle: 'Um link ou QR code leva os lances direto para o app de quem jogou com você.',
+    bullets: [
+      'Uma gravação, várias de uma vez ou só os clipes que você escolher',
+      'Quem recebe assiste de graça no app, com som e Modo Foco',
+      'O link vale 24 horas; depois, os vídeos saem da nuvem',
+      'Denúncia em um toque, e quem recebe não consegue tirar print',
+    ],
+    card: {
+      label: 'Link com 3 gravações',
+      clips: '18 clipes',
+      hours: 'Vence em 24 h',
+      copy: 'Copiar',
+      send: 'Enviar link',
+      pro: 'Compartilhar é do PRO, com login pela Apple ou pelo Google.',
     },
   },
   privacy: {
@@ -340,7 +366,8 @@ const ptBR: HomeCopy = {
         `Grava em Full HD, clipes de até ${P.freeClipSeconds}s`,
         'Todos os jeitos de salvar, menos o Apple Watch',
         'No app: som, Modo Foco, velocidade e edição',
-        'Vídeo salvo em HD, sem som e sem Foco, com marca d’água',
+        'Vídeo salvo em HD, sem som e sem Modo Foco',
+        'Assista de graça às gravações que mandarem para você',
       ],
     },
     pass: {
@@ -349,7 +376,7 @@ const ptBR: HomeCopy = {
       period: 'uma gravação',
       items: [
         'Libera uma gravação grátis que você já fez',
-        'Full HD, som e Modo Foco, sem marca d’água',
+        'Vídeo em Full HD, com som e Modo Foco',
         'Compilação dos clipes dessa gravação',
         'Pagamento único, sem assinatura',
       ],
@@ -363,7 +390,8 @@ const ptBR: HomeCopy = {
       items: [
         `${P.trialDays} dias grátis para testar`,
         'Gravação em 4K e clipes de até 60s',
-        'Vídeo em Full HD ou 4K, com som e Modo Foco, sem marca d’água',
+        'Vídeo em Full HD ou 4K, com som e Modo Foco',
+        'Compartilhe gravações por link ou QR code',
         'Compilação de clipes e Apple Watch',
       ],
     },
@@ -376,18 +404,19 @@ const ptBR: HomeCopy = {
       items: [
         `${P.trialDays} dias grátis para testar`,
         'Gravação em 4K e clipes de até 60s',
-        'Vídeo em Full HD ou 4K, com som e Modo Foco, sem marca d’água',
+        'Vídeo em Full HD ou 4K, com som e Modo Foco',
+        'Compartilhe gravações por link ou QR code',
         'Compilação de clipes e Apple Watch',
       ],
     },
-    note: 'Cancele quando quiser nas configurações da App Store ou do Google Play. Antes de salvar ou enviar no Grátis, o app mostra o que o PRO acrescenta ao vídeo.',
+    note: 'Cancele quando quiser nas configurações da App Store ou do Google Play. Todo clipe salvo leva a marca discreta do Reprize. Antes de salvar ou enviar no Grátis, o app mostra o que o PRO acrescenta ao vídeo.',
   },
   faq: {
     title: 'Perguntas frequentes',
     items: [
       {
         q: 'Meus vídeos vão para a nuvem?',
-        a: 'Só se você compartilhar. Gravar não pede cadastro, e os seus lances ficam no seu celular. Quando você cria um link para compartilhar uma gravação, ela fica na nuvem por 24 horas e depois é apagada. Para compartilhar, você entra com Apple ou Google. Os detalhes estão na Política de Privacidade.',
+        a: 'Só se você compartilhar. Gravar não pede cadastro, e os seus lances ficam no seu celular. Quando você cria um link para compartilhar gravações ou clipes, eles ficam na nuvem por 24 horas e depois são apagados. Para compartilhar, você entra com Apple ou Google. Os detalhes estão na Política de Privacidade.',
       },
       {
         q: 'O app grava o jogo inteiro?',
@@ -407,11 +436,15 @@ const ptBR: HomeCopy = {
       },
       {
         q: 'Tem limite de gravações no plano Grátis?',
-        a: 'Não. Gravações e clipes são ilimitados. O plano muda só a duração do clipe, a gravação em 4K, o que sai do app ao salvar ou enviar, a compilação de clipes e o Apple Watch.',
+        a: 'Não. Gravações e clipes são ilimitados. O plano muda só a duração do clipe, a gravação em 4K, o que sai do app ao salvar ou enviar, a compilação de clipes, o compartilhamento por link e o Apple Watch.',
       },
       {
         q: 'Qual a diferença entre Grátis, Passe e PRO?',
-        a: 'No Grátis, as gravações são ilimitadas, em Full HD, com clipes de até 15 segundos. No app tudo funciona: som, Modo Foco, velocidade, zoom e corte. Ao salvar ou enviar, o vídeo sai em HD, sem som e sem Modo Foco, com marca d’água (a velocidade vai no vídeo), e o app avisa isso antes de exportar. O Passe Avulso libera, numa gravação grátis que você já fez, a exportação em Full HD com som e Modo Foco, sem marca d’água, e a compilação dos clipes dela. O PRO libera isso em todas as gravações, e ainda traz gravação em 4K, clipes de até 60 segundos, compilação de clipes e o Apple Watch.',
+        a: 'No Grátis, as gravações são ilimitadas, em Full HD, com clipes de até 15 segundos. No app tudo funciona: som, Modo Foco, velocidade, zoom e corte. Ao salvar ou enviar, o vídeo sai em HD, sem som e sem Modo Foco (a velocidade vai no vídeo), e o app avisa isso antes de exportar. O Passe Avulso libera, numa gravação grátis que você já fez, a exportação em Full HD com som e Modo Foco e a compilação dos clipes dela. O PRO libera isso em todas as gravações, e ainda traz gravação em 4K, clipes de até 60 segundos, compilação de clipes, compartilhamento por link e o Apple Watch. Em todos os planos, o clipe salvo leva a marca discreta do Reprize.',
+      },
+      {
+        q: 'Recebi um link. Preciso pagar?',
+        a: 'Para assistir, não: abra o link no celular e os lances aparecem no app do Reprize, com som e Modo Foco. Para salvar ou enviar os clipes, quem não tem o PRO pode liberar 1 gravação recebida de cortesia, entrando com Apple ou Google. O link vale 24 horas.',
       },
       {
         q: 'Como cancelo o PRO?',
@@ -436,19 +469,18 @@ const en: HomeCopy = {
     eyebrow: 'Replay for players',
     title: 'Your play. Again.',
     subtitle:
-      'Set the phone down, play on, and keep only the play that mattered. No sign-up, no cloud.',
+      'Set the phone down, play on, and keep only the play that mattered. No sign-up to record.',
     screen: {
-      rec: 'Recording',
       elapsed: '00:12:08',
       clips: '3 clips',
       clipsBefore: '2 clips',
-      hint: 'Tap the screen to save the last 15s',
+      saveSeconds: '15',
       wayWave: 'Wave',
       wayRemote: 'Remote',
-      wayWatch: 'Apple Watch',
+      wayWatch: 'Watch',
       hold: 'Hold to end the recording',
       savedTitle: 'CLIP #3 SAVED',
-      savedVia: 'Via Remote · 15s',
+      savedVia: 'via Remote · 15s',
       undo: 'Undo',
     },
   },
@@ -510,8 +542,8 @@ const en: HomeCopy = {
         body: 'Players follows the play like a TV broadcast. Ball follows the ball in basketball and beach tennis. Turn it on or off with one tap.',
       },
       {
-        title: 'Gallery or share',
-        body: 'Save to your gallery or send it to any app, one clip or several at once.',
+        title: 'Gallery, apps or link',
+        body: 'Save to your gallery, send it to any app, one clip or several at once, or send a link with the whole recording.',
       },
       { title: 'Clip compilations', body: 'Join a recording’s clips into a single video. A PRO feature.' },
     ],
@@ -530,6 +562,25 @@ const en: HomeCopy = {
       trimCut: 'Trim: 0:08',
       trimTrigger: 'trigger',
       tools: { focus: 'Focus', speed: 'Speed', sound: 'Sound', zoom: 'Zoom', rotate: 'Rotate' },
+    },
+  },
+  share: {
+    eyebrow: 'Sharing',
+    title: 'The whole game, for the whole crew.',
+    subtitle: 'A link or QR code takes the plays straight to the app of the people you played with.',
+    bullets: [
+      'One recording, several at once or only the clips you pick',
+      'Whoever gets it watches for free in the app, with sound and Focus Mode',
+      'The link lasts 24 hours; then the videos leave the cloud',
+      'One-tap reporting, and received recordings can’t be screenshotted',
+    ],
+    card: {
+      label: 'Link with 3 recordings',
+      clips: '18 clips',
+      hours: 'Expires in 24 h',
+      copy: 'Copy',
+      send: 'Send link',
+      pro: 'Sharing is a PRO feature, with Apple or Google sign-in.',
     },
   },
   privacy: {
@@ -659,7 +710,8 @@ const en: HomeCopy = {
         `Records in Full HD, clips up to ${PU.freeClipSeconds}s`,
         'Every way to save a play, except the Apple Watch',
         'In the app: sound, Focus Mode, speed and editing',
-        'Saved video in HD, no sound and no Focus, with a watermark',
+        'Saved video in HD, no sound and no Focus Mode',
+        'Watch the recordings people send you, for free',
       ],
     },
     pass: {
@@ -668,7 +720,7 @@ const en: HomeCopy = {
       period: 'one recording',
       items: [
         'Unlocks a free recording you already made',
-        'Full HD, sound and Focus Mode, no watermark',
+        'Full HD video, with sound and Focus Mode',
         'Compiling that recording’s clips',
         'One-time payment, no subscription',
       ],
@@ -682,7 +734,8 @@ const en: HomeCopy = {
       items: [
         `${PU.trialDays}-day free trial`,
         '4K recording and clips up to 60s',
-        'Full HD or 4K video, with sound and Focus Mode, no watermark',
+        'Full HD or 4K video, with sound and Focus Mode',
+        'Share recordings by link or QR code',
         'Clip compilations and Apple Watch',
       ],
     },
@@ -695,18 +748,19 @@ const en: HomeCopy = {
       items: [
         `${PU.trialDays}-day free trial`,
         '4K recording and clips up to 60s',
-        'Full HD or 4K video, with sound and Focus Mode, no watermark',
+        'Full HD or 4K video, with sound and Focus Mode',
+        'Share recordings by link or QR code',
         'Clip compilations and Apple Watch',
       ],
     },
-    note: 'Cancel anytime in your App Store or Google Play settings. Before you save or send on Free, the app shows what PRO adds to the video.',
+    note: 'Cancel anytime in your App Store or Google Play settings. Every saved clip carries the discreet Reprize mark. Before you save or send on Free, the app shows what PRO adds to the video.',
   },
   faq: {
     title: 'Frequently asked questions',
     items: [
       {
         q: 'Do my videos go to the cloud?',
-        a: 'Only if you share. Recording needs no sign-up, and your plays stay on your phone. When you create a link to share a recording, it stays in the cloud for 24 hours and is then deleted. To share, you sign in with Apple or Google. Details are in the Privacy Policy.',
+        a: 'Only if you share. Recording needs no sign-up, and your plays stay on your phone. When you create a link to share recordings or clips, they stay in the cloud for 24 hours and are then deleted. To share, you sign in with Apple or Google. Details are in the Privacy Policy.',
       },
       {
         q: 'Does the app record the whole game?',
@@ -726,11 +780,15 @@ const en: HomeCopy = {
       },
       {
         q: 'Is there a limit on recordings on the Free plan?',
-        a: 'No. Recordings and clips are unlimited. The plan only changes the clip length, 4K recording, what leaves the app when you save or send, compiling clips and the Apple Watch.',
+        a: 'No. Recordings and clips are unlimited. The plan only changes the clip length, 4K recording, what leaves the app when you save or send, compiling clips, sharing by link and the Apple Watch.',
       },
       {
         q: 'What is the difference between Free, Pass and PRO?',
-        a: 'On Free, recordings are unlimited, in Full HD, with clips up to 15 seconds. Everything works in the app: sound, Focus Mode, speed, zoom and trim. When you save or send, the video comes out in HD, with no sound and no Focus Mode, with a watermark (the speed you chose is kept), and the app tells you so before exporting. The Single Pass unlocks, on a free recording you already made, Full HD export with sound and Focus Mode, no watermark, and compiling its clips. PRO unlocks that on every recording, and adds 4K recording, clips up to 60 seconds, compiling clips and the Apple Watch.',
+        a: 'On Free, recordings are unlimited, in Full HD, with clips up to 15 seconds. Everything works in the app: sound, Focus Mode, speed, zoom and trim. When you save or send, the video comes out in HD, with no sound and no Focus Mode (the speed you chose is kept), and the app tells you so before exporting. The Single Pass unlocks, on a free recording you already made, Full HD export with sound and Focus Mode and compiling its clips. PRO unlocks that on every recording, and adds 4K recording, clips up to 60 seconds, compiling clips, sharing by link and the Apple Watch. On every plan, the saved clip carries the discreet Reprize mark.',
+      },
+      {
+        q: 'Someone sent me a link. Do I have to pay?',
+        a: 'Not to watch: open the link on your phone and the plays show up in the Reprize app, with sound and Focus Mode. To save or send the clips without PRO, you can unlock 1 received recording as a courtesy by signing in with Apple or Google. The link lasts 24 hours.',
       },
       {
         q: 'How do I cancel PRO?',

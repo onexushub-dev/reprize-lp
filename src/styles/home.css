@@ -164,19 +164,27 @@
   align-items: center;
 }
 
+.rec__right {
+  display: flex;
+  align-items: center;
+  gap: 2.564cqw;
+}
+
+/* The app's 48 pt glass pills and round buttons over the camera. */
 .rec__pill {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 2.051cqw;
-  padding: 2.051cqw 3.077cqw;
+  height: 12.308cqw;
+  padding: 0 4.103cqw;
   border-radius: 999px;
   background: rgb(12 12 12 / 0.72);
 }
 
 .rec__dot {
-  width: 2.564cqw;
-  height: 2.564cqw;
+  width: 3.077cqw;
+  height: 3.077cqw;
   border-radius: 50%;
   background: var(--color-rec);
 }
@@ -195,20 +203,15 @@
   animation: pulse-dot 1.3s ease-in-out infinite;
 }
 
-.rec__label {
-  font-size: 3.333cqw;
-  font-weight: 700;
-}
-
 .rec__elapsed {
   font-family: var(--font-barlow), sans-serif;
-  font-size: 4.615cqw;
+  font-size: 5.641cqw;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
 
 .rec__pill--count {
-  font-size: 3.59cqw;
+  font-size: 4.103cqw;
   font-weight: 700;
   color: var(--color-amber);
 }
@@ -233,6 +236,21 @@
   opacity: 1;
 }
 
+/* Battery saving, on: the amber round button (EconomyButton). */
+.rec__round {
+  display: grid;
+  place-items: center;
+  width: 12.308cqw;
+  height: 12.308cqw;
+  border-radius: 50%;
+  background: var(--color-amber);
+}
+
+.rec__round svg {
+  width: 6.154cqw;
+  height: 6.154cqw;
+}
+
 .rec__bottom {
   position: absolute;
   inset: auto 4.103cqw 11.795cqw;
@@ -241,59 +259,92 @@
   gap: 2.051cqw;
 }
 
-.rec__hint-card {
+/* "Salvar os últimos 15s" (SaveClipButton): a white ring around an amber disc; amber ring and a tick on a save. */
+.rec__save {
   display: grid;
-  gap: 2.564cqw;
-  padding: 3.59cqw 4.103cqw;
-  border-radius: 4.615cqw;
-  background: rgb(12 12 12 / 0.72);
+  place-items: center;
+  justify-self: center;
+  width: 18.974cqw;
+  height: 18.974cqw;
+  margin-bottom: 1.026cqw;
+  border: 1.026cqw solid #fff;
+  border-radius: 50%;
+  background: rgb(12 12 12 / 0.35);
+  transition: border-color 0.15s;
 }
 
-.rec__hint-head {
-  display: flex;
-  align-items: center;
-  gap: 2.564cqw;
+.rec__save-fill {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 14.872cqw;
+  height: 14.872cqw;
+  border-radius: 50%;
+  background: var(--color-amber);
 }
 
-.rec__hint-head svg {
-  flex: none;
-  width: 6.667cqw;
-  height: 6.667cqw;
+.rec__save-icon,
+.rec__save-done {
+  grid-area: 1 / 1;
+  transition: opacity 0.15s;
 }
 
-.rec__hint {
-  font-size: 3.462cqw;
-  font-weight: 700;
-  line-height: 5.641cqw;
-  white-space: nowrap;
+.rec__save-icon {
+  width: 10.256cqw;
+  height: 10.256cqw;
 }
 
+.rec__save-icon text {
+  font-family: var(--font-manrope), sans-serif;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.rec__save-done {
+  width: 8.205cqw;
+  height: 8.205cqw;
+  opacity: 0;
+}
+
+.rec[data-saved] .rec__save {
+  border-color: var(--color-amber);
+}
+
+.rec[data-saved] .rec__save-icon {
+  opacity: 0;
+}
+
+.rec[data-saved] .rec__save-done {
+  opacity: 1;
+}
+
+/* The active triggers: one centred line of glass chips. */
 .rec__ways {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: center;
   gap: 1.538cqw;
 }
 
 .rec__way {
   display: inline-flex;
   align-items: center;
-  gap: 1.538cqw;
-  padding: 1.282cqw 2.564cqw;
-  border: 1px solid #2e2e2e;
+  gap: 1.282cqw;
+  height: 8.205cqw;
+  padding: 0 2.821cqw;
+  border: 1px solid transparent;
   border-radius: 999px;
-  font-size: 3.333cqw;
-  font-weight: 600;
+  background: rgb(12 12 12 / 0.72);
+  font-size: 3.59cqw;
+  font-weight: 700;
+  transition:
+    border-color 0.15s,
+    background-color 0.15s;
 }
 
 .rec__way svg {
   width: 4.103cqw;
   height: 4.103cqw;
-}
-
-.rec__way {
-  transition:
-    border-color 0.15s,
-    background-color 0.15s;
 }
 
 .rec[data-saved] .rec__way--hit {
@@ -1069,4 +1120,103 @@
 
 .faq-plus {
   transition: transform 0.25s;
+}
+
+/* ---------- Sharing by link (the app's ShareLinkPanel as a card) ---------- */
+.share-card {
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+  width: min(22rem, 100%);
+  padding: 1.75rem 1.5rem 1.5rem;
+  border: 1px solid var(--color-line);
+  border-radius: 1.75rem;
+  background: var(--color-surface);
+  box-shadow:
+    0 40px 80px -40px rgb(0 0 0 / 0.9),
+    0 0 80px -40px rgb(255 176 0 / 0.3);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+.share-card__qr {
+  width: 11rem;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.share-card__qr svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.share-card__label {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.share-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-muted);
+}
+
+.share-card__dot {
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.share-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.share-card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  height: 3rem;
+  border: 1px solid var(--color-line);
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.share-card__button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.share-card__button--main {
+  border-color: var(--color-amber);
+  background: var(--color-amber);
+  color: #0a0a0a;
+}
+
+.share-card__pro {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.share-card__pro b {
+  margin-right: 0.25rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  background: var(--color-amber);
+  font-size: 0.65rem;
+  color: #0a0a0a;
 }

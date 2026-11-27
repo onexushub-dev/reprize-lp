@@ -1,7 +1,7 @@
 ---
 title: Termos de Uso
 description: Condições para usar o aplicativo e o site do Reprize, incluindo planos, pagamentos, compartilhamento de gravações e responsabilidades.
-updated: 2026-11-19
+updated: 2026-11-25
 ---
 
 # Termos de Uso
@@ -34,7 +34,7 @@ Concedemos a você uma licença **pessoal, limitada, não exclusiva, intransfer�
 ## 5. Planos, preços e pagamentos
 
 - **Plano grátis:** inclui gravações ilimitadas, com limites de duração do clipe, de qualidade e de recursos no vídeo salvo ou enviado, conforme informado no app.
-- **Compartilhar pelo Reprize** (criar um link de uma gravação) é um recurso do plano **PRO**. Assistir a uma gravação recebida é gratuito em qualquer plano. Quem não tem o PRO tem **1 gravação de cortesia** no total, sem renovação, para salvar e enviar os clipes de uma gravação recebida (em Full HD, com a marca do Reprize). O Passe Avulso não se aplica a gravações recebidas.
+- **Compartilhar pelo Reprize** (criar um link de uma ou mais gravações, até 10 por link, ou de clipes escolhidos de uma gravação) é um recurso do plano **PRO**. Assistir a uma gravação recebida é gratuito em qualquer plano. Quem não tem o PRO tem **1 gravação de cortesia** no total, sem renovação, para salvar e enviar os clipes de uma gravação recebida (em Full HD). O Passe Avulso não se aplica a gravações recebidas.
 - **Passe Avulso e PRO:** liberam recursos extras (o Passe Avulso, numa gravação grátis já feita; o PRO, em todas as gravações), nas condições e nos preços exibidos na tela de compra, na moeda e com os impostos do seu país. Os valores podem mudar, mas a mudança não afeta o período já contratado.
 - **Pagamento:** é feito pela **Apple App Store** ou pelo **Google Play**, que seguem as próprias regras de cobrança, impostos, reembolso e suporte de pagamento. Não recebemos os dados do seu cartão.
 - **Assinaturas e teste grátis:** o plano PRO é uma assinatura **renovada automaticamente** ao fim de cada período (mensal ou anual) até que você cancele. Quando houver período de teste grátis, a cobrança começa ao fim dele, a menos que você cancele **pelo menos 24 horas antes** do término, conforme as regras da loja.
@@ -46,12 +46,12 @@ Concedemos a você uma licença **pessoal, limitada, não exclusiva, intransfer�
 
 As gravações e os lances **pertencem a você** (ou a quem tiver os direitos sobre eles). **Não adquirimos nenhum direito sobre eles.** Quando você compartilha uma gravação pelo Reprize, nos autoriza apenas a guardá-la, transmiti-la e exibi-la para quem tem o link, durante as 24 horas do link, e a removê-la em caso de denúncia (item 7).
 
-Os vídeos exportados podem incluir elementos gráficos do Reprize, como o logotipo. Você deve preservá-los quando eles fizerem parte do vídeo exportado, e pode compartilhar o conteúdo à vontade, observando os itens abaixo.
+Os vídeos exportados incluem a marca do Reprize (o logotipo e @reprize.app), em todos os planos. Você deve preservar a marca quando ela fizer parte do vídeo exportado, e pode compartilhar o conteúdo à vontade, observando os itens abaixo.
 
 ## 7. Compartilhar e receber gravações
 
-1. **Conta.** Para compartilhar uma gravação, ou para usar a cortesia numa gravação recebida, você entra com Apple ou Google. Mantenha o acesso à sua conta seguro. Você pode excluí-la no app, em **Conta → Excluir conta**.
-2. **Como funciona o link.** Ao compartilhar, o Reprize cria um link e um QR code. Qualquer pessoa que tenha o link pode assistir à gravação no app e repassá-lo. O link funciona por **24 horas** a partir da criação, e você pode desligá-lo antes. Depois disso, os arquivos são apagados da nuvem.
+1. **Conta.** Para compartilhar uma gravação, ou para usar a cortesia numa gravação recebida, você entra com Apple ou Google. Mantenha o acesso à sua conta seguro. Você pode excluí-la no app, em **Ajustes → Excluir conta**.
+2. **Como funciona o link.** Ao compartilhar, o Reprize cria um link e um QR code, com uma ou mais gravações (até 10) ou com os clipes que você escolheu de uma gravação. Qualquer pessoa que tenha o link pode assistir no app e repassá-lo. O link funciona por **24 horas** a partir da criação, e você pode desligá-lo antes. Depois disso, os arquivos são apagados da nuvem.
 3. **Você responde pelo que compartilha.** Antes do primeiro compartilhamento, você declara que está ciente deste item. O Reprize **não assiste, não revisa e não controla** o conteúdo das gravações. Ao compartilhar, você declara que tem o direito de enviar a gravação e a **autorização das pessoas que aparecem nela**. Se houver crianças ou adolescentes, a autorização é dos responsáveis legais.
 4. **O que já foi recebido não volta.** Quem abriu o link no app guarda uma cópia da gravação no próprio celular. Desligar o link ou excluir a sua conta impede novos acessos, mas não apaga essas cópias.
 5. **Quem recebe** pode assistir no app, mas não pode capturar a tela da gravação recebida. Salvar e enviar os clipes dela segue as regras do item 5 (PRO ou cortesia). Quem recebe deve respeitar as pessoas que aparecem no vídeo, como no item 8.
